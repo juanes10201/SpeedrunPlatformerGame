@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://chat6jxc63bfj"]
+
+[ext_resource type="Script" path="res://assets/Levels/Player.gd" id="1_uhpgg"]
+[ext_resource type="Texture2D" uid="uid://dwktx8gqk6fw5" path="res://assets/brackeys_platformer_assets/sprites/knight.png" id="2_6mlty"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5171x"]
+size = Vector2(9.99999, 13.0001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elkka"]
+atlas = ExtResource("2_6mlty")
+region = Rect2(9, 9, 13, 19)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+position = Vector2(1.99994, -36)
+scale = Vector2(6.59375, 0.882813)
+collision_layer = 13
+collision_mask = 29
+script = ExtResource("1_uhpgg")
+jump_height = 70.0
+jump_time_to_peak = 0.5
+jump_time_to_descent = 0.4
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.00900006, -6.79026)
+scale = Vector2(0.151659, 1.13274)
+shape = SubResource("RectangleShape2D_5171x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.08533e-06, -1.46004e-06)
+scale = Vector2(0.151659, 1.13274)
+texture = SubResource("AtlasTexture_elkka")
+offset = Vector2(-9.53674e-07, -9.00003)
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+position = Vector2(0.227498, -10.1944)
+scale = Vector2(0.151659, 1.13274)
+offset = Vector2(37.33, 0)
+enabled = false
+zoom = Vector2(2.575, 2.575)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="PreJumpTime" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="DashTime" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="EnemyGroundSlamTimer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="PreWallJumpTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="WallJumpTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Wallchecker" type="RayCast2D" parent="."]
+position = Vector2(0.151668, -7.9292)
+rotation = -1.5708
+target_position = Vector2(0, 1)
+collision_mask = 7

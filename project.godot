@@ -49,8 +49,9 @@ player_slide={
 2d_physics/layer_2="Slide tiles"
 2d_physics/layer_3="Groundsmash Tiles && Enemies"
 2d_physics/layer_4="Tiles"
-2d_physics/layer_5="Special enemies"
-2d_physics/layer_6="Sand"
+2d_physics/layer_5="Sand"
+2d_physics/layer_6="Special enemies"
+2d_physics/layer_7="Horizontal Sand"
 
 [rendering]
 

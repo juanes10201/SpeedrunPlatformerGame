@@ -32,6 +32,7 @@ var direction = 0
 @onready var Sprite = $"Sprite2D"
 
 var was_on_floor : bool = false
+var was_on_wall : bool = false
 
 #endregion
 
@@ -62,11 +63,16 @@ func _on_player_slide_signal() -> void:
 		Move = false
 #endregion
 
-#region Physics
-func _physics_process(delta: float) -> void:
+func _ready():
 	if(EnemyDirection == Directions.RIGHT): direction = 1
 	elif(EnemyDirection == Directions.LEFT): direction = -1
 	else: direction = 0
+
+#region Physics
+func _physics_process(delta: float) -> void:
+	if(is_on_wall() && !was_on_wall): direction *= -1
+	
+	if(is_on_ceiling()): queue_free()
 	
 	if(velocity.y < 0): strech_size(0.7, 1.3)
 	if(velocity.y >= MAX_FALL_SPEED): strech_size(0.5, 1.7)
@@ -102,6 +108,7 @@ func _physics_process(delta: float) -> void:
 		elif(velocity.x < 0): velocity.x += Cancel_speed*delta
 	#endregion
 	was_on_floor = is_on_floor()
+	was_on_wall = is_on_wall()
 	move_and_slide()
 #endregion
 

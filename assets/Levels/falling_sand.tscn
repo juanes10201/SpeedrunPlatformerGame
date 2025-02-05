@@ -10,11 +10,12 @@ region = Rect2(96, 0, 16.0757, 16.125)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qn4ou"]
 size = Vector2(16, 16)
 
-[node name="falling_sand" type="RigidBody2D"]
+[node name="falling_sand" type="RigidBody2D" groups=["sand"]]
 position = Vector2(-63, -142)
 collision_layer = 16
 collision_mask = 15
 sleeping = true
+lock_rotation = true
 freeze = true
 freeze_mode = 1
 script = ExtResource("1_8diny")

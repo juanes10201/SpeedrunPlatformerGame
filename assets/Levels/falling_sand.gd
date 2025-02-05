@@ -1,5 +1,8 @@
 extends RigidBody2D
 
+@export var can_be_pushed : bool = false
+@export var push_force : float = 80.0
+
 @onready var SandTimer = $SandTimer
 var CalledTimer : bool = false
 
@@ -25,6 +28,6 @@ func _integrate_forces(state):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if(body.is_in_group("Player")):
+	if(body.is_in_group("Player") || body.is_in_group("Enemies")):
 		SandTimer.start()
 		CalledTimer = true

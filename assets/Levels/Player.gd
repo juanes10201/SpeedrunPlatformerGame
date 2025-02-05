@@ -107,6 +107,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	#endregion
 	
+	
+	
 	#region Destructible walls w slide
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
@@ -117,6 +119,8 @@ func _physics_process(delta: float) -> void:
 			# Check the wall's Sliding variable
 			if Slide:
 				collider.destroy()  # Call the wall's destroy method
+		#if (collider.is_in_group("Sand") && collider.get_collider().can_be_pushed):
+		#	collider.get_collider().apply_central_impulse(-collider.get_normal * collider.get_collider().push_force)
 	#endregion
 #endregion
 

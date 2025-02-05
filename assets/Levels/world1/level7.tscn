@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d4lqd4xuepdef"]
+[gd_scene load_steps=10 format=4 uid="uid://d4lqd4xuepdef"]
 
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_ujwwy"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="2_hl74j"]
@@ -103,13 +103,15 @@ position = Vector2(0, -1)
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 32)
 scale = Vector2(1.00384, 1)
+tile_map_data = PackedByteArray("AADz//z/AAABAAEAAADz//3/AAABAAEAAADz//7/AAABAAEAAADz////AAABAAEAAADz/wAAAAABAAEAAADz/wEAAAABAAEAAADz/wIAAAABAAEAAADz/wMAAAABAAEAAADz/wQAAAABAAEAAADz/wUAAAABAAEAAADz/wYAAAABAAEAAADp//z/AAABAAEAAADp//3/AAABAAEAAADp//7/AAABAAEAAADp////AAABAAEAAADp/wAAAAABAAEAAADp/wEAAAABAAEAAADp/wIAAAABAAEAAADp/wMAAAABAAEAAADp/wQAAAABAAEAAADp/wUAAAABAAEAAADp/wYAAAABAAEAAADp/wcAAAABAAEAAADp/wgAAAABAAEAAADp//D/AAABAAEAAADp//H/AAABAAEAAADp//L/AAABAAEAAADp//P/AAABAAEAAADp//T/AAABAAEAAADp//X/AAABAAEAAADp//b/AAABAAEAAADp//f/AAABAAEAAADp//j/AAABAAEAAADp//n/AAABAAEAAADp//r/AAABAAEAAADp//v/AAABAAEAAADz//D/AAABAAEAAADz//H/AAABAAEAAADz//L/AAABAAEAAADz//P/AAABAAEAAADz//T/AAABAAEAAADz//X/AAABAAEAAADz//b/AAABAAEAAADz//f/AAABAAEAAADz//j/AAABAAEAAADz//n/AAABAAEAAADz//r/AAABAAEAAADz//v/AAABAAEAAADp/+//AAABAAEAAADq/+//AAABAAEAAADr/+//AAABAAEAAADs/+//AAABAAEAAADt/+//AAABAAEAAADu/+//AAABAAEAAADv/+//AAABAAEAAADw/+//AAABAAEAAADx/+//AAABAAEAAADy/+//AAABAAEAAADz/+//AAABAAEAAADq/wIAAAABAAEAAADy/wIAAAABAAEAAADr/wIAAAABAAEAAADx/wIAAAABAAEAAADs/wcAAAABAAEAAADt/wcAAAABAAEAAADu/wcAAAABAAEAAADv/wcAAAABAAEAAADw/wcAAAABAAEAAADz/wcAAAABAAEAAADz/wgAAAABAAEAAADp/woAAAABAAEAAADz/woAAAABAAEAAADp/wwAAAABAAEAAADp/w0AAAABAAEAAADz/wwAAAABAAEAAADq//3/AAABAAEAAADy//3/AAABAAEAAADt/wsAAAAAAAMAAADu/wsAAAABAAMAAADv/wsAAAACAAMAAADz/w0AAAABAAEAAADt//j/AAAAAAMAAADu//j/AAABAAMAAADv//j/AAACAAMAAAA=")
 tile_set = SubResource("TileSet_i8b3o")
 
 [node name="Player" parent="." instance=ExtResource("2_hl74j")]
-position = Vector2(-295, -96)
+position = Vector2(-283, -102)
+collision_mask = 61
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(30, 26.053)
+position = Vector2(14.5308, 64.5662)
 zoom = Vector2(2.08, 2.08)
 limit_left = -403
 limit_right = 170
@@ -134,65 +136,83 @@ one_shot = true
 autostart = true
 
 [node name="Flag" parent="." instance=ExtResource("5_wclob")]
-position = Vector2(-126, -22)
+position = Vector2(-284, 189)
 level_to_change = "level4"
 
-[node name="Enemie18" parent="." instance=ExtResource("6_h5cpi")]
-position = Vector2(-117, 55)
-collision_layer = 16
-EnemyDirection = 1
-
-[node name="Enemie16" parent="." instance=ExtResource("6_h5cpi")]
-position = Vector2(-160, -22)
-collision_layer = 16
-EnemyDirection = 1
-
 [node name="falling_sand" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-363, 9)
-collision_layer = 32
-collision_mask = 14
+position = Vector2(-331, -7)
+collision_mask = 31
 
 [node name="falling_sand2" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-347, 9)
-collision_layer = 32
-collision_mask = 14
+position = Vector2(-315, -7)
+collision_mask = 31
 
 [node name="falling_sand3" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-331, 9)
-collision_layer = 32
-collision_mask = 14
+position = Vector2(-299, -7)
+collision_mask = 31
 
 [node name="falling_sand4" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-315, 9)
-collision_layer = 32
-collision_mask = 14
+position = Vector2(-283, -7)
+collision_mask = 31
 
 [node name="falling_sand5" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-299, 9)
-collision_layer = 32
-collision_mask = 14
+position = Vector2(-267, -7)
+collision_mask = 31
 
 [node name="falling_sand6" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-283, 9)
-collision_layer = 32
-collision_mask = 14
+position = Vector2(-251, -7)
+collision_mask = 31
 
-[node name="falling_sand7" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-267, 9)
-collision_layer = 32
-collision_mask = 14
+[node name="Enemie" parent="." instance=ExtResource("6_h5cpi")]
+position = Vector2(-292, -25)
+
+[node name="Enemie2" parent="." instance=ExtResource("6_h5cpi")]
+position = Vector2(-277, -25)
+EnemyDirection = 1
+
+[node name="falling_sand13" parent="." instance=ExtResource("7_kb3ie")]
+position = Vector2(-235, -7)
+collision_mask = 31
+
+[node name="Enemie3" parent="." instance=ExtResource("6_h5cpi")]
+position = Vector2(-344, 128)
+
+[node name="Enemie4" parent="." instance=ExtResource("6_h5cpi")]
+position = Vector2(-225, 128)
+EnemyDirection = 1
 
 [node name="falling_sand8" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-251, 9)
-collision_layer = 32
-collision_mask = 14
+position = Vector2(-315, 72)
+collision_mask = 31
 
 [node name="falling_sand9" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-235, 9)
-collision_layer = 32
-collision_mask = 14
+position = Vector2(-299, 72)
+collision_mask = 31
 
 [node name="falling_sand10" parent="." instance=ExtResource("7_kb3ie")]
-position = Vector2(-219, 9)
-collision_layer = 32
-collision_mask = 14
+position = Vector2(-283, 72)
+collision_mask = 31
+
+[node name="falling_sand11" parent="." instance=ExtResource("7_kb3ie")]
+position = Vector2(-267, 72)
+collision_mask = 31
+
+[node name="falling_sand12" parent="." instance=ExtResource("7_kb3ie")]
+position = Vector2(-251, 72)
+collision_mask = 31
+
+[node name="falling_sand18" parent="." instance=ExtResource("7_kb3ie")]
+position = Vector2(-347, 152)
+collision_mask = 31
+
+[node name="falling_sand19" parent="." instance=ExtResource("7_kb3ie")]
+position = Vector2(-331, 152)
+collision_mask = 31
+
+[node name="falling_sand21" parent="." instance=ExtResource("7_kb3ie")]
+position = Vector2(-235, 152)
+collision_mask = 31
+
+[node name="falling_sand22" parent="." instance=ExtResource("7_kb3ie")]
+position = Vector2(-219, 152)
+collision_mask = 31

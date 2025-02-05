@@ -13,7 +13,8 @@ region = Rect2(77.0269, 12.0829, 14.6606, 12.464)
 
 [node name="Enemie" type="CharacterBody2D"]
 position = Vector2(115.72, -23.74)
-collision_mask = 13
+collision_layer = 32
+collision_mask = 29
 script = ExtResource("1_qsr6m")
 Max_groundsmash_distance = 200.0
 enemy_type = 1.0

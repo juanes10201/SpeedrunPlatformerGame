@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cykeyxkv73jjt"]
 
-[ext_resource type="Script" path="res://assets/Levels/world1/falling_sand.gd" id="1_8diny"]
+[ext_resource type="Script" path="res://assets/Levels/falling_sand.gd" id="1_8diny"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="2_703h2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b824a"]
@@ -15,6 +15,8 @@ position = Vector2(-63, -142)
 collision_layer = 16
 collision_mask = 15
 sleeping = true
+freeze = true
+freeze_mode = 1
 script = ExtResource("1_8diny")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -29,6 +31,11 @@ collision_layer = 0
 collision_mask = 31
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.115, 1.16)
 shape = SubResource("RectangleShape2D_qn4ou")
+debug_color = Color(0.823213, 0.373721, 0.385799, 0.42)
+
+[node name="SandTimer" type="Timer" parent="."]
+wait_time = 0.2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

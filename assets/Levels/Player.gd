@@ -70,7 +70,9 @@ func _input(event):
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 	
-	if(is_on_floor() && was_on_floor == false): strech_size(1.7, 0.5)
+	if(is_on_floor() && was_on_floor == false):
+		strech_size(1.7, 0.5)
+		#if(GroundSmash): FrameFreeze(0.05, 0.5)
 	
 	_strech_tick(delta)
 	_physics_apply_gravity(delta)
@@ -271,6 +273,20 @@ func _strech_tick(delta : float):
 
 func get_gravity_player() -> float:
 	return jump_gravity if velocity.y < 0.0 else fall_gravity
+
+func On_Death():
+	#FrameFreeze(0.05, 0.7)
+	get_tree().reload_current_scene() 
+
+var FrameFreezeEnabled : bool = false
+
+func FrameFreeze(TimeScale, duration):
+	if(!FrameFreezeEnabled):
+		FrameFreezeEnabled = true
+		Engine.time_scale = TimeScale
+		await(get_tree().create_timer(duration * TimeScale).timeout)
+		Engine.time_scale = 1
+		FrameFreezeEnabled = false
 
 #region Wall Checker
 func is_near_wall() -> bool:

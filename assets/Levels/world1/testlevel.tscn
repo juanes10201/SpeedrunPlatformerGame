@@ -116,7 +116,6 @@ jump_height = 45.0
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(18.8057, -66.8318)
-scale = Vector2(1, 1)
 zoom = Vector2(2.35, 2.35)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

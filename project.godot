@@ -43,6 +43,15 @@ player_slide={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Slide tiles"
+2d_physics/layer_3="Groundsmash Tiles && Enemies"
+2d_physics/layer_4="Tiles"
+2d_physics/layer_5="Special enemies"
+2d_physics/layer_6="Sand"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

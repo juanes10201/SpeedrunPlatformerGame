@@ -11,5 +11,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if(Time_Left): text = str(floor(Time_Left.time_left))
-	if(Time_Left && Time_Left.time_left <= 0): get_tree().reload_current_scene()  
+	if(Time_Left && Time_Left.time_left <= 0): get_node("../../Player").On_Death()
 	

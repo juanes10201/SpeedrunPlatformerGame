@@ -142,7 +142,6 @@ level_to_change = "level7"
 position = Vector2(-79, -58)
 Max_groundsmash_distance = 300.0
 EnemyDirection = 1
-enemy_type = 0.0
 
 [node name="Enemie13" parent="." instance=ExtResource("6_3uh0q")]
 position = Vector2(-58, -58)
@@ -150,10 +149,6 @@ EnemyDirection = 1
 
 [node name="Enemie9" parent="." instance=ExtResource("6_3uh0q")]
 position = Vector2(198, 71)
-EnemyDirection = 1
-
-[node name="Enemie14" parent="Enemie9" instance=ExtResource("6_3uh0q")]
-position = Vector2(59, -3)
 EnemyDirection = 1
 
 [node name="Enemie14" parent="." instance=ExtResource("6_3uh0q")]
@@ -186,4 +181,8 @@ EnemyDirection = 1
 
 [node name="Enemie17" parent="." instance=ExtResource("6_3uh0q")]
 position = Vector2(-123, 67)
+EnemyDirection = 1
+
+[node name="Enemie19" parent="." instance=ExtResource("6_3uh0q")]
+position = Vector2(272, 70)
 EnemyDirection = 1

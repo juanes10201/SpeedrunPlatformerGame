@@ -46,7 +46,7 @@ func _on_player_ground_smash_signal() -> void:
 	if(is_on_floor() && global_position.distance_to(Player.position) <= Max_groundsmash_distance):
 		_jump(JUMP_VELOCITY if enemy_type == 0 else SPECIAL_ENEMY_JUMP_VELOCITY)
 		if(enemy_type == 0):
-			Player.FrameFreeze(0.05, 0.4)
+			#Player.FrameFreeze(0.05, 0.4)
 			velocity.x = Enemy_burst_speed if Player.position.x < position.x else Enemy_burst_speed*-1
 			Move = false
 			Player.Controller_Vibrate_Player_Movement(1)

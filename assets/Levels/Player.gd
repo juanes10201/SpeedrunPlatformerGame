@@ -45,7 +45,6 @@ var direction := Input.get_axis("ui_left", "ui_right")
 @onready var CoyoteTimer = $CoyoteTimer
 @onready var Sprite = $Sprite2D
 @onready var EnemyGroundSlamTimer = $EnemyGroundSlamTimer
-@onready var WallJumpTimer = $WallJumpTimer
 @onready var PreWallJumpTimer = $PreWallJumpTimer
 
 @export var jump_height : float
@@ -145,7 +144,7 @@ func _physics_apply_gravity(delta: float) -> void:
 #region jump
 func _physics_jump(delta: float) -> void:
 	# Handle jump.
-	if (!PreJumpTime.is_stopped() && (is_on_floor() || WallJump || !CoyoteTimer.is_stopped() )):
+	if ((!PreJumpTime.is_stopped() && (is_on_floor() || WallJump || !CoyoteTimer.is_stopped()) ) || (!PreWallJumpTimer.is_stopped() && Input.is_action_pressed("player_jump")) ):
 		if(Sliding != Sides.NONE):
 			Sliding = Sides.UP
 			Speed.x = Acc.x*2 if LastDirection >= 0 else Acc.x*-2 
@@ -153,7 +152,8 @@ func _physics_jump(delta: float) -> void:
 		Controller_Vibrate_Player_Movement(0.2)
 		#region WallJump case
 		if(WallJump || !PreWallJumpTimer.is_stopped()):
-			Speed.x = WallJumpVelocity*-1 if WallJumpSide == Sides.RIGHT else WallJumpVelocity
+			Speed.x = WallJumpVelocity*-1 if WallJumpPreviousSide == Sides.RIGHT else WallJumpVelocity
+			PreWallJumpTimer.stop()
 			velocity.y -= 50
 		#endregion
 	
@@ -177,7 +177,7 @@ func _physics_h_movement(delta: float) -> void:
 	if (!WallJump && direction && Speed.x < MaxAcc.x && Speed.x > MaxAcc.x*-1):
 		if((direction > 0 && Speed.x < 0) || (direction < 0 && Speed.x > 0)): Speed.x += Acc.x * direction
 		#Move faster if coming from Walljump
-		if((WallJumpPreviousSide == Sides.LEFT && direction < 0) || (WallJumpPreviousSide == Sides.RIGHT && direction > 0) && !WallJumpTimer.is_stopped()): Speed.x += Acc.x * direction *2
+		if((WallJumpPreviousSide == Sides.LEFT && direction < 0) || (WallJumpPreviousSide == Sides.RIGHT && direction > 0) && !PreWallJumpTimer.is_stopped()): Speed.x += Acc.x * direction *2
 		
 		Speed.x += Acc.x * direction  # Adjust speed based on input direction
 	else:
@@ -248,15 +248,15 @@ func _physics_walljump(delta: float) -> void:
 		WallJump = true
 		if(direction > 0):
 			WallJumpSide = Sides.RIGHT
-			WallJumpPreviousSide = Sides.RIGHT
+			if(WallJumpPreviousSide == Sides.NONE): WallJumpPreviousSide = Sides.RIGHT
 		else:
 			WallJumpSide = Sides.LEFT
-			WallJumpPreviousSide = Sides.LEFT
+			if(WallJumpPreviousSide == Sides.NONE):  WallJumpPreviousSide = Sides.LEFT
 	else:
 		if(WallJump):
-			WallJumpTimer.start()
 			PreWallJumpTimer.start()
-		if(WallJumpTimer.is_stopped() && PreWallJumpTimer.is_stopped()): WallJumpPreviousSide = Sides.NONE
+			print("boing")
+		if(PreWallJumpTimer.is_stopped()): WallJumpPreviousSide = Sides.NONE
 		WallJump = false
 	#endregion
 	

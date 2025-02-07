@@ -72,7 +72,7 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	if(is_on_wall() && !was_on_wall): direction *= -1
 	
-	if(is_on_ceiling()): queue_free()
+	#if(is_on_ceiling()): queue_free()
 	
 	if(velocity.y < 0): strech_size(0.7, 1.3)
 	if(velocity.y >= MAX_FALL_SPEED): strech_size(0.5, 1.7)

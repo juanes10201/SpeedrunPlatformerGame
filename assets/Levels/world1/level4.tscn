@@ -155,42 +155,36 @@ collision_mask = 0
 Enemy_burst_speed = 400.0
 EnemyDirection = 2
 
-[node name="Enemie3" parent="." instance=ExtResource("5_h6i6c")]
-position = Vector2(-21, 101)
-collision_layer = 2
-collision_mask = 0
-EnemyDirection = 2
-
-[node name="Enemie4" parent="." instance=ExtResource("5_h6i6c")]
-position = Vector2(-59, 102)
-collision_layer = 2
-collision_mask = 0
-EnemyDirection = 2
-
-[node name="Enemie5" parent="." instance=ExtResource("5_h6i6c")]
-position = Vector2(-38, 102)
-collision_layer = 2
-collision_mask = 0
-EnemyDirection = 2
-
 [node name="Enemie6" parent="." instance=ExtResource("5_h6i6c")]
 position = Vector2(-283, 213)
 collision_layer = 2
 collision_mask = 0
-EnemyDirection = 2
+EnemyDirection = 1
 
 [node name="Enemie7" parent="." instance=ExtResource("5_h6i6c")]
 position = Vector2(-265, 213)
 collision_layer = 2
 collision_mask = 0
-EnemyDirection = 2
+EnemyDirection = 1
 
 [node name="Enemie8" parent="." instance=ExtResource("5_h6i6c")]
 position = Vector2(-249, 212)
 collision_layer = 2
 collision_mask = 0
-EnemyDirection = 2
+EnemyDirection = 1
 
 [node name="Flag" parent="." instance=ExtResource("6_35nne")]
 position = Vector2(-30, 219)
 level_to_change = "level5"
+
+[node name="Enemie9" parent="." instance=ExtResource("5_h6i6c")]
+position = Vector2(-60, 105.26)
+EnemyDirection = 2
+
+[node name="Enemie10" parent="." instance=ExtResource("5_h6i6c")]
+position = Vector2(-38.72, 105)
+EnemyDirection = 2
+
+[node name="Enemie11" parent="." instance=ExtResource("5_h6i6c")]
+position = Vector2(-17.72, 105)
+EnemyDirection = 2

@@ -71,6 +71,10 @@ func _ready():
 
 #region Physics
 func _physics_process(delta: float) -> void:
+	if( SPEED != 0 && !is_on_wall()) :
+		Sprite.play("Walking")
+	else: Sprite.play("Idle")
+	
 	if(is_on_wall() && !was_on_wall): direction *= -1
 	
 	#if(is_on_ceiling()): queue_free()

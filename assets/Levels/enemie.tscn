@@ -1,15 +1,52 @@
-[gd_scene load_steps=6 format=3 uid="uid://djqwajvc8m3td"]
+[gd_scene load_steps=10 format=3 uid="uid://djqwajvc8m3td"]
 
 [ext_resource type="Script" path="res://assets/Levels/enemie_physics.gd" id="1_ny8g4"]
 [ext_resource type="Script" path="res://assets/Levels/enemie_area2d.gd" id="2_x2l0f"]
-[ext_resource type="Texture2D" uid="uid://bvcb15rp35jlr" path="res://assets/brackeys_platformer_assets/sprites/slime_green.png" id="3_tg5uf"]
+[ext_resource type="Texture2D" uid="uid://dfxj00uyktfa7" path="res://assets/Sprites/slime-Sheet.png" id="3_nfed4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y4c6"]
 size = Vector2(8, 9.615)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pmgar"]
-atlas = ExtResource("3_tg5uf")
-region = Rect2(77.0269, 12.0829, 14.8591, 12.0398)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxsak"]
+atlas = ExtResource("3_nfed4")
+region = Rect2(32, 0, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh8qu"]
+atlas = ExtResource("3_nfed4")
+region = Rect2(0, 0, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq2ap"]
+atlas = ExtResource("3_nfed4")
+region = Rect2(16, 0, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8cs0"]
+atlas = ExtResource("3_nfed4")
+region = Rect2(32, 0, 16, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2fkqx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxsak")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh8qu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq2ap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8cs0")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
 
 [node name="Enemie" type="CharacterBody2D" groups=["Enemie"]]
 position = Vector2(115.72, -23.74)
@@ -35,7 +72,8 @@ shape = SubResource("RectangleShape2D_4y4c6")
 [node name="MoveTimer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.279999, 6.74)
-texture = SubResource("AtlasTexture_pmgar")
-offset = Vector2(-0.279999, -5.42)
+sprite_frames = SubResource("SpriteFrames_2fkqx")
+animation = &"Idle"
+offset = Vector2(-0.28, -9.195)

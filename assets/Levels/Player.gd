@@ -268,7 +268,6 @@ func _physics_walljump(delta: float) -> void:
 	else:
 		if(WallJump):
 			PreWallJumpTimer.start()
-			print("boing")
 		if(PreWallJumpTimer.is_stopped()): WallJumpPreviousSide = Sides.NONE
 		WallJump = false
 	#endregion

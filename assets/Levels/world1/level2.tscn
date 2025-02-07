@@ -63,7 +63,6 @@ texture = ExtResource("1_01enl")
 0:5/0 = 0
 0:5/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 1:5/0 = 0
-1:5/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 2:5/0 = 0
 2:5/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 3:5/0 = 0
@@ -104,7 +103,8 @@ position = Vector2(0, -1)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-41, -90)
 scale = Vector2(6.59375, 0.882813)
-zoom = Vector2(2.08, 2.08)
+offset = Vector2(-7.5, 50.885)
+zoom = Vector2(2.12, 2.12)
 limit_left = -318
 limit_right = 236
 position_smoothing_enabled = true

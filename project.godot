@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GlobalSignal="*res://assets/global_signal/global_signal.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 player_dash={

@@ -12,6 +12,7 @@ enum Sides{
 }
 
 var Sliding: Sides = Sides.NONE
+var WasSliding : bool = false
 var Slide : bool = false
 
 var GroundSmash : bool = false
@@ -64,10 +65,18 @@ func _input(event):
 		if event.keycode == KEY_F2:
 			get_tree().reload_current_scene()
 
+func _ready() -> void:
+	pass
+
 
 #region Physics proccess
 func _physics_process(delta: float) -> void:
+	WasSliding = false
 	var direction := Input.get_axis("ui_left", "ui_right")
+	
+	if(direction):
+		Sprite.play("Walking")
+	else: Sprite.play("Idle")
 	
 	if(is_on_floor() && was_on_floor == false):
 		strech_size(1.7, 0.5)
@@ -115,7 +124,7 @@ func _physics_process(delta: float) -> void:
 		var collider = collision.get_collider()
 		
 		# Check if the collider is a destructible wall
-		if collider.is_in_group("destructible_walls_slide"):
+		if (collider.is_in_group("destructible_walls_slide")):
 			# Check the wall's Sliding variable
 			if Slide:
 				collider.destroy()  # Call the wall's destroy method

@@ -58,6 +58,7 @@ func _on_player_slide_signal() -> void:
 	if(is_on_floor() && enemy_type == 0):
 		#Player.FrameFreeze(0.05, 0.4)
 		_jump(-400)
+		Player.Camera.Shake(1.0, 5.0)
 		velocity.x = Enemy_burst_speed if  Player.Sliding == Player.Sides.RIGHT else Enemy_burst_speed*-1
 		Player.Controller_Vibrate_Player_Movement(1)
 		Move = false

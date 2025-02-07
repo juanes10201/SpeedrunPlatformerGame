@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://1q1rsb3yrxn0"]
+[gd_scene load_steps=10 format=4 uid="uid://1q1rsb3yrxn0"]
 
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_bfg0y"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="2_kmi6g"]
 [ext_resource type="Script" path="res://assets/Levels/world1/tile_map_layer.gd" id="2_ubfur"]
 [ext_resource type="Script" path="res://assets/Levels/UI_time_text.gd" id="3_unrlh"]
 [ext_resource type="PackedScene" uid="uid://djqwajvc8m3td" path="res://assets/Levels/enemie.tscn" id="4_inole"]
+[ext_resource type="Script" path="res://assets/Levels/world1/Player_camera.gd" id="4_io765"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="6_gwfxy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c40bb"]
@@ -99,12 +100,6 @@ sources/0 = SubResource("TileSetAtlasSource_c40bb")
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, -1)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-57.2, -156.915)
-scale = Vector2(6.59375, 0.882813)
-offset = Vector2(-63.37, 23.85)
-zoom = Vector2(2.49, 2.49)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 32)
 scale = Vector2(1.00384, 1)
@@ -116,6 +111,15 @@ script = ExtResource("2_ubfur")
 position = Vector2(-315, -25)
 collision_mask = 5
 jump_height = 45.0
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(39.0976, -149.426)
+scale = Vector2(1, 1)
+offset = Vector2(-28.055, 23.85)
+zoom = Vector2(2.49, 2.49)
+limit_left = -367
+limit_right = 145
+script = ExtResource("4_io765")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2

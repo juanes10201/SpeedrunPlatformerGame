@@ -97,15 +97,6 @@ sprite_frames = SubResource("SpriteFrames_qwuic")
 animation = &"Walking"
 offset = Vector2(0, -9)
 
-[node name="PlayerCamera" type="Camera2D" parent="."]
-position = Vector2(0.227498, -10.1944)
-scale = Vector2(0.151659, 1.13274)
-offset = Vector2(37.33, 0)
-enabled = false
-zoom = Vector2(2.575, 2.575)
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
-
 [node name="CoyoteTimer" type="Timer" parent="."]
 wait_time = 0.15
 one_shot = true

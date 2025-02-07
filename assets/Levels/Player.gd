@@ -47,6 +47,7 @@ var direction := Input.get_axis("ui_left", "ui_right")
 @onready var Sprite = $Sprite2D
 @onready var EnemyGroundSlamTimer = $EnemyGroundSlamTimer
 @onready var PreWallJumpTimer = $PreWallJumpTimer
+@onready var Camera = $Camera2D
 
 @export var jump_height : float
 @export var jump_time_to_peak : float
@@ -60,10 +61,12 @@ var was_on_floor : bool = true
 
 #endregion
 
+#region Debug
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_F2:
+		if event.keycode == KEY_F9:
 			get_tree().reload_current_scene()
+#endregion
 
 func _ready() -> void:
 	pass
@@ -147,6 +150,7 @@ func _physics_apply_gravity(delta: float) -> void:
 		Dashed = false
 		if(GroundSmash):
 			GroundSmash = false
+			Camera.Shake(10.0, 10.0)
 			enemy_jump()
 			EnemyGroundSlamTimer.start()
 		if(Sliding == Sides.UP):
@@ -271,10 +275,16 @@ func _physics_walljump(delta: float) -> void:
 		if(PreWallJumpTimer.is_stopped()): WallJumpPreviousSide = Sides.NONE
 		WallJump = false
 	#endregion
-	
+
+#region Controller vibration
 func Controller_Vibrate_Player_Movement(Force):
 	Input.start_joy_vibration(0, 0.3 * Force, 0.4 * Force, 0.2)
-	
+#endregion
+
+
+#region Juice
+
+#region Streching and scaling
 @onready var original_scale = Sprite.scale
 func strech_size(X, Y):
 	Sprite.scale = Vector2(original_scale.x*X, original_scale.y*Y)
@@ -282,16 +292,10 @@ func strech_size(X, Y):
 func _strech_tick(delta : float):
 	Sprite.scale.x += (original_scale.x - Sprite.scale.x) * 20 * delta
 	Sprite.scale.y += (original_scale.y - Sprite.scale.y) * 20 * delta
+#endregion
 
-func get_gravity_player() -> float:
-	return jump_gravity if velocity.y < 0.0 else fall_gravity
-
-func On_Death():
-	#FrameFreeze(0.05, 0.7)
-	get_tree().reload_current_scene() 
-
+#region FrameFreeze
 var FrameFreezeEnabled : bool = false
-
 func FrameFreeze(TimeScale, duration):
 	if(!FrameFreezeEnabled):
 		FrameFreezeEnabled = true
@@ -299,6 +303,17 @@ func FrameFreeze(TimeScale, duration):
 		await(get_tree().create_timer(duration * TimeScale).timeout)
 		Engine.time_scale = 1
 		FrameFreezeEnabled = false
+#endregion
+#endregion
+
+func get_gravity_player() -> float:
+	return jump_gravity if velocity.y < 0.0 else fall_gravity
+
+#region Death
+func On_Death():
+	#FrameFreeze(0.05, 0.7)
+	get_tree().reload_current_scene() 
+#endregion
 
 #region Wall Checker
 func is_near_wall() -> bool:

@@ -30,11 +30,16 @@ var Dashed : bool = false
 var DashAcc = Vector2(600, 400)
 var DashMove = Vector2(0, 0) 
 
+var HaveKey : bool = false
+
 #@export var JUMP_VELOCITY = -350.0
 @export var WallJumpVelocity : float = 7000.0
 
 @export var JumpCancelAcc : float = 25.0
 @export var GroundSmashAcc : float = 25000.0
+
+@export var TimeDeath : float = 1.5
+var Physics : bool = true
 
 var LastDirection : float = 0
 var direction := Input.get_axis("ui_left", "ui_right")
@@ -48,6 +53,13 @@ var direction := Input.get_axis("ui_left", "ui_right")
 @onready var EnemyGroundSlamTimer = $EnemyGroundSlamTimer
 @onready var PreWallJumpTimer = $PreWallJumpTimer
 @onready var Camera = $Camera2D
+@onready var ParticlesLanding = $ParticlesLanding
+@onready var ParticlesJump = $ParticlesJump
+@onready var ParticlesDeath = $ParticlesDeath
+@onready var SlideRampTimer = $SlideRampTimer
+
+@onready var TransitionOut = $"../CanvasLayer/TransitionOut"
+@onready var TransitionIn = $"../CanvasLayer/TransitionIn"
 
 @export var jump_height : float
 @export var jump_time_to_peak : float
@@ -69,7 +81,9 @@ func _input(event):
 #endregion
 
 func _ready() -> void:
-	pass
+	TransitionOut.hide()
+	TransitionIn.show()
+	TransitionIn.fade_out()
 
 
 #region Physics proccess
@@ -83,15 +97,23 @@ func _physics_process(delta: float) -> void:
 	
 	if(is_on_floor() && was_on_floor == false):
 		strech_size(1.7, 0.5)
-		#if(GroundSmash): FrameFreeze(0.05, 0.5)
+		ParticlesLanding.play("default")
+		ParticlesLanding.show()
+		ParticlesJump.emitting = false
+		ParticlesLanding.hide()
+	if(!is_on_floor()):
+		ParticlesLanding.hide()
+		ParticlesLanding.show()
+		ParticlesJump.emitting = true
 	
-	_strech_tick(delta)
-	_physics_apply_gravity(delta)
-	_physics_jump(delta)
-	_physics_h_movement(delta)
-	_physics_dash(delta)
-	_physics_slide_and_groundsmash(delta)
-	_physics_walljump(delta)
+	if(Physics):
+		_strech_tick(delta)
+		_physics_apply_gravity(delta)
+		_physics_jump(delta)
+		_physics_h_movement(delta)
+		_physics_dash(delta)
+		_physics_slide_and_groundsmash(delta)
+		_physics_walljump(delta)
 
 	#region Apply horizontal movement
 	# Update velocity based on Speed and Dash status
@@ -215,6 +237,7 @@ func _physics_slide_and_groundsmash(delta: float) -> void:
 		elif(Sliding != Sides.UP && !PressingGroundSmash):
 			Controller_Vibrate_Player_Movement(0.2)
 			Speed.x = GroundSmashAcc if Sliding == Sides.RIGHT else GroundSmashAcc * -1
+			if(!SlideRampTimer.is_stopped()): Speed.x *= 1.2
 			if(Sliding == Sides.NONE): Sliding = Sides.RIGHT if LastDirection > 0  else Sides.LEFT
 			Slide = true
 			strech_size(1, .6)
@@ -311,8 +334,14 @@ func get_gravity_player() -> float:
 
 #region Death
 func On_Death():
-	#FrameFreeze(0.05, 0.7)
-	get_tree().reload_current_scene() 
+	ParticlesDeath.emitting = true
+	Sprite.hide()
+	Physics = false
+	#TransitionOut.show()
+	#TransitionOut.fade_out()
+	await(get_tree().create_timer(TimeDeath).timeout)
+	if get_tree():
+		get_tree().reload_current_scene()
 #endregion
 
 #region Wall Checker

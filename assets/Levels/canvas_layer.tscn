@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfa7sxsc3ppdn"]
+
+[ext_resource type="Script" path="res://assets/Levels/UI_time_text.gd" id="1_lu8t7"]
+[ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="2_g187p"]
+
+[sub_resource type="GDScript" id="GDScript_4cp2g"]
+script/source = "extends Sprite2D
+
+@export var MoveAmount : float = 1000
+var FadeOut : bool = false
+@export var XGoTo : float = 774.382
+@export var XDif : float = 20.0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if(FadeOut): self.position.x += (XGoTo-self.position.x) * 6 * delta
+	if(self.position.x >= XGoTo-XDif && self.position.x <= XGoTo+XDif): self.hide()
+
+func fade_out():
+	FadeOut = true
+"
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 2
+
+[node name="ui_text_timeleft" type="RichTextLabel" parent="."]
+offset_left = 251.0
+offset_top = 28.0
+offset_right = 364.0
+offset_bottom = 53.0
+text = "TIME 10"
+scroll_active = false
+script = ExtResource("1_lu8t7")
+
+[node name="TransitionOut" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-827.164, 475.041)
+scale = Vector2(0.88834, 0.881557)
+texture = ExtResource("2_g187p")
+script = SubResource("GDScript_4cp2g")
+XGoTo = 813.382
+
+[node name="TransitionIn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(813.382, 470)
+scale = Vector2(0.875, -0.871)
+texture = ExtResource("2_g187p")
+script = SubResource("GDScript_4cp2g")
+XGoTo = -900.0

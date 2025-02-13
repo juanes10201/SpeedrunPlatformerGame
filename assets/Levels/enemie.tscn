@@ -50,8 +50,8 @@ animations = [{
 
 [node name="Enemie" type="CharacterBody2D" groups=["Enemie"]]
 position = Vector2(115.72, -23.74)
-collision_layer = 5
-collision_mask = 21
+collision_layer = 4
+collision_mask = 17
 script = ExtResource("1_ny8g4")
 Max_groundsmash_distance = 200.0
 
@@ -60,8 +60,8 @@ collision_layer = 2
 script = ExtResource("2_x2l0f")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.215, 1.255)
-scale = Vector2(1.225, 1.2)
+position = Vector2(0.215, 1.825)
+scale = Vector2(1.225, 1.39)
 shape = SubResource("RectangleShape2D_4y4c6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

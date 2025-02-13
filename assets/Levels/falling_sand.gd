@@ -3,12 +3,17 @@ extends RigidBody2D
 @export var can_be_pushed : bool = false
 @export var push_force : float = 80.0
 @export var wait_time : float = 0.1
+@export var is_falling : bool = false
 
 @onready var SandTimer = $SandTimer
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_deferred("freeze", true)
+	if(!is_falling):
+		set_deferred("freeze", true)
+	else:
+		set_deferred("freeze", false)
 	SandTimer.wait_time = wait_time
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

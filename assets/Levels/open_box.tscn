@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1ytdkacld0nb"]
+
+[ext_resource type="Script" path="res://assets/Levels/open_box.gd" id="1_5cidy"]
+[ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="2_lrgft"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b824a"]
+atlas = ExtResource("2_lrgft")
+region = Rect2(128.062, 0.125791, 15.8569, 15.8229)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qn4ou"]
+size = Vector2(16, 16)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_5cidy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_b824a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qn4ou")
+debug_color = Color(0.697578, 0.493659, 0, 0.42)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.115, 1.16)
+shape = SubResource("RectangleShape2D_qn4ou")
+debug_color = Color(0.826248, 0.397122, 3.85046e-07, 0.42)
+
+[node name="SandTimer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

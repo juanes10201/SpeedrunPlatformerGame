@@ -32,7 +32,14 @@ func _integrate_forces(state):
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("Player") || body.is_in_group("Enemies")):
-		if !(body.is_in_group("Player") && body.GroundSmash):
-			await get_tree().create_timer(wait_time).timeout
+		if (body.is_in_group("Player")):
+			body.OnSand = true
+			if(!body.GroundSmash):
+				await get_tree().create_timer(wait_time).timeout
 		set_deferred("freeze", false)
 		self.set_deferred("sleeping", false)
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if(body.is_in_group("Player")):
+		body.OnSand = false

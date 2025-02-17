@@ -32,9 +32,20 @@ var direction = 0
 @onready var MoveTimer = $"MoveTimer"
 @onready var Sprite = $"Sprite2D"
 
+@onready var MoveSound = Player.AudioSlimeMove
+@onready var SlideSound = Player.AudioSlimeKill
+@onready var AudioMove = Player.AudioSlimeMove
+
+
 var was_on_floor : bool = false
 var was_on_wall : bool = false
 
+#endregion
+
+#region Killed by Slide or Groundsmash Sound
+func _killed_by_player_sound() -> void:
+	#if(!SlideSound.playing):
+	Player._play_sound(SlideSound, true)
 #endregion
 
 #region Jumping
@@ -52,6 +63,7 @@ func _on_player_ground_smash_signal() -> void:
 			velocity.x = Enemy_burst_speed if Player.position.x < position.x else Enemy_burst_speed*-1
 			Move = false
 			Player.Controller_Vibrate_Player_Movement(1)
+			_killed_by_player_sound()
 #endregion
 
 #region Player Slide 
@@ -63,6 +75,7 @@ func _on_player_slide_signal() -> void:
 		velocity.x = Enemy_burst_speed if  Player.Sliding == Player.Sides.RIGHT else Enemy_burst_speed*-1
 		Player.Controller_Vibrate_Player_Movement(1)
 		Move = false
+		_killed_by_player_sound()
 #endregion
 
 func _ready():
@@ -104,6 +117,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction * SPEED# * randf_range(1, 1.2)
 			strech_size(1.7, 0.5)
 			MoveTimer.start()
+			Player._play_sound(AudioMove, false)
 		elif(!MoveTimer.is_stopped()):
 			if(direction > 0): velocity.x -= Cancel_speed*delta
 			elif(direction < 0): velocity.x += Cancel_speed*delta

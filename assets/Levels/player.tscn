@@ -1,9 +1,23 @@
-[gd_scene load_steps=21 format=3 uid="uid://chat6jxc63bfj"]
+[gd_scene load_steps=36 format=3 uid="uid://chat6jxc63bfj"]
 
 [ext_resource type="Script" path="res://assets/Levels/Player.gd" id="1_uhpgg"]
 [ext_resource type="Texture2D" uid="uid://cga4opnhsehd7" path="res://assets/Sprites/knight-Sheet.png" id="2_5o2oi"]
 [ext_resource type="Texture2D" uid="uid://cbctoqrlaxvyh" path="res://assets/Sprites/knightmove-Sheet.png" id="3_ra12e"]
 [ext_resource type="Texture2D" uid="uid://d2hw4c4hq34qe" path="res://assets/Sprites/particles-Sheet.png" id="4_8hwr6"]
+[ext_resource type="AudioStream" uid="uid://bfqk2r6n43smr" path="res://assets/Sounds/dash1.wav" id="5_pfel7"]
+[ext_resource type="AudioStream" uid="uid://by8wq0dg0h5ks" path="res://assets/Sounds/dash2.wav" id="6_k7csp"]
+[ext_resource type="AudioStream" uid="uid://bgkh2ktpjw7di" path="res://assets/Sounds/dash3.wav" id="7_a27l2"]
+[ext_resource type="AudioStream" uid="uid://bp0r66nyk5ajk" path="res://assets/Sounds/dash4.wav" id="8_ndawj"]
+[ext_resource type="AudioStream" uid="uid://kugth1ul3tvv" path="res://assets/Sounds/dash5.wav" id="9_jbnmf"]
+[ext_resource type="AudioStream" uid="uid://cnogbwvf1ey7m" path="res://assets/Sounds/dash6.wav" id="10_evg0t"]
+[ext_resource type="AudioStream" uid="uid://l5elxqguto6h" path="res://assets/Sounds/walk.wav" id="11_dfg8f"]
+[ext_resource type="AudioStream" uid="uid://ds4orkikk3nav" path="res://assets/Sounds/jump.wav" id="11_f6d5f"]
+[ext_resource type="AudioStream" uid="uid://b53kcu1sjusbk" path="res://assets/Sounds/slide.wav" id="12_mayjg"]
+[ext_resource type="AudioStream" uid="uid://dpxr2ky640n13" path="res://assets/Sounds/groundsmash.wav" id="13_6xtp5"]
+[ext_resource type="AudioStream" uid="uid://bgb5h0wh5v6uq" path="res://assets/Sounds/sand_walking.wav" id="13_ltsn2"]
+[ext_resource type="AudioStream" uid="uid://wvfyegwnf1q4" path="res://assets/Sounds/slime_slide.wav" id="14_8u734"]
+[ext_resource type="AudioStream" uid="uid://c2jyf1ulqt0qj" path="res://assets/Sounds/slime_move.wav" id="15_4ir8m"]
+[ext_resource type="AudioStream" uid="uid://baawx3chmik64" path="res://assets/Sounds/PlayerWind.wav" id="15_ehprd"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lgtto"]
 particle_flag_disable_z = true
@@ -143,6 +157,15 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4mswk"]
+streams_count = 6
+stream_0/stream = ExtResource("5_pfel7")
+stream_1/stream = ExtResource("6_k7csp")
+stream_2/stream = ExtResource("7_a27l2")
+stream_3/stream = ExtResource("8_ndawj")
+stream_4/stream = ExtResource("9_jbnmf")
+stream_5/stream = ExtResource("10_evg0t")
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(1.99994, -36)
 scale = Vector2(6.59375, 0.882813)
@@ -217,3 +240,33 @@ position = Vector2(0.151668, -7.9292)
 rotation = -1.5708
 target_position = Vector2(0, 1)
 collision_mask = 23
+
+[node name="AudioDash" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_4mswk")
+
+[node name="AudioJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_f6d5f")
+
+[node name="AudioWalk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_dfg8f")
+
+[node name="AudioWalkSand" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ltsn2")
+
+[node name="AudioSlide" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_mayjg")
+volume_db = -10.0
+
+[node name="AudioGroundsmash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_6xtp5")
+
+[node name="AudioSlimeKill" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_8u734")
+
+[node name="AudioWind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_ehprd")
+volume_db = -5.0
+
+[node name="AudioSlimeMove" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_4ir8m")
+volume_db = -10.74

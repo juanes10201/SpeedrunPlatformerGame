@@ -40,3 +40,4 @@ debug_color = Color(0.823213, 0.373721, 0.385799, 0.42)
 wait_time = 0.2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

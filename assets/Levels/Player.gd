@@ -58,6 +58,17 @@ var direction := Input.get_axis("ui_left", "ui_right")
 @onready var ParticlesDeath = $ParticlesDeath
 @onready var SlideRampTimer = $SlideRampTimer
 
+@onready var AudioDash = $AudioDash
+@onready var AudioWalk = $AudioWalk
+@onready var AudioSlide = $AudioSlide
+@onready var AudioGroundsmash = $AudioGroundsmash
+@onready var AudioWind = $AudioWind
+@onready var AudioJump = $AudioJump
+@onready var AudioWalkSand = $AudioWalkSand
+
+@onready var AudioSlimeKill = $AudioSlimeKill
+@onready var AudioSlimeMove = $AudioSlimeMove
+
 @onready var TransitionOut = $"../CanvasLayer/TransitionOut"
 @onready var TransitionIn = $"../CanvasLayer/TransitionIn"
 
@@ -68,6 +79,8 @@ var direction := Input.get_axis("ui_left", "ui_right")
 @onready var jump_velocity : float = ((2.0 * jump_height) / jump_time_to_peak) * -1.0
 @onready var jump_gravity : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
 @onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
+
+var OnSand : bool = false
 
 var was_on_floor : bool = true
 
@@ -137,6 +150,11 @@ func _physics_process(delta: float) -> void:
 	
 	was_on_floor = is_on_floor()
 	
+	#region Sand Sound
+	if(OnSand && Sliding): _play_sound(AudioWalkSand, false)
+	else: _stop_sound(AudioWalkSand)
+	#endregion
+	
 	# Move the character
 	move_and_slide()
 	#endregion
@@ -153,24 +171,44 @@ func _physics_process(delta: float) -> void:
 			# Check the wall's Sliding variable
 			if Slide:
 				collider.destroy()  # Call the wall's destroy method
-		#if (collider.is_in_group("Sand") && collider.get_collider().can_be_pushed):
-		#	collider.get_collider().apply_central_impulse(-collider.get_normal * collider.get_collider().push_force)
 	#endregion
+#endregion
+
+#region Walking sound
+func _play_sound(body, override):
+	if(override && body.playing):
+		body.stop()
+	if(!body.playing):
+		if(body == AudioSlide): body.volume_db = -10
+		body.pitch_scale = randf_range(0.8, 1)
+		body.play()
+func _stop_sound(body):
+	if(body.playing):
+		body.stop()
+func _fade_sound(body):
+	var tween_fade_sound = get_tree().create_tween()
+	tween_fade_sound.tween_property(body, "volume_db", -80, 0.5)
+	tween_fade_sound.tween_callback(body.stop)
 #endregion
 
 #region Gravity
 func _physics_apply_gravity(delta: float) -> void:
+	print(AudioGroundsmash.volume_db)
 	if (!is_on_floor()):
 		if(was_on_floor): CoyoteTimer.start()
 		if(!WallJump && DashTime.is_stopped()):
 			velocity.y += get_gravity_player() * Acc.y * delta
 			if(!WallJump):
 				if(velocity.y < 0): strech_size(0.7, 1.3)
-				elif(velocity.y >= MaxAcc.y): strech_size(0.5, 1.7)
+				elif(velocity.y >= MaxAcc.y):
+					strech_size(0.5, 1.7)
+					_play_sound(AudioWind, false)
 		#else: velocity.y += Speed.y * delta
 	if (is_on_floor()):
 		Dashed = false
+		_stop_sound(AudioWind)
 		if(GroundSmash):
+			AudioGroundsmash.play()
 			GroundSmash = false
 			Camera.Shake(10.0, 10.0)
 			enemy_jump()
@@ -189,6 +227,7 @@ func _physics_jump(delta: float) -> void:
 			Speed.x = Acc.x*2 if LastDirection >= 0 else Acc.x*-2 
 		velocity.y = jump_velocity
 		Controller_Vibrate_Player_Movement(0.2)
+		_play_sound(AudioJump, false)
 		#region WallJump case
 		if(WallJump || !PreWallJumpTimer.is_stopped()):
 			Speed.x = WallJumpVelocity*-1 if WallJumpPreviousSide == Sides.RIGHT else WallJumpVelocity
@@ -214,6 +253,7 @@ func _physics_h_movement(delta: float) -> void:
 	
 	# Get the input direction and handle the movement/deceleration.
 	if (!WallJump && direction && Speed.x < MaxAcc.x && Speed.x > MaxAcc.x*-1):
+		#_play_sound(AudioWalk, false)
 		if((direction > 0 && Speed.x < 0) || (direction < 0 && Speed.x > 0)): Speed.x += Acc.x * direction
 		#Move faster if coming from Walljump
 		if((WallJumpPreviousSide == Sides.LEFT && direction < 0) || (WallJumpPreviousSide == Sides.RIGHT && direction > 0) && !PreWallJumpTimer.is_stopped()): Speed.x += Acc.x * direction *2
@@ -222,6 +262,7 @@ func _physics_h_movement(delta: float) -> void:
 	else:
 		if(Speed.x > 0): Speed.x -= Acc.x
 		if(Speed.x < 0): Speed.x += Acc.x
+		#_stop_sound(AudioWalk)
 #endregion
 
 #region Slide and Ground Smash
@@ -235,6 +276,7 @@ func _physics_slide_and_groundsmash(delta: float) -> void:
 			set_collision_mask_value(4, false)
 		#Slide
 		elif(Sliding != Sides.UP && !PressingGroundSmash):
+			_play_sound(AudioSlide, false)
 			Controller_Vibrate_Player_Movement(0.2)
 			Speed.x = GroundSmashAcc if Sliding == Sides.RIGHT else GroundSmashAcc * -1
 			if(!SlideRampTimer.is_stopped()): Speed.x *= 1.2
@@ -246,6 +288,7 @@ func _physics_slide_and_groundsmash(delta: float) -> void:
 		#strech_size(1, 1)
 		#Speed.x -= Acc.x * LastDirection
 		#if((Speed.x <= 250 && Speed.x > 0) || (Speed.x >= -250 && Speed.x < 0)):
+		_fade_sound(AudioSlide)
 		Sliding = Sides.NONE
 		Slide = false
 		if(Sliding != Sides.UP): Speed.x = 0
@@ -263,6 +306,8 @@ func _physics_dash(delta: float) -> void:
 	#Dash
 	if(Input.is_action_just_pressed("player_dash") && !Dashed):
 		Dashed = true
+		AudioDash.pitch_scale = randf_range(0.8, 1.2)
+		AudioDash.play()
 		strech_size(2, 0.5)
 		DashTime.start()
 		DashMove = DashAcc * LastDirection

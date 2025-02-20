@@ -264,6 +264,24 @@ libraries = {
 "": SubResource("AnimationLibrary_klj0i")
 }
 
+[node name="KillBox2" parent="." instance=ExtResource("11_fkqj8")]
+position = Vector2(392, 136)
+
+[node name="KillBox3" parent="." instance=ExtResource("11_fkqj8")]
+position = Vector2(407, 136)
+
+[node name="KillBox4" parent="." instance=ExtResource("11_fkqj8")]
+position = Vector2(422, 136)
+
+[node name="KillBox5" parent="." instance=ExtResource("11_fkqj8")]
+position = Vector2(392, 151)
+
+[node name="KillBox6" parent="." instance=ExtResource("11_fkqj8")]
+position = Vector2(407, 151)
+
+[node name="KillBox7" parent="." instance=ExtResource("11_fkqj8")]
+position = Vector2(422, 151)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 32)
 scale = Vector2(1.00384, 1)
@@ -308,26 +326,8 @@ position = Vector2(448, 89)
 position = Vector2(102, -104)
 scale = Vector2(3.31, 5.385)
 
-[node name="KillBox2" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(392, 136)
-
 [node name="falling_sand" parent="." instance=ExtResource("13_e8m4r")]
 position = Vector2(392, 25)
-
-[node name="KillBox3" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(407, 136)
-
-[node name="KillBox4" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(422, 136)
-
-[node name="KillBox5" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(392, 151)
-
-[node name="KillBox6" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(407, 151)
-
-[node name="KillBox7" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(422, 151)
 
 [node name="falling_sand2" parent="." instance=ExtResource("13_e8m4r")]
 position = Vector2(408, 25)

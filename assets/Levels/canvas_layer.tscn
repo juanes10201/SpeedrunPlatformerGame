@@ -1,7 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfa7sxsc3ppdn"]
+[gd_scene load_steps=14 format=3 uid="uid://cfa7sxsc3ppdn"]
 
+[ext_resource type="Texture2D" uid="uid://d1y21fe855ulp" path="res://assets/Sprites/ray-time.png" id="1_g8qx6"]
 [ext_resource type="Script" path="res://assets/Levels/UI_time_text.gd" id="1_lu8t7"]
+[ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="2_7riok"]
+[ext_resource type="FontFile" uid="uid://brwm536qpt5yh" path="res://assets/Fonts/Big Old Boldy.otf" id="2_71664"]
 [ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="2_g187p"]
+[ext_resource type="FontFile" uid="uid://jnxa1dic02wa" path="res://assets/Fonts/Jack Frost.otf" id="3_e5ml3"]
+[ext_resource type="Script" path="res://assets/Levels/ray_time_sprite.gd" id="4_b68jw"]
+[ext_resource type="FontFile" uid="uid://l7fcqdsrhopc" path="res://assets/Fonts/Mister Fisher.otf" id="5_65j5g"]
+[ext_resource type="Script" path="res://assets/Levels/time_progress_bar.gd" id="9_5m8db"]
+[ext_resource type="Texture2D" uid="uid://cabdni6k13vwg" path="res://assets/Sprites/codebar.png" id="10_xfbqc"]
 
 [sub_resource type="GDScript" id="GDScript_4cp2g"]
 script/source = "extends Sprite2D
@@ -25,17 +33,14 @@ func fade_out():
 	FadeOut = true
 "
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5q73"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kkqk"]
+bg_color = Color(0.619608, 0.478431, 1, 1)
+
 [node name="CanvasLayer" type="CanvasLayer"]
 layer = 2
-
-[node name="ui_text_timeleft" type="RichTextLabel" parent="."]
-offset_left = 251.0
-offset_top = 28.0
-offset_right = 364.0
-offset_bottom = 53.0
-text = "TIME 10"
-scroll_active = false
-script = ExtResource("1_lu8t7")
 
 [node name="TransitionOut" type="Sprite2D" parent="."]
 visible = false
@@ -52,3 +57,99 @@ scale = Vector2(0.875, -0.871)
 texture = ExtResource("2_g187p")
 script = SubResource("GDScript_4cp2g")
 XGoTo = -900.0
+
+[node name="ui_text_seg" type="RichTextLabel" parent="."]
+offset_left = 516.0
+offset_top = -1.0
+offset_right = 596.0
+offset_bottom = 44.0
+theme_override_colors/default_color = Color(0.372549, 0.372549, 0.705882, 1)
+theme_override_colors/font_shadow_color = Color(0.105882, 0.0431373, 0.298039, 0.670588)
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_fonts/normal_font = ExtResource("2_7riok")
+theme_override_font_sizes/normal_font_size = 34
+text = "seg"
+
+[node name="Ray-time" type="Sprite2D" parent="."]
+position = Vector2(562, 99)
+scale = Vector2(2.0625, 2.0625)
+texture = ExtResource("1_g8qx6")
+script = ExtResource("4_b68jw")
+
+[node name="ui_text_timeleft" type="RichTextLabel" parent="."]
+anchors_preset = -1
+anchor_left = 0.447
+anchor_top = 0.005
+anchor_right = 0.447
+anchor_bottom = 0.005
+offset_left = 2.05597
+offset_top = 2.76
+offset_right = 199.056
+offset_bottom = 136.76
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.619608, 0.478431, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.105882, 0.0431373, 0.298039, 0.776471)
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/shadow_offset_x = 6
+theme_override_fonts/normal_font = ExtResource("2_71664")
+theme_override_font_sizes/normal_font_size = 81
+text = "0"
+scroll_active = false
+script = ExtResource("1_lu8t7")
+
+[node name="ui_text_timeleft2" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.447
+anchor_top = 0.005
+anchor_right = 0.447
+anchor_bottom = 0.005
+offset_left = 2.05597
+offset_top = 2.76
+offset_right = 115.056
+offset_bottom = 97.76
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.835294, 0.290196, 0.223529, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 3
+theme_override_fonts/normal_font = ExtResource("3_e5ml3")
+theme_override_font_sizes/normal_font_size = 81
+text = "0"
+scroll_active = false
+script = ExtResource("1_lu8t7")
+
+[node name="ui_text_seg2" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 577.5
+offset_top = 41.5
+offset_right = 636.5
+offset_bottom = 86.5
+theme_override_colors/default_color = Color(0.835294, 0.290196, 0.223529, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_offset_x = 2
+theme_override_fonts/normal_font = ExtResource("5_65j5g")
+theme_override_font_sizes/normal_font_size = 36
+text = "seg"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 1.0
+offset_top = 645.0
+offset_right = 1151.0
+offset_bottom = 648.0
+theme_override_styles/background = SubResource("StyleBoxFlat_i5q73")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4kkqk")
+show_percentage = false
+script = ExtResource("9_5m8db")
+
+[node name="Codebar" type="Sprite2D" parent="."]
+position = Vector2(169, 625)
+texture = ExtResource("10_xfbqc")

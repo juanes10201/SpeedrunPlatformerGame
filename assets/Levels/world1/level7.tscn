@@ -309,7 +309,6 @@ wait_time = 0.05
 [node name="WorldEnvironment" parent="." instance=ExtResource("9_wvot3")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("10_f67ca")]
-visible = false
 
 [node name="Enemie2" parent="." instance=ExtResource("7_141wr")]
 position = Vector2(-224, 170)

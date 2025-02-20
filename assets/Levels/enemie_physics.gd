@@ -35,6 +35,7 @@ var direction = 0
 @onready var MoveSound = Player.AudioSlimeMove
 @onready var SlideSound = Player.AudioSlimeKill
 @onready var AudioMove = Player.AudioSlimeMove
+@onready var AudioGroundsmash = Player.AudioSlimeGroundsmash
 
 
 var was_on_floor : bool = false
@@ -46,6 +47,8 @@ var was_on_wall : bool = false
 func _killed_by_player_sound() -> void:
 	#if(!SlideSound.playing):
 	Player._play_sound(SlideSound, true)
+func _groundsmash_player_sound() -> void:
+	Player._play_sound(AudioGroundsmash, true)
 #endregion
 
 #region Jumping
@@ -63,7 +66,7 @@ func _on_player_ground_smash_signal() -> void:
 			velocity.x = Enemy_burst_speed if Player.position.x < position.x else Enemy_burst_speed*-1
 			Move = false
 			Player.Controller_Vibrate_Player_Movement(1)
-			_killed_by_player_sound()
+			_groundsmash_player_sound()
 #endregion
 
 #region Player Slide 
@@ -85,51 +88,52 @@ func _ready():
 
 #region Physics
 func _physics_process(delta: float) -> void:
-	if( SPEED != 0 && !is_on_wall()) :
-		Sprite.play("Walking")
-	else: Sprite.play("Idle")
-	
-	if(is_on_wall() && !was_on_wall): direction *= -1
-	
-	#if(is_on_ceiling()): queue_free()
-	
-	if(velocity.y < 0): strech_size(0.7, 1.3)
-	if(velocity.y >= MAX_FALL_SPEED): strech_size(0.5, 1.7)
-	
-	if(is_on_floor() && was_on_floor == false): strech_size(1.7, 0.5)
-	
-	_strech_tick(delta)
-	
-	
-	#region Trigger Player GroundSmash
-	if(Player && !Player.EnemyGroundSlamTimer.is_stopped()): _on_player_ground_smash_signal()
-	#endregion
-	#region Gravity
-	if (!is_on_floor() &&  velocity.y < MAX_FALL_SPEED):
-		velocity += get_gravity() * delta
-	#endregion
-	if(direction): Sprite.flip_h = false if direction >= 0 else true
-	
-	#region Horizontal Movement
-	#Enemy Movement
-	if(Move):
-		if (direction && SPEED < MAX_SPEED && SPEED > MAX_SPEED*-1 && MoveTimer.is_stopped()):
-			velocity.x = direction * SPEED# * randf_range(1, 1.2)
-			strech_size(1.7, 0.5)
-			MoveTimer.start()
-			Player._play_sound(AudioMove, false)
-		elif(!MoveTimer.is_stopped()):
-			if(direction > 0): velocity.x -= Cancel_speed*delta
-			elif(direction < 0): velocity.x += Cancel_speed*delta
-		#if( (direction == 1 && position.x-OriginalX >= distance) || (direction == -1 && position.x-OriginalX < distance*-1) ):
-		#	direction *= -1
-	else:
-		if(velocity.x > 0): velocity.x -= Cancel_speed*delta
-		elif(velocity.x < 0): velocity.x += Cancel_speed*delta
-	#endregion
-	was_on_floor = is_on_floor()
-	was_on_wall = is_on_wall()
-	move_and_slide()
+	if(Player.EnemiesPhysics):
+		if( SPEED != 0 && !is_on_wall()) :
+			Sprite.play("Walking")
+		else: Sprite.play("Idle")
+		
+		if(is_on_wall() && !was_on_wall): direction *= -1
+		
+		#if(is_on_ceiling()): queue_free()
+		
+		if(velocity.y < 0): strech_size(0.7, 1.3)
+		if(velocity.y >= MAX_FALL_SPEED): strech_size(0.5, 1.7)
+		
+		if(is_on_floor() && was_on_floor == false): strech_size(1.7, 0.5)
+		
+		_strech_tick(delta)
+		
+		
+		#region Trigger Player GroundSmash
+		if(Player && !Player.EnemyGroundSlamTimer.is_stopped()): _on_player_ground_smash_signal()
+		#endregion
+		#region Gravity
+		if (!is_on_floor() &&  velocity.y < MAX_FALL_SPEED):
+			velocity += get_gravity() * delta
+		#endregion
+		if(direction): Sprite.flip_h = false if direction >= 0 else true
+		
+		#region Horizontal Movement
+		#Enemy Movement
+		if(Move):
+			if (direction && SPEED < MAX_SPEED && SPEED > MAX_SPEED*-1 && MoveTimer.is_stopped()):
+				velocity.x = direction * SPEED# * randf_range(1, 1.2)
+				strech_size(1.7, 0.5)
+				MoveTimer.start()
+				Player._play_sound(AudioMove, false)
+			elif(!MoveTimer.is_stopped()):
+				if(direction > 0): velocity.x -= Cancel_speed*delta
+				elif(direction < 0): velocity.x += Cancel_speed*delta
+			#if( (direction == 1 && position.x-OriginalX >= distance) || (direction == -1 && position.x-OriginalX < distance*-1) ):
+			#	direction *= -1
+		else:
+			if(velocity.x > 0): velocity.x -= Cancel_speed*delta
+			elif(velocity.x < 0): velocity.x += Cancel_speed*delta
+		#endregion
+		was_on_floor = is_on_floor()
+		was_on_wall = is_on_wall()
+		move_and_slide()
 #endregion
 
 #region Scaling

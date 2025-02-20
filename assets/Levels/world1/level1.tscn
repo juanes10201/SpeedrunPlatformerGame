@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://1q1rsb3yrxn0"]
+[gd_scene load_steps=17 format=4 uid="uid://1q1rsb3yrxn0"]
 
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_bfg0y"]
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_flqp5"]
@@ -156,6 +156,22 @@ physics_layer_1/collision_layer = 4
 physics_layer_1/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_c40bb")
 
+[sub_resource type="GDScript" id="GDScript_kdu5x"]
+script/source = "extends CanvasLayer
+@export var ShowFadeIn : bool = true
+@export var ShowFadeOut : bool = false
+@export var ShowTimer : bool = true
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, -1)
 
@@ -182,7 +198,7 @@ tile_set = SubResource("TileSet_i8b3o")
 script = ExtResource("2_ubfur")
 
 [node name="Player" parent="." instance=ExtResource("2_kmi6g")]
-position = Vector2(-315, -25)
+position = Vector2(-318, -43)
 collision_mask = 5
 jump_height = 45.0
 
@@ -190,13 +206,15 @@ jump_height = 45.0
 position = Vector2(39.0976, -149.426)
 offset = Vector2(-28.055, 23.85)
 zoom = Vector2(2.49, 2.49)
-limit_left = -367
-limit_top = -243
-limit_right = 145
+limit_left = -383
+limit_top = -249
+limit_right = 153
 limit_bottom = 1000
+limit_smoothed = true
 script = ExtResource("4_io765")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_c7hpj")]
+script = SubResource("GDScript_kdu5x")
 
 [node name="Time_Left" type="Timer" parent="."]
 wait_time = 8.0

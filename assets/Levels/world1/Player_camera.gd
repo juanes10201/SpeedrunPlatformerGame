@@ -6,14 +6,23 @@ var ShakeStrenght : float = 0.0
 
 var rng = RandomNumberGenerator.new()
 
+enum Cinematic_types{
+	FOLLOW_PLAYER,
+	CREDITS
+}
+#@export var Cinematic_type : Cinematic_types = Cinematic_types.FOLLOW_PLAYER
+#@onready var credits_ystart = position.y
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
+	#if(Cinematic_type == Cinematic_types.CREDITS): self.position.y -= 250
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	TickShake(delta)
+	#if(Cinematic_type == Cinematic_types.CREDITS): self.position.y = lerpf(self.position.y, credits_ystart, 2*delta)
 
 #region Camera Shake
 func Shake(_shakerangestrenght, _shakefade) -> void:

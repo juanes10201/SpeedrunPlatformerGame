@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://bn1csj47sa2bw"]
+
+[ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="1_ttbm3"]
+[ext_resource type="Texture2D" uid="uid://be1h2ja4pyni1" path="res://assets/Sprites/screenshot.png" id="1_xemf1"]
+[ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="2_13jpg"]
+[ext_resource type="Texture2D" uid="uid://dt72x52yyj1wa" path="res://assets/Sprites/PauseMenuButton.png" id="4_x1e5y"]
+[ext_resource type="Texture2D" uid="uid://qot7qahghomi" path="res://assets/Sprites/PauseMenuConfigButton.png" id="5_71xyd"]
+[ext_resource type="Texture2D" uid="uid://0s62gu0b77n1" path="res://assets/Sprites/PauseMenuGoBackButton.png" id="6_q3d8x"]
+
+[sub_resource type="GDScript" id="GDScript_4cp2g"]
+script/source = "extends Sprite2D
+
+@export var MoveAmount : float = 1000
+var FadeOut : bool = false
+@export var XGoTo : float = 774.382
+@export var XDif : float = 20.0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if(FadeOut): self.position.x += (XGoTo-self.position.x) * 6 * delta
+	if(self.position.x >= XGoTo-XDif && self.position.x <= XGoTo+XDif): self.hide()
+
+func fade_out():
+	FadeOut = true
+"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wschs"]
+states/Start/position = Vector2(282, 100)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(589, 323)
+scale = Vector2(0.635, 0.635)
+texture = ExtResource("1_xemf1")
+
+[node name="Transition" type="Sprite2D" parent="."]
+position = Vector2(1156.93, 374.562)
+rotation = -0.10821
+scale = Vector2(-0.888, 0.882)
+texture = ExtResource("1_ttbm3")
+script = SubResource("GDScript_4cp2g")
+XGoTo = 813.382
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
+
+[node name="AnimationTree" type="AnimationTree" parent="Transition"]
+tree_root = SubResource("AnimationNodeStateMachine_wschs")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 702.932
+offset_top = -6.43848
+offset_right = 1152.93
+offset_bottom = 86.5615
+theme_override_fonts/normal_font = ExtResource("2_13jpg")
+theme_override_font_sizes/normal_font_size = 87
+text = "Speed"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 541.932
+offset_top = 570.562
+offset_right = 991.932
+offset_bottom = 663.562
+theme_override_fonts/normal_font = ExtResource("2_13jpg")
+theme_override_font_sizes/normal_font_size = 87
+text = "Tickers"
+
+[node name="PauseMenuButton" type="Sprite2D" parent="."]
+position = Vector2(698.432, 205.873)
+scale = Vector2(0.683206, 0.683206)
+texture = ExtResource("4_x1e5y")
+
+[node name="PauseMenuConfigButton" type="Sprite2D" parent="."]
+position = Vector2(613.932, 377.562)
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("5_71xyd")
+
+[node name="PauseMenuGoBackButton" type="Sprite2D" parent="."]
+position = Vector2(545.932, 520.562)
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("6_q3d8x")

@@ -42,6 +42,7 @@ var HaveKey : bool = false
 var Physics : bool = true
 var EnemiesPhysics : bool = true
 var Paused : bool = false
+@onready var ReturnToGameTime = $ReturnToGameTime
 
 var LastDirection : float = 0
 var direction := Input.get_axis("ui_left", "ui_right")
@@ -56,6 +57,7 @@ var direction := Input.get_axis("ui_left", "ui_right")
 @onready var PreWallJumpTimer = $PreWallJumpTimer
 @onready var Camera = $Camera2D
 @onready var ParticlesLanding = $ParticlesLanding
+@onready var ParticlesSlide = $ParticlesSlide
 @onready var ParticlesJump = $ParticlesJump
 @onready var ParticlesDeath = $ParticlesDeath
 @onready var SlidingOnRamp : bool = false
@@ -83,12 +85,13 @@ var direction := Input.get_axis("ui_left", "ui_right")
 @onready var jump_gravity : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
 @onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
 
+var Pause_fadeout : bool = false
+
 var OnSand : bool = false
 
 var was_on_floor : bool = true
 
 var Dead : bool = false
-var pause_menu_instance = null
 
 #endregion
 
@@ -100,9 +103,9 @@ func _input(event):
 #endregion
 
 func _ready() -> void:
-	TransitionOut.hide()
-	TransitionIn.show()
-	TransitionIn.fade_out()
+	if(TransitionOut): TransitionOut.hide()
+	if(TransitionIn): TransitionIn.show()
+	if(TransitionIn): TransitionIn.fade_out()
 
 
 #region Physics proccess
@@ -114,20 +117,32 @@ func _physics_process(delta: float) -> void:
 	
 	if(Input.is_action_just_pressed("menu_pause")): _pause_game()
 	
-	if(direction):
-		Sprite.play("Walking")
-	else: Sprite.play("Idle")
+	if(!Slide):
+		if(direction):
+			Sprite.play("Walking")
+		else: Sprite.play("Idle")
 	
-	if(is_on_floor() && was_on_floor == false):
-		strech_size(1.7, 0.5)
+	#region Particles
+	#region Jump initial particles
+	if(!is_on_floor() && was_on_floor):
+		ParticlesLanding.position = self.position
+		ParticlesLanding.position.y -= 5 
+		ParticlesLanding.set_as_top_level(true)
 		ParticlesLanding.play("default")
 		ParticlesLanding.show()
+	if(!ParticlesLanding.is_playing()):
+		ParticlesLanding.hide()
+	#endregion
+	
+	if(is_on_floor() && !was_on_floor):
+		strech_size(1.7, 0.5)
 		ParticlesJump.emitting = false
 		ParticlesLanding.hide()
 	if(!is_on_floor()):
-		ParticlesLanding.hide()
-		ParticlesLanding.show()
 		ParticlesJump.emitting = true
+	#endregion
+	
+	_pause_menu_end_tick()
 	
 	if(Physics):
 		_strech_tick(delta)
@@ -202,8 +217,21 @@ func _fade_sound(body):
 #endregion
 
 #region Pause and menu
+func _pause_menu_end_tick() -> void:
+	if(Pause_fadeout && ReturnToGameTime.is_stopped()):
+		if($"control_pause_menu"):
+			$"control_pause_menu".queue_free()
+			
+		#Get timer and pause
+		$"../Time_Left".paused = false	
+		#Stop player movement
+		Physics = true
+		#Stop enemie movement
+		EnemiesPhysics = true
+		Pause_fadeout = false
+		Paused = false
+
 func _pause_game() -> void:
-	Paused = !Paused
 	if(!Paused):
 		_spawn_pause_menu()
 		#Get timer and pause
@@ -212,16 +240,14 @@ func _pause_game() -> void:
 		Physics = false
 		#Stop enemie movement
 		EnemiesPhysics = false
+		Paused = !Paused
 	else:
 		_unpause_game()
+
 func _unpause_game() -> void:
-	if(pause_menu_instance != null): pause_menu_instance.queue_free()
-	#Get timer and pause
-	$"../Time_Left".paused = false	
-	#Stop player movement
-	Physics = true
-	#Stop enemie movement
-	EnemiesPhysics = true
+	$"control_pause_menu/pause_menu/Transition/AnimationPlayer".play("fade_movement")
+	ReturnToGameTime.start()
+	Pause_fadeout = true
 	
 func _spawn_pause_menu() -> void:
 	var pause_menu = preload("res://assets/Levels/pause_menu.tscn")
@@ -232,7 +258,6 @@ func _spawn_pause_menu() -> void:
 
 # region Gravity
 func _physics_apply_gravity(delta: float) -> void:
-	print(AudioGroundsmash.volume_db)
 	if (!is_on_floor()):
 		if(was_on_floor): CoyoteTimer.start()
 		if(!WallJump && DashTime.is_stopped()):
@@ -321,7 +346,9 @@ func _physics_slide_and_groundsmash(delta: float) -> void:
 			#if(SlidingOnRamp): Speed.x *= 1.2
 			if(Sliding == Sides.NONE): Sliding = Sides.RIGHT if LastDirection > 0  else Sides.LEFT
 			Slide = true
-			strech_size(1, .6)
+			ParticlesSlide.emitting = true
+			#strech_size(1, .6)
+			Sprite.play("Slide")
 			set_collision_mask_value(3, false)
 	elif(Sliding != Sides.NONE):
 		#strech_size(1, 1)
@@ -329,6 +356,7 @@ func _physics_slide_and_groundsmash(delta: float) -> void:
 		#if((Speed.x <= 250 && Speed.x > 0) || (Speed.x >= -250 && Speed.x < 0)):
 		_fade_sound(AudioSlide)
 		Sliding = Sides.NONE
+		ParticlesSlide.emitting = false
 		Slide = false
 		if(Sliding != Sides.UP): Speed.x = 0
 	#if(Sliding == Sides.UP):

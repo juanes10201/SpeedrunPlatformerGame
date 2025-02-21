@@ -335,12 +335,12 @@ EnemyDirection = 2
 
 [node name="Enemie11" parent="." instance=ExtResource("7_141wr")]
 position = Vector2(-56, 57)
-Max_groundsmash_distance = 80.0
+Max_groundsmash_distance = 100.0
 EnemyDirection = 2
 
 [node name="Enemie13" parent="." instance=ExtResource("7_141wr")]
 position = Vector2(-39, 58)
-Max_groundsmash_distance = 80.0
+Max_groundsmash_distance = 100.0
 EnemyDirection = 2
 
 [node name="falling_sand4" parent="." instance=ExtResource("8_crrle")]

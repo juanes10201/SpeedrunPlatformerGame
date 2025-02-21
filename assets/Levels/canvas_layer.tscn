@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cfa7sxsc3ppdn"]
+[gd_scene load_steps=19 format=3 uid="uid://cfa7sxsc3ppdn"]
 
 [ext_resource type="Texture2D" uid="uid://d1y21fe855ulp" path="res://assets/Sprites/ray-time.png" id="1_g8qx6"]
 [ext_resource type="Script" path="res://assets/Levels/UI_time_text.gd" id="1_lu8t7"]
@@ -10,6 +10,11 @@
 [ext_resource type="FontFile" uid="uid://l7fcqdsrhopc" path="res://assets/Fonts/Mister Fisher.otf" id="5_65j5g"]
 [ext_resource type="Script" path="res://assets/Levels/time_progress_bar.gd" id="9_5m8db"]
 [ext_resource type="Texture2D" uid="uid://cabdni6k13vwg" path="res://assets/Sprites/codebar.png" id="10_xfbqc"]
+[ext_resource type="FontFile" uid="uid://bsnqdysy8vsfe" path="res://assets/Fonts/Go Faster.ttf" id="11_2dvs7"]
+[ext_resource type="Script" path="res://assets/Levels/return_to_game_ui_text.gd" id="12_qiyrq"]
+[ext_resource type="AudioStream" uid="uid://ofd0qv2qphyv" path="res://assets/Sounds/timer/snd_counter_3.wav" id="13_yutq5"]
+[ext_resource type="AudioStream" uid="uid://g5g5yfumdyfq" path="res://assets/Sounds/timer/snd_counter_2.wav" id="14_dpkxu"]
+[ext_resource type="AudioStream" uid="uid://683s6yn144mx" path="res://assets/Sounds/timer/snd_counter_1.wav" id="15_vajhb"]
 
 [sub_resource type="GDScript" id="GDScript_4cp2g"]
 script/source = "extends Sprite2D
@@ -45,7 +50,7 @@ layer = 2
 [node name="TransitionOut" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-827.164, 475.041)
-scale = Vector2(0.88834, 0.881557)
+scale = Vector2(0.888, -0.882)
 texture = ExtResource("2_g187p")
 script = SubResource("GDScript_4cp2g")
 XGoTo = 813.382
@@ -59,9 +64,9 @@ script = SubResource("GDScript_4cp2g")
 XGoTo = -900.0
 
 [node name="ui_text_seg" type="RichTextLabel" parent="."]
-offset_left = 516.0
+offset_left = 532.0
 offset_top = -1.0
-offset_right = 596.0
+offset_right = 612.0
 offset_bottom = 44.0
 theme_override_colors/default_color = Color(0.372549, 0.372549, 0.705882, 1)
 theme_override_colors/font_shadow_color = Color(0.105882, 0.0431373, 0.298039, 0.670588)
@@ -72,7 +77,7 @@ theme_override_font_sizes/normal_font_size = 34
 text = "seg"
 
 [node name="Ray-time" type="Sprite2D" parent="."]
-position = Vector2(562, 99)
+position = Vector2(578, 99)
 scale = Vector2(2.0625, 2.0625)
 texture = ExtResource("1_g8qx6")
 script = ExtResource("4_b68jw")
@@ -83,9 +88,9 @@ anchor_left = 0.447
 anchor_top = 0.005
 anchor_right = 0.447
 anchor_bottom = 0.005
-offset_left = 2.05597
+offset_left = 18.056
 offset_top = 2.76
-offset_right = 199.056
+offset_right = 215.056
 offset_bottom = 136.76
 grow_horizontal = 2
 grow_vertical = 2
@@ -153,3 +158,37 @@ script = ExtResource("9_5m8db")
 [node name="Codebar" type="Sprite2D" parent="."]
 position = Vector2(169, 625)
 texture = ExtResource("10_xfbqc")
+
+[node name="ReturnToGameUIText" type="RichTextLabel" parent="."]
+layout_direction = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 264.0
+offset_bottom = -264.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.619608, 0.478431, 1, 1)
+theme_override_colors/font_outline_color = Color(0.235294, 0.172549, 0.54902, 1)
+theme_override_colors/font_shadow_color = Color(0.105882, 0.0431373, 0.298039, 0.494118)
+theme_override_constants/outline_size = 14
+theme_override_constants/shadow_offset_y = 9
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/normal_font = ExtResource("11_2dvs7")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "3"
+visible_characters_behavior = 2
+text_direction = 2
+script = ExtResource("12_qiyrq")
+
+[node name="counter1" type="AudioStreamPlayer2D" parent="ReturnToGameUIText"]
+stream = ExtResource("15_vajhb")
+
+[node name="counter2" type="AudioStreamPlayer2D" parent="ReturnToGameUIText"]
+stream = ExtResource("14_dpkxu")
+volume_db = 6.0
+
+[node name="counter3" type="AudioStreamPlayer2D" parent="ReturnToGameUIText"]
+stream = ExtResource("13_yutq5")

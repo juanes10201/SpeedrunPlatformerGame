@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cba0dn710x26"]
 
-[ext_resource type="Script" path="res://assets/Levels/world1/flag.gd" id="1_gl5pl"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/flag.gd" id="1_gl5pl"]
 [ext_resource type="Texture2D" uid="uid://dj6fpitwbxqbk" path="res://assets/brackeys_platformer_assets/sprites/coin.png" id="2_5d660"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbb13"]

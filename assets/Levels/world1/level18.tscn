@@ -1,19 +1,19 @@
 [gd_scene load_steps=29 format=4 uid="uid://bc2g1v4d5dgw0"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_olfhe"]
-[ext_resource type="Script" path="res://assets/Levels/world1/grid_bg.gd" id="2_mxux3"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_mxux3"]
 [ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="3_uw7qr"]
-[ext_resource type="Script" path="res://assets/Levels/world1/slide_ramp_area_2d.gd" id="4_3yjx7"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/slide_ramp_area_2d.gd" id="4_3yjx7"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="4_sxrva"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="5_ku8xo"]
-[ext_resource type="Script" path="res://assets/Levels/world1/Player_camera.gd" id="6_8xvbj"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="6_8xvbj"]
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="7_rdsiu"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="8_5ld8n"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="9_m1ssj"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="10_uodmx"]
 [ext_resource type="PackedScene" uid="uid://djqwajvc8m3td" path="res://assets/Levels/enemie.tscn" id="11_8tdyo"]
 [ext_resource type="Texture2D" uid="uid://fxx14m4na3pt" path="res://assets/Sprites/kenney_inputs.png" id="12_ec2nf"]
-[ext_resource type="Script" path="res://assets/Levels/world1/animated_button.gd" id="13_eswto"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/animated_button.gd" id="13_eswto"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001

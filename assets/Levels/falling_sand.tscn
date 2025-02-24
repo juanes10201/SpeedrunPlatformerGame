@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cykeyxkv73jjt"]
 
-[ext_resource type="Script" path="res://assets/Levels/falling_sand.gd" id="1_8diny"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/falling_sand.gd" id="1_8diny"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="2_703h2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b824a"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=21 format=4 uid="uid://bitlmcq7vy28o"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_y0bho"]
-[ext_resource type="Script" path="res://assets/Levels/world1/grid_bg.gd" id="2_wmjuc"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_wmjuc"]
 [ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="3_la5tr"]
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="4_fwr1o"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="5_eysea"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="6_7lavh"]
-[ext_resource type="Script" path="res://assets/Levels/world1/Player_camera.gd" id="7_hr4x7"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="7_hr4x7"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="8_td8xb"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="9_4bcer"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="11_3cmu8"]
@@ -310,7 +310,7 @@ is_falling = true
 MAX_SPEED = 120.0
 
 [node name="KillBox" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-198, -28)
+position = Vector2(-199, -28)
 
 [node name="KillBox2" parent="." instance=ExtResource("12_rk70u")]
 position = Vector2(-183, -28)
@@ -319,10 +319,10 @@ position = Vector2(-183, -28)
 position = Vector2(-233, 83)
 
 [node name="KillBox4" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-218, 83)
+position = Vector2(-217, 83)
 
 [node name="KillBox5" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-198, 194)
+position = Vector2(-199, 194)
 
 [node name="KillBox6" parent="." instance=ExtResource("12_rk70u")]
 position = Vector2(-183, 194)
@@ -331,10 +331,10 @@ position = Vector2(-183, 194)
 position = Vector2(-234, 275)
 
 [node name="KillBox8" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-219, 275)
+position = Vector2(-218, 275)
 
 [node name="KillBox31" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-118, 416)
+position = Vector2(-119, 416)
 
 [node name="KillBox32" parent="." instance=ExtResource("12_rk70u")]
 position = Vector2(-103, 416)
@@ -343,22 +343,13 @@ position = Vector2(-103, 416)
 position = Vector2(-153, 537)
 
 [node name="KillBox34" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-138, 537)
-
-[node name="KillBox37" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-118, 416)
-
-[node name="KillBox38" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-103, 416)
+position = Vector2(-137, 537)
 
 [node name="KillBox39" parent="." instance=ExtResource("12_rk70u")]
 position = Vector2(-153, 537)
 
-[node name="KillBox40" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-138, 537)
-
 [node name="KillBox41" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-561, 24)
+position = Vector2(-580, 21)
 scale = Vector2(41.6249, -0.656824)
 Visible = false
 
@@ -368,7 +359,7 @@ scale = Vector2(41.6249, -0.656824)
 Visible = false
 
 [node name="KillBox9" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-197, 354)
+position = Vector2(-198, 354)
 
 [node name="KillBox10" parent="." instance=ExtResource("12_rk70u")]
 position = Vector2(-182, 354)
@@ -377,10 +368,10 @@ position = Vector2(-182, 354)
 position = Vector2(-233, 435)
 
 [node name="KillBox12" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-218, 435)
+position = Vector2(-217, 435)
 
 [node name="KillBox17" parent="." instance=ExtResource("12_rk70u")]
-position = Vector2(-196, 514)
+position = Vector2(-197, 514)
 
 [node name="KillBox18" parent="." instance=ExtResource("12_rk70u")]
 position = Vector2(-181, 514)

@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_g1dnh"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_ujwwy"]
-[ext_resource type="Script" path="res://assets/Levels/world1/grid_bg.gd" id="2_6d868"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_6d868"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="2_hl74j"]
-[ext_resource type="Script" path="res://assets/Levels/world1/Player_camera.gd" id="3_ofk6x"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="3_ofk6x"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="5_wclob"]
 [ext_resource type="PackedScene" uid="uid://bygxx5ppwysc3" path="res://assets/Levels/enemie_special.tscn" id="6_h5cpi"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="7_kb3ie"]

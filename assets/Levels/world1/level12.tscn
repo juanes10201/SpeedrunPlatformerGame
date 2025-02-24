@@ -1,11 +1,11 @@
 [gd_scene load_steps=30 format=4 uid="uid://cafn7pokf25fd"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_enkfg"]
-[ext_resource type="Script" path="res://assets/Levels/world1/grid_bg.gd" id="2_37lu5"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_37lu5"]
 [ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="3_nkqi2"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="4_ftuf5"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="5_35hiv"]
-[ext_resource type="Script" path="res://assets/Levels/world1/Player_camera.gd" id="6_mk621"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="6_mk621"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="7_i80le"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="9_2w5ig"]
 [ext_resource type="PackedScene" uid="uid://bygxx5ppwysc3" path="res://assets/Levels/enemie_special.tscn" id="10_wfyd5"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="11_guge3"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="12_mru5o"]
 [ext_resource type="Texture2D" uid="uid://fxx14m4na3pt" path="res://assets/Sprites/kenney_inputs.png" id="13_hnsh7"]
-[ext_resource type="Script" path="res://assets/Levels/world1/animated_button.gd" id="14_ngfm0"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/animated_button.gd" id="14_ngfm0"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001

@@ -1,11 +1,11 @@
 [gd_scene load_steps=24 format=4 uid="uid://bqov503amlnpt"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_7g5bh"]
-[ext_resource type="Script" path="res://assets/Levels/world1/grid_bg.gd" id="2_nqhee"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_nqhee"]
 [ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="3_0gam5"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="4_o3mbp"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="5_m4ox4"]
-[ext_resource type="Script" path="res://assets/Levels/world1/Player_camera.gd" id="6_khy7k"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="6_khy7k"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="7_88bor"]
 [ext_resource type="PackedScene" uid="uid://djqwajvc8m3td" path="res://assets/Levels/enemie.tscn" id="8_kwpr6"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="10_dey5y"]
@@ -264,24 +264,6 @@ libraries = {
 "": SubResource("AnimationLibrary_klj0i")
 }
 
-[node name="KillBox2" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(392, 136)
-
-[node name="KillBox3" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(407, 136)
-
-[node name="KillBox4" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(422, 136)
-
-[node name="KillBox5" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(392, 151)
-
-[node name="KillBox6" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(407, 151)
-
-[node name="KillBox7" parent="." instance=ExtResource("11_fkqj8")]
-position = Vector2(422, 151)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 32)
 scale = Vector2(1.00384, 1)
@@ -350,3 +332,7 @@ EnemyDirection = 1
 [node name="Enemie6" parent="." instance=ExtResource("8_kwpr6")]
 position = Vector2(-30, -58)
 EnemyDirection = 1
+
+[node name="KillBox2" parent="." instance=ExtResource("11_fkqj8")]
+position = Vector2(408, 144)
+scale = Vector2(3, 2)

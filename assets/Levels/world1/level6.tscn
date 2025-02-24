@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_3aepa"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_f0qhg"]
-[ext_resource type="Script" path="res://assets/Levels/world1/grid_bg.gd" id="2_33leu"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_33leu"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="2_km85v"]
 [ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="3_e5yy1"]
-[ext_resource type="Script" path="res://assets/Levels/world1/Player_camera.gd" id="3_my8pa"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="3_my8pa"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="5_7x4em"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="5_fb7hv"]
 [ext_resource type="PackedScene" uid="uid://djqwajvc8m3td" path="res://assets/Levels/enemie.tscn" id="6_07box"]

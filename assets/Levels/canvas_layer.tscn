@@ -1,17 +1,17 @@
 [gd_scene load_steps=19 format=3 uid="uid://cfa7sxsc3ppdn"]
 
 [ext_resource type="Texture2D" uid="uid://d1y21fe855ulp" path="res://assets/Sprites/ray-time.png" id="1_g8qx6"]
-[ext_resource type="Script" path="res://assets/Levels/UI_time_text.gd" id="1_lu8t7"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/UI_time_text.gd" id="1_lu8t7"]
 [ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="2_7riok"]
 [ext_resource type="FontFile" uid="uid://brwm536qpt5yh" path="res://assets/Fonts/Big Old Boldy.otf" id="2_71664"]
 [ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="2_g187p"]
 [ext_resource type="FontFile" uid="uid://jnxa1dic02wa" path="res://assets/Fonts/Jack Frost.otf" id="3_e5ml3"]
-[ext_resource type="Script" path="res://assets/Levels/ray_time_sprite.gd" id="4_b68jw"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/ray_time_sprite.gd" id="4_b68jw"]
 [ext_resource type="FontFile" uid="uid://l7fcqdsrhopc" path="res://assets/Fonts/Mister Fisher.otf" id="5_65j5g"]
-[ext_resource type="Script" path="res://assets/Levels/time_progress_bar.gd" id="9_5m8db"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/time_progress_bar.gd" id="9_5m8db"]
 [ext_resource type="Texture2D" uid="uid://cabdni6k13vwg" path="res://assets/Sprites/codebar.png" id="10_xfbqc"]
 [ext_resource type="FontFile" uid="uid://bsnqdysy8vsfe" path="res://assets/Fonts/Go Faster.ttf" id="11_2dvs7"]
-[ext_resource type="Script" path="res://assets/Levels/return_to_game_ui_text.gd" id="12_qiyrq"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/return_to_game_ui_text.gd" id="12_qiyrq"]
 [ext_resource type="AudioStream" uid="uid://ofd0qv2qphyv" path="res://assets/Sounds/timer/snd_counter_3.wav" id="13_yutq5"]
 [ext_resource type="AudioStream" uid="uid://g5g5yfumdyfq" path="res://assets/Sounds/timer/snd_counter_2.wav" id="14_dpkxu"]
 [ext_resource type="AudioStream" uid="uid://683s6yn144mx" path="res://assets/Sounds/timer/snd_counter_1.wav" id="15_vajhb"]
@@ -90,8 +90,8 @@ anchor_right = 0.447
 anchor_bottom = 0.005
 offset_left = 18.056
 offset_top = 2.76
-offset_right = 215.056
-offset_bottom = 136.76
+offset_right = 535.056
+offset_bottom = 240.76
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -102,6 +102,7 @@ theme_override_constants/shadow_offset_y = 6
 theme_override_constants/shadow_offset_x = 6
 theme_override_fonts/normal_font = ExtResource("2_71664")
 theme_override_font_sizes/normal_font_size = 81
+bbcode_enabled = true
 text = "0"
 scroll_active = false
 script = ExtResource("1_lu8t7")
@@ -127,6 +128,7 @@ theme_override_constants/shadow_offset_y = 4
 theme_override_constants/shadow_offset_x = 3
 theme_override_fonts/normal_font = ExtResource("3_e5ml3")
 theme_override_font_sizes/normal_font_size = 81
+bbcode_enabled = true
 text = "0"
 scroll_active = false
 script = ExtResource("1_lu8t7")
@@ -165,6 +167,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 264.0
+offset_right = 141.0
 offset_bottom = -264.0
 grow_horizontal = 2
 grow_vertical = 2

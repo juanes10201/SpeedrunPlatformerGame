@@ -1,11 +1,11 @@
 [gd_scene load_steps=22 format=4 uid="uid://bmesdmhqtf5d8"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_iscaq"]
-[ext_resource type="Script" path="res://assets/Levels/world1/grid_bg.gd" id="2_2wk1r"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_2wk1r"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="3_nmmnm"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="4_i76ih"]
 [ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="4_xqa3i"]
-[ext_resource type="Script" path="res://assets/Levels/world1/Player_camera.gd" id="5_gf3s4"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="5_gf3s4"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="6_rj8dq"]
 [ext_resource type="PackedScene" uid="uid://djqwajvc8m3td" path="res://assets/Levels/enemie.tscn" id="7_141wr"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="8_crrle"]

@@ -93,6 +93,9 @@ var was_on_floor : bool = true
 
 var Dead : bool = false
 
+
+var EnabledKillBox = Global.KillBoxTypes.Red
+
 #endregion
 
 #region Debug
@@ -124,15 +127,15 @@ func _physics_process(delta: float) -> void:
 	
 	#region Particles
 	#region Jump initial particles
-	if(!is_on_floor() && was_on_floor):
+	if(!is_on_floor() && was_on_floor && !ParticlesLanding.is_playing()):
 		ParticlesLanding.position = self.position
-		ParticlesLanding.position.y -= 5 
+		ParticlesLanding.position.y -= 5
 		ParticlesLanding.set_as_top_level(true)
 		ParticlesLanding.play("default")
 		ParticlesLanding.show()
 	if(!ParticlesLanding.is_playing()):
 		ParticlesLanding.hide()
-	#endregion
+	#endregion  
 	
 	if(is_on_floor() && !was_on_floor):
 		strech_size(1.7, 0.5)
@@ -201,12 +204,13 @@ func _physics_process(delta: float) -> void:
 
 #region Walking sound
 func _play_sound(body, override):
-	if(override && body.playing):
-		body.stop()
-	if(!body.playing):
-		if(body == AudioSlide): body.volume_db = -10
-		body.pitch_scale = randf_range(0.8, 1)
-		body.play()
+	if(body):
+		if(override && body.playing):
+			body.stop()
+		if(!body.playing):
+			if(body == AudioSlide): body.volume_db = -10
+			body.pitch_scale = randf_range(0.8, 1)
+			body.play()
 func _stop_sound(body):
 	if(body.playing):
 		body.stop()
@@ -266,12 +270,17 @@ func _physics_apply_gravity(delta: float) -> void:
 				if(velocity.y < 0): strech_size(0.7, 1.3)
 				elif(velocity.y >= MaxAcc.y):
 					strech_size(0.5, 1.7)
-					_play_sound(AudioWind, false)
+					#_play_sound(AudioWind, false)
 		#else: velocity.y += Speed.y * delta
 	if (is_on_floor()):
 		Dashed = false
 		_stop_sound(AudioWind)
 		if(GroundSmash):
+			ParticlesLanding.position = self.position
+			ParticlesLanding.position.y -= 10
+			ParticlesLanding.set_as_top_level(true)
+			ParticlesLanding.play("groundsmash")
+			ParticlesLanding.show()
 			AudioGroundsmash.play()
 			GroundSmash = false
 			Camera.Shake(10.0, 10.0)

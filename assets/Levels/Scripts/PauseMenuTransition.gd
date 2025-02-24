@@ -8,6 +8,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(Anim.is_playing())
 	if(!Anim.is_playing()):
 		Anim.play("main_movement")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://mwwwugaaoyiw"]
 
-[ext_resource type="Script" path="res://assets/Levels/world1/key.gd" id="1_ruxkn"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/key.gd" id="1_ruxkn"]
 [ext_resource type="Texture2D" uid="uid://frgvamgpi0lw" path="res://assets/Sprites/key-Sheet.png" id="2_kxj2g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_px0dq"]

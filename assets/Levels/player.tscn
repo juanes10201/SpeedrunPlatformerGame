@@ -1,6 +1,6 @@
-[gd_scene load_steps=42 format=4 uid="uid://chat6jxc63bfj"]
+[gd_scene load_steps=48 format=4 uid="uid://chat6jxc63bfj"]
 
-[ext_resource type="Script" path="res://assets/Levels/Player.gd" id="1_uhpgg"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/Player.gd" id="1_uhpgg"]
 [ext_resource type="Texture2D" uid="uid://cga4opnhsehd7" path="res://assets/Sprites/knight-Sheet.png" id="2_5o2oi"]
 [ext_resource type="Texture2D" uid="uid://ddts812oj81xu" path="res://assets/Sprites/knight-Sheet-slide.png" id="3_7hiw4"]
 [ext_resource type="Texture2D" uid="uid://cbctoqrlaxvyh" path="res://assets/Sprites/knightmove-Sheet.png" id="3_ra12e"]
@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://wvfyegwnf1q4" path="res://assets/Sounds/slime_slide.wav" id="14_8u734"]
 [ext_resource type="AudioStream" uid="uid://c2jyf1ulqt0qj" path="res://assets/Sounds/slime_move.wav" id="15_4ir8m"]
 [ext_resource type="AudioStream" uid="uid://baawx3chmik64" path="res://assets/Sounds/PlayerWind.wav" id="15_ehprd"]
+[ext_resource type="Texture2D" uid="uid://d233ru5plyksw" path="res://assets/Sprites/particlesfall-Sheet.png" id="19_8erp2"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lgtto"]
 particle_flag_disable_z = true
@@ -185,6 +186,26 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("4_8hwr6")
 region = Rect2(48, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8tnj"]
+atlas = ExtResource("19_8erp2")
+region = Rect2(0, 0, 38, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5cot"]
+atlas = ExtResource("19_8erp2")
+region = Rect2(38, 0, 38, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0kia"]
+atlas = ExtResource("19_8erp2")
+region = Rect2(76, 0, 38, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snb1l"]
+atlas = ExtResource("19_8erp2")
+region = Rect2(114, 0, 38, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k35r5"]
+atlas = ExtResource("19_8erp2")
+region = Rect2(152, 0, 38, 18)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dbk5q"]
 animations = [{
 "frames": [{
@@ -202,6 +223,26 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8tnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5cot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0kia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snb1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k35r5")
+}],
+"loop": false,
+"name": &"groundsmash",
 "speed": 10.0
 }]
 
@@ -319,3 +360,4 @@ stream = SubResource("AudioStreamWAV_ppcfx")
 visible = false
 position = Vector2(9.09607e-06, -7.9292)
 sprite_frames = SubResource("SpriteFrames_dbk5q")
+animation = &"groundsmash"

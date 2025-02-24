@@ -1,12 +1,8 @@
 extends Button
 
-enum BUTTON_ACTIONS{
-	none,
-	resume_game,
-	restart_level,
-	config_menu
-}
-@export var BUTTON_ACTION = BUTTON_ACTIONS.none
+@export var BUTTON_ACTION = Global.BUTTON_ACTIONS.none
+@export var ADITIONAL_ARGUMENT : String = ""
+
 @export var HoverDif = 30
 @export var PressedDif = -20
 
@@ -46,12 +42,16 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	if(BUTTON_ACTION == BUTTON_ACTIONS.resume_game && Player):
+	if(BUTTON_ACTION == Global.BUTTON_ACTIONS.resume_game && Player):
 		Player._pause_game()
-	elif(BUTTON_ACTION == BUTTON_ACTIONS.restart_level):
+	elif(BUTTON_ACTION == Global.BUTTON_ACTIONS.restart_level):
 		Player.TransitionOut.show()
 		Player.TransitionOut.fade_out()
 		await(get_tree().create_timer(Player.TimeDeath).timeout)
 		if get_tree(): get_tree().reload_current_scene()
-	elif(BUTTON_ACTION == BUTTON_ACTIONS.config_menu):
+	elif(BUTTON_ACTION == Global.BUTTON_ACTIONS.config_menu):
 		print("TO-DO: Lazy developer didn't implement config menu...")
+	elif(BUTTON_ACTION == Global.BUTTON_ACTIONS.move_to_scene):
+		var _scene_string : String = "res://assets/Levels/world1/" + ADITIONAL_ARGUMENT + ".tscn"
+		get_tree().change_scene_to_file(_scene_string)
+		

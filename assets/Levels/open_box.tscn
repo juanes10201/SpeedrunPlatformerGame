@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1ytdkacld0nb"]
 
-[ext_resource type="Script" path="res://assets/Levels/open_box.gd" id="1_5cidy"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/open_box.gd" id="1_5cidy"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="2_lrgft"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b824a"]

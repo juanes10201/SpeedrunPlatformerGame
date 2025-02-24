@@ -1,22 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmnyy0uuvc0jk"]
+[gd_scene load_steps=6 format=3 uid="uid://dmnyy0uuvc0jk"]
 
-[ext_resource type="Script" path="res://assets/Levels/kill_box.gd" id="1_rifmj"]
-[ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_vqgcg"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_upvf1"]
-atlas = ExtResource("1_vqgcg")
-region = Rect2(112.001, 0.000768542, 15.9986, 15.9985)
+[ext_resource type="Script" path="res://assets/Levels/Scripts/kill_box.gd" id="1_rifmj"]
+[ext_resource type="Texture2D" uid="uid://ccvnmxojr4xgl" path="res://assets/Sprites/killbox.png" id="3_x4xn5"]
+[ext_resource type="Texture2D" uid="uid://cudcpyp3nri4k" path="res://assets/Sprites/killbox-disabled.png" id="4_djsvw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qvlp"]
 size = Vector2(14.5, 14.5)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6adf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_x4xn5")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_djsvw")
+}],
+"loop": true,
+"name": &"disabled",
+"speed": 5.0
+}]
+
 [node name="KillBox" type="Area2D"]
+texture_repeat = 2
 script = ExtResource("1_rifmj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("AtlasTexture_upvf1")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.105, 1.095)
 shape = SubResource("RectangleShape2D_3qvlp")
+debug_color = Color(0, 0.6, 0.701961, 0.235294)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_repeat = 2
+sprite_frames = SubResource("SpriteFrames_y6adf")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

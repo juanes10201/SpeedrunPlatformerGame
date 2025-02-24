@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bygxx5ppwysc3"]
 
-[ext_resource type="Script" path="res://assets/Levels/enemie_physics.gd" id="1_qsr6m"]
-[ext_resource type="Script" path="res://assets/Levels/enemie_area2d.gd" id="2_tlbfg"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/enemie_physics.gd" id="1_qsr6m"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/enemie_area2d.gd" id="2_tlbfg"]
 [ext_resource type="Texture2D" uid="uid://bo55t35tra7dk" path="res://assets/Sprites/slimespecial-Sheet.png" id="3_iv0n4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6kq6s"]

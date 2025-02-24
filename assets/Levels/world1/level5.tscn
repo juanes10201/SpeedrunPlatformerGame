@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_lv37x"]
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_whp7s"]
-[ext_resource type="Script" path="res://assets/Levels/world1/grid_bg.gd" id="2_6ojf8"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_6ojf8"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="2_igmiy"]
-[ext_resource type="Script" path="res://assets/Levels/world1/Player_camera.gd" id="3_63h1i"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="3_63h1i"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="5_yf14x"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="6_m4vu1"]
 [ext_resource type="PackedScene" uid="uid://djqwajvc8m3td" path="res://assets/Levels/enemie.tscn" id="6_qp0hn"]
@@ -183,11 +183,11 @@ wait_time = 9.0
 one_shot = true
 autostart = true
 
+[node name="WorldEnvironment" parent="." instance=ExtResource("6_m4vu1")]
+
 [node name="Flag" parent="." instance=ExtResource("5_yf14x")]
 position = Vector2(-273, 168)
 level_to_change = "level6"
-
-[node name="WorldEnvironment" parent="Flag" instance=ExtResource("6_m4vu1")]
 
 [node name="Enemie3" parent="." instance=ExtResource("6_qp0hn")]
 position = Vector2(-160, 199)
@@ -218,9 +218,9 @@ Visible = false
 [node name="CanvasLayer" parent="." instance=ExtResource("11_868bk")]
 
 [node name="KillBox2" parent="." instance=ExtResource("11_q5bbx")]
-position = Vector2(-164, 120)
-scale = Vector2(25.97, 1)
+position = Vector2(-168, 119)
+scale = Vector2(24.815, 1)
 
 [node name="KillBox3" parent="." instance=ExtResource("11_q5bbx")]
-position = Vector2(-351, 172)
+position = Vector2(-358.525, 174.21)
 scale = Vector2(1, 7.88)

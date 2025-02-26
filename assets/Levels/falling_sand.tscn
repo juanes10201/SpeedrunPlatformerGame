@@ -3,15 +3,15 @@
 [ext_resource type="Script" path="res://assets/Levels/Scripts/falling_sand.gd" id="1_8diny"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="2_703h2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bujpq"]
+size = Vector2(8, 5.7561)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_b824a"]
 atlas = ExtResource("2_703h2")
 region = Rect2(96, 0, 16.0757, 16.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qn4ou"]
 size = Vector2(16, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bujpq"]
-size = Vector2(8, 5.7561)
 
 [node name="falling_sand" type="RigidBody2D" groups=["sand"]]
 position = Vector2(-63, -142)
@@ -22,6 +22,13 @@ lock_rotation = true
 freeze = true
 freeze_mode = 1
 script = ExtResource("1_8diny")
+
+[node name="Area2DCrush" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DCrush"]
+position = Vector2(-0.17, 1.73)
+scale = Vector2(1.355, 1.875)
+shape = SubResource("RectangleShape2D_bujpq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_b824a")
@@ -42,13 +49,6 @@ debug_color = Color(0.823213, 0.373721, 0.385799, 0.42)
 [node name="SandTimer" type="Timer" parent="."]
 wait_time = 0.2
 
-[node name="Area2DCrush" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DCrush"]
-position = Vector2(-0.17, 1.73)
-scale = Vector2(1.355, 1.875)
-shape = SubResource("RectangleShape2D_bujpq")
-
+[connection signal="body_entered" from="Area2DCrush" to="." method="_on_area_2d_crush_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Area2DCrush" to="." method="_on_area_2d_crush_body_entered"]

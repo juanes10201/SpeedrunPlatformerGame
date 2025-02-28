@@ -293,6 +293,7 @@ EnemyDirection = 2
 [node name="Flag" parent="." instance=ExtResource("6_35nne")]
 position = Vector2(-30, 219)
 level_to_change = "level5"
+current_level = 4.0
 
 [node name="Enemie9" parent="." instance=ExtResource("5_h6i6c")]
 position = Vector2(-60, 105.26)

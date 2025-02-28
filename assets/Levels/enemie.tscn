@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://djqwajvc8m3td"]
+[gd_scene load_steps=16 format=3 uid="uid://djqwajvc8m3td"]
 
 [ext_resource type="Script" path="res://assets/Levels/Scripts/enemie_physics.gd" id="1_ny8g4"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/enemie_area2d.gd" id="2_x2l0f"]
 [ext_resource type="Texture2D" uid="uid://dfxj00uyktfa7" path="res://assets/Sprites/slime-Sheet.png" id="3_nfed4"]
+[ext_resource type="Texture2D" uid="uid://b145nvnbk486f" path="res://assets/Sprites/slime-particles.png" id="4_caayp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y4c6"]
 size = Vector2(8, 9.615)
@@ -48,6 +49,43 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_6jgwk"]
+offsets = PackedFloat32Array(0.693989, 0.827869)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kl3rb"]
+gradient = SubResource("Gradient_6jgwk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ticmx"]
+particle_flag_disable_z = true
+angle_min = -93.8
+angle_max = 110.5
+spread = 180.0
+initial_velocity_min = 48.1
+initial_velocity_max = 115.17
+angular_velocity_min = -119.38
+angular_velocity_max = 73.67
+gravity = Vector3(0, 98, 0)
+color_ramp = SubResource("GradientTexture1D_kl3rb")
+hue_variation_min = -0.02
+hue_variation_max = 0.08
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5mpd1"]
+particle_flag_disable_z = true
+angle_min = -198.0
+angle_max = -127.5
+inherit_velocity_ratio = 0.137
+spread = 53.531
+initial_velocity_min = -44.0
+gravity = Vector3(0, 98, 0)
+hue_variation_min = -0.02
+hue_variation_max = 0.03
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_boibh"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+turbulence_enabled = true
+
 [node name="Enemie" type="CharacterBody2D" groups=["Enemie"]]
 position = Vector2(115.72, -23.74)
 collision_layer = 4
@@ -77,3 +115,24 @@ position = Vector2(0.279999, 6.74)
 sprite_frames = SubResource("SpriteFrames_2fkqx")
 animation = &"Idle"
 offset = Vector2(-0.28, -9.195)
+
+[node name="HitParticles" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_ticmx")
+texture = ExtResource("4_caayp")
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.34
+randomness = 0.33
+
+[node name="HitFlyParticles" type="GPUParticles2D" parent="."]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_5mpd1")
+texture = ExtResource("4_caayp")
+
+[node name="Moveparticles" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_boibh")
+texture = ExtResource("4_caayp")

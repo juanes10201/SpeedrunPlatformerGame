@@ -278,6 +278,7 @@ autostart = true
 [node name="Flag" parent="." instance=ExtResource("6_rj8dq")]
 position = Vector2(-29, 267)
 level_to_change = "level8"
+current_level = 7.0
 
 [node name="Enemie" parent="." instance=ExtResource("7_141wr")]
 position = Vector2(-247, 170)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://c8r0ebu1qkgf2"]
+[gd_scene load_steps=21 format=4 uid="uid://c8r0ebu1qkgf2"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_gwkwp"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_0fqbn"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="6_hgv1h"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="7_fh841"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="8_8sq5l"]
-[ext_resource type="PackedScene" uid="uid://bygxx5ppwysc3" path="res://assets/Levels/enemie_special.tscn" id="9_xakjx"]
 [ext_resource type="PackedScene" uid="uid://bxtkh08fsp6ue" path="res://assets/Levels/kill_box_blue.tscn" id="10_r0gsi"]
 [ext_resource type="PackedScene" uid="uid://mwwwugaaoyiw" path="res://assets/Levels/key.tscn" id="11_funbt"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="12_w687e"]
@@ -157,7 +156,8 @@ autostart = true
 
 [node name="Flag" parent="." instance=ExtResource("6_hgv1h")]
 position = Vector2(-199, -326)
-level_to_change = "end"
+level_to_change = "level27"
+current_level = 26.0
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("7_fh841")]
 
@@ -165,10 +165,6 @@ level_to_change = "end"
 position = Vector2(-54, 424)
 scale = Vector2(99.32, 1)
 Visible = false
-
-[node name="Enemie5" parent="." instance=ExtResource("9_xakjx")]
-position = Vector2(-152, -163)
-EnemyDirection = 2
 
 [node name="KillBox5" parent="." instance=ExtResource("8_8sq5l")]
 position = Vector2(-21, -177)

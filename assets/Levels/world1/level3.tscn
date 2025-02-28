@@ -203,6 +203,7 @@ autostart = true
 [node name="Flag" parent="." instance=ExtResource("6_4a4ii")]
 position = Vector2(305, -122)
 level_to_change = "level4"
+current_level = 3.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-4, 32)

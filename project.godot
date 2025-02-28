@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalSignal="*res://assets/global_signal/global_signal.gd"
+SaveGame="*res://assets/Levels/Scripts/save_game.gd"
 
 [display]
 

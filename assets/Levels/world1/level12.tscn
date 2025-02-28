@@ -346,6 +346,7 @@ autostart = true
 [node name="Flag" parent="." instance=ExtResource("7_i80le")]
 position = Vector2(-291, 2495)
 level_to_change = "level13"
+current_level = 12.0
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("10_xlv6t")]
 
@@ -428,12 +429,12 @@ position = Vector2(-330, 2453)
 position = Vector2(-315, 2453)
 
 [node name="KillBox7" parent="." instance=ExtResource("12_mru5o")]
-position = Vector2(-663, 2008)
+position = Vector2(-677, 2008)
 scale = Vector2(41.6249, -0.656824)
 Visible = false
 
 [node name="KillBox8" parent="." instance=ExtResource("12_mru5o")]
-position = Vector2(48, 2006)
+position = Vector2(65, 2006)
 scale = Vector2(41.6249, -0.656824)
 Visible = false
 

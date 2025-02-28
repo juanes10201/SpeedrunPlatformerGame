@@ -10,7 +10,8 @@ enum BUTTON_ACTIONS{
 	resume_game,
 	restart_level,
 	config_menu,
-	move_to_scene
+	move_to_scene,
+	move_to_level_starting_with
 }
 enum OBJECT_ACTIONS{
 	none,

@@ -37,7 +37,11 @@ var direction = 0
 @onready var AudioMove = Player.AudioSlimeMove
 @onready var AudioGroundsmash = Player.AudioSlimeGroundsmash
 
+@onready var ShootBulletTimer = $ShootBulletTimer
 
+@onready var BulletObject = preload("res://assets/Levels/bullets.tscn")# if enemy_type == 2 else null
+
+@export var TimeToShoot : float = 1.0
 var was_on_floor : bool = false
 var was_on_wall : bool = false
 
@@ -62,6 +66,7 @@ func _on_player_ground_smash_signal() -> void:
 	if(Can_BeGroundSmash && is_on_floor() && global_position.distance_to(Player.position) <= Max_groundsmash_distance):
 		_jump(JUMP_VELOCITY if enemy_type == 0 else SPECIAL_ENEMY_JUMP_VELOCITY)
 		if(enemy_type == 0):
+			$HitParticles.emitting = true
 			#Player.FrameFreeze(0.05, 0.4)
 			velocity.x = Enemy_burst_speed if Player.position.x < position.x else Enemy_burst_speed*-1
 			Move = false
@@ -72,6 +77,7 @@ func _on_player_ground_smash_signal() -> void:
 #region Player Slide 
 func _on_player_slide_signal() -> void:
 	if(is_on_floor() && enemy_type == 0):
+		$HitParticles.emitting = true
 		#Player.FrameFreeze(0.05, 0.4)
 		_jump(-400)
 		Player.Camera.Shake(1.0, 5.0)
@@ -85,9 +91,29 @@ func _ready():
 	if(EnemyDirection == Directions.RIGHT): direction = 1
 	elif(EnemyDirection == Directions.LEFT): direction = -1
 	else: direction = 0
+	if(ShootBulletTimer): ShootBulletTimer.wait_time = TimeToShoot
 
 #region Physics
 func _physics_process(delta: float) -> void:
+	if(is_on_floor() && velocity.x > 0):
+		$Moveparticles.emitting = true
+	else:
+		$Moveparticles.emitting = false
+	if(!is_on_floor() && enemy_type == 0):
+		$HitFlyParticles.emitting = true
+	else:
+		$HitFlyParticles.emitting = false
+	
+	#region Shoot
+	if(enemy_type == 2):
+		if(ShootBulletTimer.is_stopped() && BulletObject):
+			ShootBulletTimer.start()
+			var BulletInstance = BulletObject.instantiate()
+			BulletInstance.position = self.position
+			BulletInstance.top_level = true
+			add_child(BulletInstance)
+	#endregion
+	
 	if(Player.EnemiesPhysics):
 		if( SPEED != 0 && !is_on_wall()) :
 			Sprite.play("Walking")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cba0dn710x26"]
+[gd_scene load_steps=7 format=3 uid="uid://cba0dn710x26"]
 
 [ext_resource type="Script" path="res://assets/Levels/Scripts/flag.gd" id="1_gl5pl"]
 [ext_resource type="Texture2D" uid="uid://dj6fpitwbxqbk" path="res://assets/brackeys_platformer_assets/sprites/coin.png" id="2_5d660"]
+[ext_resource type="Texture2D" uid="uid://cc6sao5m1uf1p" path="res://assets/Sprites/light3.png" id="3_klgg3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbb13"]
 size = Vector2(20, 28)
@@ -36,3 +37,9 @@ shape = SubResource("RectangleShape2D_sbb13")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_r0xch")
 script = SubResource("GDScript_qmtqk")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(1.00384, 1)
+color = Color(0.809302, 0.528971, 0.270935, 1)
+energy = 0.3
+texture = ExtResource("3_klgg3")

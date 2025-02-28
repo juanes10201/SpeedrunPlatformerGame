@@ -13,3 +13,9 @@ adjustment_saturation = 1.15
 
 [node name="WorldEnvironment" type="WorldEnvironment"]
 environment = SubResource("Environment_dklr8")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.332903, 0.463423, 0.655491, 1)
+energy = 0.2
+shadow_enabled = true
+shadow_item_cull_mask = 1023

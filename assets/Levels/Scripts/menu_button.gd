@@ -10,12 +10,28 @@ extends Button
 @onready var ControlNode = $"../../pause_menu"
 @onready var SelectedSprite = $SelectedSprite
 @onready var Player = $"../../../../Player"
+@export var IsPixelartButton : bool = false
+
+@onready var tex_selected : Texture = preload("res://assets/Sprites/levelnote-selected.png") if IsPixelartButton else null
+@onready var tex_unselected : Texture = self.icon
+
+@onready var hover_size : Vector2 = Vector2(original_size.x+HoverDif, original_size.y+HoverDif)
+@onready var press_size : Vector2 = Vector2(original_size.x+PressedDif, original_size.y+PressedDif)
+
+var touching_mouse : bool = false
 
 var PressedAnim : bool = false
 
+var tween_hover = null
+var tween_press = null
+var tween_normal = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	_set_text_size(original_size.y)
+	if(BUTTON_ACTION == Global.BUTTON_ACTIONS.move_to_level_starting_with):
+		ADITIONAL_ARGUMENT += str(text)
+		BUTTON_ACTION = Global.BUTTON_ACTIONS.move_to_scene
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -23,25 +39,66 @@ func _process(delta: float) -> void:
 	if(!PressedAnim):
 		var Mouse_pos = get_global_mouse_position()
 		if(Mouse_pos.x >= self.position.x && Mouse_pos.x <= self.position.x + self.size.x && Mouse_pos.y >= self.position.y && Mouse_pos.y <= self.position.y + self.size.y+20):
+			if(IsPixelartButton && !touching_mouse):
+				$"../Iconuser"._update_best_scores(float(text))
+			touching_mouse = true
+			if(IsPixelartButton): icon = tex_selected
 			#region On pressed
-			if(Input.is_action_pressed("ui_click")): 
-				self.size.x = lerpf(self.size.x, original_size.x+PressedDif, 5*delta)
-				self.size.y = lerpf(self.size.y, original_size.y+PressedDif, 5*delta)
-			#endregion
+			if(tween_press == null && Input.is_action_pressed("ui_click") && self.size.x < original_size.x+PressedDif):
+				tween_press = get_tree().create_tween()
+				tween_press.tween_property(self, "size", press_size, .2)
+				tween_press.play()
+				if(tween_hover):
+					tween_hover.kill()
+					tween_hover = null
+				if(tween_normal):
+					tween_normal.kill()
+					tween_normal = null
+				#_set_size_button(lerpf(self.size.x, original_size.x+PressedDif, 5*delta),  lerpf(self.size.y, original_size.y+PressedDif, 5*delta))
 			#region Hover
-			else:
-				self.size.x = lerpf(self.size.x, original_size.x+HoverDif, 5*delta)
-				self.size.y = lerpf(self.size.y, original_size.y+HoverDif, 5*delta)
+			elif(!tween_press):
+				if(tween_hover == null):
+					tween_hover = get_tree().create_tween()
+					tween_hover.tween_property(self, "size", hover_size, 1)\
+					.set_ease(Tween.EASE_OUT)\
+					.set_trans(Tween.TRANS_ELASTIC)
+					tween_hover.play()
+				if(tween_press):
+					tween_press.kill()
+					tween_press = null
+				if(tween_normal):
+					tween_normal.kill()
+					tween_normal = null
+				#_set_size_button(lerpf(self.size.x, original_size.x+HoverDif, 5*delta), lerpf(self.size.y, original_size.y+HoverDif, 5*delta))
 			#endregion
 		#region Return to normal state
 		elif(self.size != original_size):
-			self.size.x = lerpf(self.size.x, original_size.x, 10*delta)
-			self.size.y = lerpf(self.size.y, original_size.y, 10*delta)
+			if(touching_mouse):
+				if(IsPixelartButton): icon = tex_unselected
+			touching_mouse = false
+			if(tween_normal == null):
+				tween_normal = get_tree().create_tween()
+				tween_normal.tween_property(self, "size", original_size, 1)\
+				.set_ease(Tween.EASE_OUT)\
+				.set_trans(Tween.TRANS_ELASTIC)
+			tween_normal.play()
+			if(tween_hover):
+				tween_hover.kill()
+				tween_hover = null
+			if(tween_press):
+				tween_press.kill()
+				tween_press = null
+			#_set_size_button(lerpf(self.size.x, original_size.x, 10*delta), lerpf(self.size.y, original_size.y, 10*delta))
 		#endregion
 	#endregion
+	_set_text_size(self.size.x)
 
+func _set_text_size(X : float):
+	pass
+	#add_theme_font_size_override('font_size', X-45)
 
 func _on_pressed() -> void:
+	print("Button pressed!")
 	if(BUTTON_ACTION == Global.BUTTON_ACTIONS.resume_game && Player):
 		Player._pause_game()
 	elif(BUTTON_ACTION == Global.BUTTON_ACTIONS.restart_level):

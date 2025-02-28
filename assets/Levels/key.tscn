@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://mwwwugaaoyiw"]
+[gd_scene load_steps=19 format=3 uid="uid://mwwwugaaoyiw"]
 
 [ext_resource type="Script" path="res://assets/Levels/Scripts/key.gd" id="1_ruxkn"]
 [ext_resource type="Texture2D" uid="uid://frgvamgpi0lw" path="res://assets/Sprites/key-Sheet.png" id="2_kxj2g"]
+[ext_resource type="Texture2D" uid="uid://cc6sao5m1uf1p" path="res://assets/Sprites/light3.png" id="3_bajnl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_px0dq"]
 atlas = ExtResource("2_kxj2g")
@@ -116,5 +117,11 @@ frame_progress = 0.86177
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2pfje")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(1.00384, 1)
+color = Color(0.589171, 0.316433, 0.0521555, 1)
+energy = 0.6
+texture = ExtResource("3_bajnl")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

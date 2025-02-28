@@ -1,5 +1,7 @@
 extends CharacterBody2D
-	
+
+var SaveData = preload("res://assets/Levels/Scripts/save_game.gd")
+
 func enemy_jump():
 	pass
 
@@ -59,7 +61,8 @@ var direction := Input.get_axis("ui_left", "ui_right")
 @onready var ParticlesLanding = $ParticlesLanding
 @onready var ParticlesSlide = $ParticlesSlide
 @onready var ParticlesJump = $ParticlesJump
-@onready var ParticlesDeath = $ParticlesDeath
+@onready var ParticlesDeathFloor = $ParticlesDeathFloor
+@onready var ParticlesDeathAir = $ParticlesDeathAir
 @onready var SlidingOnRamp : bool = false
 
 @onready var AudioDash = $AudioDash
@@ -295,19 +298,7 @@ func _physics_apply_gravity(delta: float) -> void:
 func _physics_jump(delta: float) -> void:
 	# Handle jump.
 	if ((!PreJumpTime.is_stopped() && (is_on_floor() || WallJump || !CoyoteTimer.is_stopped()) ) || (!PreWallJumpTimer.is_stopped() && Input.is_action_pressed("player_jump")) ):
-		if(Sliding != Sides.NONE):
-			Sliding = Sides.UP
-			Speed.x = Acc.x*2 if LastDirection >= 0 else Acc.x*-2 
-		velocity.y = jump_velocity
-		Controller_Vibrate_Player_Movement(0.2)
-		_play_sound(AudioJump, false)
-		#region WallJump case
-		if(WallJump || !PreWallJumpTimer.is_stopped()):
-			Speed.x = WallJumpVelocity*-1 if WallJumpPreviousSide == Sides.RIGHT else WallJumpVelocity
-			PreWallJumpTimer.stop()
-			velocity.y -= 50
-		#endregion
-	
+		DoJump()
 	#Cancel jump
 	if(velocity.y < 0 && !Input.is_action_pressed("player_jump")):
 		velocity.y += JumpCancelAcc
@@ -316,6 +307,20 @@ func _physics_jump(delta: float) -> void:
 	
 	#Pre-detect jump
 #endregion
+
+func DoJump() -> void:
+	if(Sliding != Sides.NONE):
+		Sliding = Sides.UP
+		Speed.x = Acc.x*2 if LastDirection >= 0 else Acc.x*-2
+	velocity.y = jump_velocity
+	Controller_Vibrate_Player_Movement(0.2)
+	_play_sound(AudioJump, false)
+	#region WallJump case
+	if(WallJump || !PreWallJumpTimer.is_stopped()):
+		Speed.x = WallJumpVelocity*-1 if WallJumpPreviousSide == Sides.RIGHT else WallJumpVelocity
+		PreWallJumpTimer.stop()
+		velocity.y -= 50
+	#endregion
 
 #region Horizontal movement
 func _physics_h_movement(delta: float) -> void:
@@ -455,7 +460,8 @@ func get_gravity_player() -> float:
 
 #region Death
 func On_Death():
-	ParticlesDeath.emitting = true
+	if(is_on_floor()): ParticlesDeathFloor.emitting = true
+	else: ParticlesDeathAir.emitting = true
 	Sprite.hide()
 	Physics = false
 	Dead = true

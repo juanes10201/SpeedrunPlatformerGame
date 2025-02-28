@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://chat6jxc63bfj"]
+[gd_scene load_steps=49 format=4 uid="uid://chat6jxc63bfj"]
 
 [ext_resource type="Script" path="res://assets/Levels/Scripts/Player.gd" id="1_uhpgg"]
 [ext_resource type="Texture2D" uid="uid://cga4opnhsehd7" path="res://assets/Sprites/knight-Sheet.png" id="2_5o2oi"]
@@ -20,6 +20,9 @@
 [ext_resource type="AudioStream" uid="uid://c2jyf1ulqt0qj" path="res://assets/Sounds/slime_move.wav" id="15_4ir8m"]
 [ext_resource type="AudioStream" uid="uid://baawx3chmik64" path="res://assets/Sounds/PlayerWind.wav" id="15_ehprd"]
 [ext_resource type="Texture2D" uid="uid://d233ru5plyksw" path="res://assets/Sprites/particlesfall-Sheet.png" id="19_8erp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5171x"]
+size = Vector2(9.99999, 13.0001)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lgtto"]
 particle_flag_disable_z = true
@@ -153,8 +156,39 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5171x"]
-size = Vector2(9.99999, 13.0001)
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qtktq"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 1.84
+angle_min = -720.0
+angle_max = 720.0
+spread = 180.0
+initial_velocity_max = 11.62
+angular_velocity_min = 0.549984
+angular_velocity_max = 0.549984
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 9.49949e-08
+radial_velocity_min = 61.9
+radial_velocity_max = 61.9
+gravity = Vector3(34.82, -98, 0)
+linear_accel_min = -55.51
+linear_accel_max = 8.6
+radial_accel_min = -27.78
+radial_accel_max = -2.23517e-06
+tangential_accel_min = 12.56
+tangential_accel_max = 12.56
+damping_min = 0.17
+damping_max = 7.899
+scale_min = 1.15
+scale_max = 3.0
+color = Color(0.796078, 0.858824, 0.988235, 1)
+hue_variation_min = -2.23517e-08
+hue_variation_max = 0.04
+turbulence_enabled = true
+turbulence_noise_strength = 0.24
+turbulence_noise_scale = 0.93
+turbulence_influence_min = 0.04
+turbulence_influence_max = 0.04
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4mswk"]
 streams_count = 6
@@ -247,7 +281,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-position = Vector2(1.99994, -36)
+position = Vector2(8, 19)
 scale = Vector2(6.59375, 0.882813)
 collision_layer = 13
 collision_mask = 25
@@ -256,6 +290,11 @@ TimeDeath = 0.4
 jump_height = 70.0
 jump_time_to_peak = 0.5
 jump_time_to_descent = 0.4
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.00900006, -6.79026)
+scale = Vector2(0.151659, 1.13274)
+shape = SubResource("RectangleShape2D_5171x")
 
 [node name="ParticlesJump" type="GPUParticles2D" parent="."]
 emitting = false
@@ -273,12 +312,17 @@ sprite_frames = SubResource("SpriteFrames_qwuic")
 animation = &"Idle"
 offset = Vector2(0, -9)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(0.00900006, -6.79026)
-scale = Vector2(0.151659, 1.13274)
-shape = SubResource("RectangleShape2D_5171x")
+[node name="ParticlesDeathAir" type="GPUParticles2D" parent="."]
+position = Vector2(0, -5.66371)
+emitting = false
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_qtktq")
+lifetime = 0.7
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.14
 
-[node name="ParticlesDeath" type="GPUParticles2D" parent="."]
+[node name="ParticlesDeathFloor" type="GPUParticles2D" parent="."]
 position = Vector2(-0.454967, -1.13273)
 emitting = false
 amount = 80

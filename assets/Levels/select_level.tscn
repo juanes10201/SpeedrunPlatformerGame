@@ -1,0 +1,2041 @@
+[gd_scene load_steps=27 format=3 uid="uid://b8hfdqkkc1qu4"]
+
+[ext_resource type="Script" path="res://assets/Levels/select_level_control.gd" id="1_b5fae"]
+[ext_resource type="Texture2D" uid="uid://be1h2ja4pyni1" path="res://assets/Sprites/screenshot.png" id="2_4ih8s"]
+[ext_resource type="Texture2D" uid="uid://dtrd6thhu6b8c" path="res://assets/Sprites/levelnote.png" id="2_crdla"]
+[ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="3_xs1fo"]
+[ext_resource type="Texture2D" uid="uid://cd5uevt337ene" path="res://assets/Sprites/menus/iconuser.jpg" id="4_31q2l"]
+[ext_resource type="FontFile" uid="uid://dfigptrdw0fg2" path="res://assets/Fonts/pixelart/Gossamer Girls.ttf" id="4_ls6e5"]
+[ext_resource type="Script" path="res://assets/Levels/transitionLevelSelect.gd" id="4_mhtpf"]
+[ext_resource type="FontFile" uid="uid://b42aju5a8xkr8" path="res://assets/Fonts/pixelart/Pixel Or GTFO.ttf" id="5_pukat"]
+[ext_resource type="Shader" path="res://assets/Levels/Shader/playername_text.gdshader" id="5_vk6as"]
+[ext_resource type="Script" path="res://assets/Levels/iconuser.gd" id="6_g16s7"]
+[ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="6_l7vrl"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/menu_button.gd" id="8_fy3l1"]
+[ext_resource type="Shader" path="res://assets/Levels/Shader/playertexttime.gdshader" id="9_fpqfc"]
+[ext_resource type="Texture2D" uid="uid://bwv6k156sqcd2" path="res://assets/Sprites/menus/noisemap.png" id="9_nnt34"]
+
+[sub_resource type="Animation" id="Animation_8cdkx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1487, 458)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../select1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(30, 48)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../select2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(125, 49)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../select3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(221, 49)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../select4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(322, 49)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../select5:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(427, 49)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../select6:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(529, 49)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../select7:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(634, 49)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../select8:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(727, 49)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../select9:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, 163)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../select10:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(125, 163)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../select11:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(221, 163)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../select12:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(322, 163)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../select13:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(427, 163)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../select14:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(529, 163)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../select15:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(634, 163)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../select16:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(727, 163)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../select17:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, 284)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../select18:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(125, 284)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../select19:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(221, 284)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../select20:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(322, 284)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../select21:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(427, 284)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../select22:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(529, 284)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../select23:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(634, 284)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../select24:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(727, 284)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../select25:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, 415)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../select26:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(125, 415)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../select27:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(221, 415)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../select28:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(322, 415)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../select29:position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(427, 415)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../select30:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(529, 415)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../select31:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(634, 415)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../select32:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(727, 415)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("../speed:position")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(752, -14)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("../tickers:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18, 545)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("../tickers:theme_override_constants/shadow_offset_y")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("../speed:theme_override_constants/shadow_offset_y")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_ec4ib"]
+resource_name = "idle"
+length = 8.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.6, 4.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1487, 458), Vector2(1529, 458), Vector2(1487, 458)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../select1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.13333, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(30, 48), Vector2(30, 48), Vector2(30, 24), Vector2(30, 48)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../select2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 1.3, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(125, 49), Vector2(125, 49), Vector2(125, 16), Vector2(125, 49)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../select3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.53333, 1.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(221, 49), Vector2(221, 49), Vector2(221, 15), Vector2(221, 49)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../select4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.4, 1.73333, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(322, 49), Vector2(322, 49), Vector2(322, 17), Vector2(322, 49)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../select5:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.6, 1.86667, 2.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(427, 49), Vector2(427, 49), Vector2(427, 18), Vector2(427, 49)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../select6:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.8, 2.1, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(529, 49), Vector2(529, 49), Vector2(529, 14), Vector2(529, 49)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../select7:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2, 2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(634, 49), Vector2(634, 49), Vector2(634, 15), Vector2(634, 49)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../select8:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.0333333, 2.2, 2.46667, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(727, 49), Vector2(727, 49), Vector2(727, 23), Vector2(727, 49)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../select9:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 2.4, 2.66667, 2.83333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(24, 163), Vector2(24, 163), Vector2(24, 137), Vector2(24, 163)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../select10:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2.6, 2.76667, 2.86667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(125, 163), Vector2(125, 163), Vector2(125, 137), Vector2(125, 163)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../select11:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.0333333, 2.8, 3, 3.16667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(221, 163), Vector2(221, 163), Vector2(221, 137), Vector2(221, 163)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../select12:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.0333333, 3, 3.16667, 3.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(322, 163), Vector2(322, 163), Vector2(322, 137), Vector2(322, 163)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../select13:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.0333333, 3.2, 3.43333, 3.56667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(427, 163), Vector2(427, 163), Vector2(427, 137), Vector2(427, 163)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../select14:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 3.4, 3.63333, 3.73333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(529, 163), Vector2(529, 163), Vector2(529, 137), Vector2(529, 163)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../select15:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 3.6, 3.9, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(634, 163), Vector2(634, 163), Vector2(634, 137), Vector2(634, 163)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../select16:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.0333333, 3.8, 4.03333, 4.13333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(727, 163), Vector2(727, 163), Vector2(727, 137), Vector2(727, 163)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../select17:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 4, 4.3, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(24, 284), Vector2(24, 284), Vector2(24, 258), Vector2(24, 284)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../select18:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0.0333333, 4.2, 4.4, 4.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(125, 284), Vector2(125, 284), Vector2(125, 258), Vector2(125, 284)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../select19:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0.0333333, 4.4, 4.7, 4.86667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(221, 284), Vector2(221, 284), Vector2(221, 258), Vector2(221, 284)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../select20:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 4.6, 4.76667, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(322, 284), Vector2(322, 284), Vector2(322, 258), Vector2(322, 284)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../select21:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 4.8, 5.06667, 5.23333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(427, 284), Vector2(427, 284), Vector2(427, 258), Vector2(427, 284)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../select22:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 5, 5.2, 5.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(529, 284), Vector2(529, 284), Vector2(529, 258), Vector2(529, 284)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../select23:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0.0333333, 5.23333, 5.46667, 5.63333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(634, 284), Vector2(634, 284), Vector2(634, 258), Vector2(634, 284)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../select24:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 5.4, 5.56667, 5.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(727, 284), Vector2(727, 284), Vector2(727, 258), Vector2(727, 284)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../select25:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 5.6, 5.8, 5.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(24, 415), Vector2(24, 415), Vector2(24, 389), Vector2(24, 415)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../select26:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0.0333333, 5.8, 6, 6.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(125, 415), Vector2(125, 415), Vector2(125, 389), Vector2(125, 415)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../select27:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 6, 6.23333, 6.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(221, 415), Vector2(221, 415), Vector2(221, 389), Vector2(221, 415)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../select28:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0.0333333, 6.2, 6.4, 6.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(322, 415), Vector2(322, 415), Vector2(322, 389), Vector2(322, 415)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../select29:position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0.0333333, 6.4, 6.56667, 6.73333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(427, 415), Vector2(427, 415), Vector2(427, 389), Vector2(427, 415)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../select30:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0.0333333, 6.6, 6.83333, 6.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(529, 415), Vector2(529, 415), Vector2(529, 389), Vector2(529, 415)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../select31:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0.0333333, 6.8, 6.93333, 7.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(634, 415), Vector2(634, 415), Vector2(634, 389), Vector2(634, 415)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../select32:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0.0333333, 7, 7.2, 7.43333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(727, 415), Vector2(727, 415), Vector2(727, 389), Vector2(727, 415)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("../speed:position")
+tracks/33/interp = 2
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(1.3, 2.16667, 3.16667, 3.63333, 4.52421, 5.39088, 6.39088, 6.85754),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(752, -1.45973), Vector2(752, -17.4597), Vector2(752, -3.11439), Vector2(752, -1.45973), Vector2(752, -1.45973), Vector2(752, -17.4597), Vector2(752, -3.11439), Vector2(752, -1.45973)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("../tickers:position")
+tracks/34/interp = 2
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(1, 2.06667, 3, 4.96667, 6.03333, 6.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18, 524), Vector2(18, 504), Vector2(18, 551.202), Vector2(18, 524), Vector2(18, 504), Vector2(18, 551.202)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("../tickers:theme_override_constants/shadow_offset_y")
+tracks/35/interp = 2
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(1, 2.16667, 3, 4.96667, 6.13333, 6.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [5, 12, 5, 5, 12, 5]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("../speed:theme_override_constants/shadow_offset_y")
+tracks/36/interp = 2
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(1.16667, 2.1, 3.23333, 4.5, 5.43333, 6.56667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [4, 8, 4, 4, 8, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k8t8m"]
+_data = {
+"RESET": SubResource("Animation_8cdkx"),
+"idle": SubResource("Animation_ec4ib")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhdmf"]
+bg_color = Color(0.619608, 0.478431, 1, 0.227451)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.619608, 0.478431, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_pl6gh"]
+offsets = PackedFloat32Array(0, 0.177596)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_t61u7"]
+gradient = SubResource("Gradient_pl6gh")
+
+[sub_resource type="Gradient" id="Gradient_f0wjs"]
+offsets = PackedFloat32Array(0, 0.177596, 0.363388, 0.546448, 0.73224, 0.901639)
+colors = PackedColorArray(0.351674, 0.53321, 1, 1, 0, 0.654805, 0.587834, 1, 0.582608, 0.593802, 5.77569e-07, 1, 0.839808, 0.446962, 0, 1, 1, 0.168355, 0.432426, 1, 0.760066, 0.302222, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ctt21"]
+gradient = SubResource("Gradient_f0wjs")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_alg7h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jubap"]
+shader = ExtResource("5_vk6as")
+shader_parameter/mouse_position = Vector2(1592.89, -37.9576)
+shader_parameter/sprite_position = Vector2(951, 174)
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/inset = 0.0
+shader_parameter/max_tilt = 0.44
+shader_parameter/max_distance = 500.0
+shader_parameter/foilcolor = Color(0.000113828, 0.000113828, 0.000113828, 1)
+shader_parameter/threshold = 0.0
+shader_parameter/fuzziness = 0.11
+shader_parameter/period = 1.0
+shader_parameter/scroll = 1.0
+shader_parameter/normal_strength = 0.1
+shader_parameter/effect_alpha_mult = 0.692
+shader_parameter/direction = 0.5
+shader_parameter/foil_mask = SubResource("GradientTexture1D_t61u7")
+shader_parameter/gradient = SubResource("GradientTexture1D_ctt21")
+shader_parameter/noise = SubResource("NoiseTexture2D_alg7h")
+shader_parameter/normal_map = ExtResource("9_nnt34")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u7p1s"]
+resource_local_to_scene = true
+shader = ExtResource("9_fpqfc")
+shader_parameter/center = Vector2(50, 50)
+shader_parameter/amplitude = 0.1
+shader_parameter/frequency = 1.0
+shader_parameter/downward_offset = 22.512
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mnboa"]
+shader = ExtResource("9_fpqfc")
+shader_parameter/center = Vector2(50, 50)
+shader_parameter/amplitude = 0.048
+shader_parameter/frequency = 1.085
+shader_parameter/downward_offset = 11.137
+
+[node name="control_pause_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 1.0
+offset_right = 40.0
+offset_bottom = 41.0
+focus_mode = 2
+script = ExtResource("1_b5fae")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(691, 373)
+scale = Vector2(0.744436, 0.744436)
+texture = ExtResource("2_4ih8s")
+
+[node name="Transition" type="Sprite2D" parent="."]
+position = Vector2(1487, 458)
+rotation = -1.79813
+scale = Vector2(1.21884, -1.21061)
+texture = ExtResource("3_xs1fo")
+script = ExtResource("4_mhtpf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
+libraries = {
+"": SubResource("AnimationLibrary_k8t8m")
+}
+
+[node name="select1" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -10.0
+offset_top = 48.0
+offset_right = 63.0
+offset_bottom = 123.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "1"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select2" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 85.0
+offset_top = 49.0
+offset_right = 158.0
+offset_bottom = 124.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "2"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select3" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 181.0
+offset_top = 49.0
+offset_right = 254.0
+offset_bottom = 124.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "3"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select4" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 282.0
+offset_top = 49.0
+offset_right = 355.0
+offset_bottom = 124.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "4"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select5" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 387.0
+offset_top = 49.0
+offset_right = 460.0
+offset_bottom = 124.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "5"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select6" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 489.0
+offset_top = 49.0
+offset_right = 562.0
+offset_bottom = 124.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "6"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select7" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 594.0
+offset_top = 49.0
+offset_right = 667.0
+offset_bottom = 124.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "7"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select8" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 687.0
+offset_top = 49.0
+offset_right = 760.0
+offset_bottom = 124.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "8"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select9" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_top = 163.0
+offset_right = 57.0
+offset_bottom = 238.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "9"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select10" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 85.0
+offset_top = 163.0
+offset_right = 158.0
+offset_bottom = 238.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "10"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select11" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 181.0
+offset_top = 163.0
+offset_right = 254.0
+offset_bottom = 238.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "11"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select12" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 282.0
+offset_top = 163.0
+offset_right = 355.0
+offset_bottom = 238.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "12"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select13" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 387.0
+offset_top = 163.0
+offset_right = 460.0
+offset_bottom = 238.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "13"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select14" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 489.0
+offset_top = 163.0
+offset_right = 562.0
+offset_bottom = 238.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "14"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select15" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 594.0
+offset_top = 163.0
+offset_right = 667.0
+offset_bottom = 238.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "15"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select16" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 687.0
+offset_top = 163.0
+offset_right = 760.0
+offset_bottom = 238.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "16"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select17" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_top = 284.0
+offset_right = 57.0
+offset_bottom = 359.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "17"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select18" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 85.0
+offset_top = 284.0
+offset_right = 158.0
+offset_bottom = 359.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "18"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select19" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 181.0
+offset_top = 284.0
+offset_right = 254.0
+offset_bottom = 359.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "19"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select20" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 282.0
+offset_top = 284.0
+offset_right = 355.0
+offset_bottom = 359.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "20"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select21" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 387.0
+offset_top = 284.0
+offset_right = 460.0
+offset_bottom = 359.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "21"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select22" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 489.0
+offset_top = 284.0
+offset_right = 562.0
+offset_bottom = 359.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "22"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select23" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 594.0
+offset_top = 284.0
+offset_right = 667.0
+offset_bottom = 359.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "23"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select24" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 687.0
+offset_top = 284.0
+offset_right = 760.0
+offset_bottom = 359.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "24"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select25" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_top = 415.0
+offset_right = 57.0
+offset_bottom = 490.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "25"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select26" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 85.0
+offset_top = 415.0
+offset_right = 158.0
+offset_bottom = 490.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "26"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select27" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 181.0
+offset_top = 415.0
+offset_right = 254.0
+offset_bottom = 490.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "27"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select28" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 282.0
+offset_top = 415.0
+offset_right = 355.0
+offset_bottom = 490.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "28"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select29" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 387.0
+offset_top = 415.0
+offset_right = 460.0
+offset_bottom = 490.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "29"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select30" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 489.0
+offset_top = 415.0
+offset_right = 562.0
+offset_bottom = 490.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "30"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select31" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 594.0
+offset_top = 415.0
+offset_right = 667.0
+offset_bottom = 490.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "31"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select32" type="Button" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 687.0
+offset_top = 415.0
+offset_right = 760.0
+offset_bottom = 490.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "32"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select33" type="Button" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_top = 526.0
+offset_right = 57.0
+offset_bottom = 601.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "33"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select34" type="Button" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 85.0
+offset_top = 526.0
+offset_right = 158.0
+offset_bottom = 601.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "34"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select35" type="Button" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 181.0
+offset_top = 526.0
+offset_right = 254.0
+offset_bottom = 601.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "35"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select36" type="Button" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 282.0
+offset_top = 526.0
+offset_right = 355.0
+offset_bottom = 601.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "36"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select37" type="Button" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 387.0
+offset_top = 526.0
+offset_right = 460.0
+offset_bottom = 601.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "37"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select38" type="Button" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 489.0
+offset_top = 526.0
+offset_right = 562.0
+offset_bottom = 601.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "38"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="select39" type="Button" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 594.0
+offset_top = 526.0
+offset_right = 667.0
+offset_bottom = 601.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+text = "39"
+icon = ExtResource("2_crdla")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("8_fy3l1")
+BUTTON_ACTION = 5
+ADITIONAL_ARGUMENT = "level"
+IsPixelartButton = true
+
+[node name="Iconuser" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_jubap")
+position = Vector2(951, 173)
+scale = Vector2(1.09358, 1.09358)
+texture = ExtResource("4_31q2l")
+script = ExtResource("6_g16s7")
+
+[node name="BestUser" type="RichTextLabel" parent="Iconuser"]
+material = SubResource("ShaderMaterial_u7p1s")
+offset_left = -128.934
+offset_top = 101.501
+offset_right = 200.066
+offset_bottom = 189.501
+theme_override_fonts/normal_font = ExtResource("5_pukat")
+theme_override_font_sizes/normal_font_size = 32
+text = "{STEAM USER}"
+
+[node name="BestTime" type="RichTextLabel" parent="Iconuser"]
+material = SubResource("ShaderMaterial_mnboa")
+offset_left = -124.362
+offset_top = 140.815
+offset_right = 175.638
+offset_bottom = 187.815
+theme_override_fonts/normal_font = ExtResource("5_pukat")
+theme_override_font_sizes/normal_font_size = 32
+text = "1:01 seg"
+
+[node name="speed" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 752.0
+offset_top = -14.0
+offset_right = 1251.0
+offset_bottom = 155.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 1
+theme_override_fonts/normal_font = ExtResource("6_l7vrl")
+theme_override_font_sizes/normal_font_size = 120
+text = "Speed"
+
+[node name="tickers" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 545.0
+offset_right = 568.998
+offset_bottom = 727.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = -2
+theme_override_fonts/normal_font = ExtResource("6_l7vrl")
+theme_override_font_sizes/normal_font_size = 120
+text = "Tickers"
+
+[connection signal="pressed" from="select1" to="select1" method="_on_pressed"]
+[connection signal="pressed" from="select2" to="select2" method="_on_pressed"]
+[connection signal="pressed" from="select3" to="select3" method="_on_pressed"]
+[connection signal="pressed" from="select4" to="select4" method="_on_pressed"]
+[connection signal="pressed" from="select5" to="select5" method="_on_pressed"]
+[connection signal="pressed" from="select6" to="select6" method="_on_pressed"]
+[connection signal="pressed" from="select7" to="select7" method="_on_pressed"]
+[connection signal="pressed" from="select8" to="select8" method="_on_pressed"]
+[connection signal="pressed" from="select9" to="select9" method="_on_pressed"]
+[connection signal="pressed" from="select10" to="select10" method="_on_pressed"]
+[connection signal="pressed" from="select11" to="select11" method="_on_pressed"]
+[connection signal="pressed" from="select12" to="select12" method="_on_pressed"]
+[connection signal="pressed" from="select13" to="select13" method="_on_pressed"]
+[connection signal="pressed" from="select14" to="select14" method="_on_pressed"]
+[connection signal="pressed" from="select15" to="select15" method="_on_pressed"]
+[connection signal="pressed" from="select16" to="select16" method="_on_pressed"]
+[connection signal="pressed" from="select17" to="select17" method="_on_pressed"]
+[connection signal="pressed" from="select18" to="select18" method="_on_pressed"]
+[connection signal="pressed" from="select19" to="select19" method="_on_pressed"]
+[connection signal="pressed" from="select20" to="select20" method="_on_pressed"]
+[connection signal="pressed" from="select21" to="select21" method="_on_pressed"]
+[connection signal="pressed" from="select22" to="select22" method="_on_pressed"]
+[connection signal="pressed" from="select23" to="select23" method="_on_pressed"]
+[connection signal="pressed" from="select24" to="select24" method="_on_pressed"]
+[connection signal="pressed" from="select25" to="select25" method="_on_pressed"]
+[connection signal="pressed" from="select26" to="select26" method="_on_pressed"]
+[connection signal="pressed" from="select27" to="select27" method="_on_pressed"]
+[connection signal="pressed" from="select28" to="select28" method="_on_pressed"]
+[connection signal="pressed" from="select29" to="select29" method="_on_pressed"]
+[connection signal="pressed" from="select30" to="select30" method="_on_pressed"]
+[connection signal="pressed" from="select31" to="select31" method="_on_pressed"]
+[connection signal="pressed" from="select32" to="select32" method="_on_pressed"]
+[connection signal="pressed" from="select33" to="select33" method="_on_pressed"]
+[connection signal="pressed" from="select34" to="select34" method="_on_pressed"]
+[connection signal="pressed" from="select35" to="select35" method="_on_pressed"]
+[connection signal="pressed" from="select36" to="select36" method="_on_pressed"]
+[connection signal="pressed" from="select37" to="select37" method="_on_pressed"]
+[connection signal="pressed" from="select38" to="select38" method="_on_pressed"]
+[connection signal="pressed" from="select39" to="select39" method="_on_pressed"]

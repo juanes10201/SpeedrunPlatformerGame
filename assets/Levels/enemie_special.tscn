@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bygxx5ppwysc3"]
+[gd_scene load_steps=15 format=3 uid="uid://bygxx5ppwysc3"]
 
 [ext_resource type="Script" path="res://assets/Levels/Scripts/enemie_physics.gd" id="1_qsr6m"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/enemie_area2d.gd" id="2_tlbfg"]
 [ext_resource type="Texture2D" uid="uid://bo55t35tra7dk" path="res://assets/Sprites/slimespecial-Sheet.png" id="3_iv0n4"]
+[ext_resource type="Texture2D" uid="uid://bcqhpwtu5xyn8" path="res://assets/Sprites/slime-special-particles.png" id="4_ii4mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6kq6s"]
 size = Vector2(8, 9.615)
@@ -51,6 +52,36 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_iorly"]
+particle_flag_disable_z = true
+angle_min = -93.8
+angle_max = 110.5
+inherit_velocity_ratio = 0.1
+spread = 180.0
+initial_velocity_min = 48.1
+initial_velocity_max = 115.17
+angular_velocity_min = -119.38
+angular_velocity_max = 73.67
+gravity = Vector3(0, 98, 0)
+hue_variation_min = -0.02
+hue_variation_max = 0.08
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6npnj"]
+particle_flag_disable_z = true
+angle_min = -198.0
+angle_max = -127.5
+inherit_velocity_ratio = 0.137
+spread = 53.531
+initial_velocity_min = -44.0
+gravity = Vector3(0, 98, 0)
+hue_variation_min = -0.02
+hue_variation_max = 0.03
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_14o53"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+turbulence_enabled = true
+
 [node name="Enemie" type="CharacterBody2D"]
 position = Vector2(115.72, -23.74)
 collision_layer = 32
@@ -80,3 +111,23 @@ position = Vector2(0.559998, 13.48)
 sprite_frames = SubResource("SpriteFrames_cwqvb")
 animation = &"Idle"
 offset = Vector2(-0.28, -15.95)
+
+[node name="HitParticles" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_iorly")
+texture = ExtResource("4_ii4mo")
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.34
+randomness = 0.33
+
+[node name="HitFlyParticles" type="GPUParticles2D" parent="."]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_6npnj")
+texture = ExtResource("4_ii4mo")
+
+[node name="Moveparticles" type="GPUParticles2D" parent="."]
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_14o53")
+texture = ExtResource("4_ii4mo")

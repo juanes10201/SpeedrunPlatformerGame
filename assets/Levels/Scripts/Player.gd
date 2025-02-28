@@ -257,7 +257,7 @@ func _unpause_game() -> void:
 	Pause_fadeout = true
 	
 func _spawn_pause_menu() -> void:
-	var pause_menu = preload("res://assets/Levels/pause_menu.tscn")
+	var pause_menu = preload("res://assets/Levels/world1/pause_menu.tscn")
 	if (pause_menu):
 		var pause_menu_instance = pause_menu.instantiate()
 		add_child(pause_menu_instance)

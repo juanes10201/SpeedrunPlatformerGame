@@ -44,31 +44,18 @@ func _process(delta: float) -> void:
 			touching_mouse = true
 			if(IsPixelartButton): icon = tex_selected
 			#region On pressed
-			if(tween_press == null && Input.is_action_pressed("ui_click") && self.size.x < original_size.x+PressedDif):
-				tween_press = get_tree().create_tween()
-				tween_press.tween_property(self, "size", press_size, .2)
-				tween_press.play()
-				if(tween_hover):
-					tween_hover.kill()
-					tween_hover = null
-				if(tween_normal):
-					tween_normal.kill()
-					tween_normal = null
+			if(Input.is_action_pressed("ui_click") && self.size.x < original_size.x+PressedDif):
+				var tween_button = get_tree().create_tween()
+				tween_button.tween_property(self, "size", press_size, .2)
+				tween_button.play()
 				#_set_size_button(lerpf(self.size.x, original_size.x+PressedDif, 5*delta),  lerpf(self.size.y, original_size.y+PressedDif, 5*delta))
 			#region Hover
 			elif(!tween_press):
-				if(tween_hover == null):
-					tween_hover = get_tree().create_tween()
-					tween_hover.tween_property(self, "size", hover_size, 1)\
-					.set_ease(Tween.EASE_OUT)\
-					.set_trans(Tween.TRANS_ELASTIC)
-					tween_hover.play()
-				if(tween_press):
-					tween_press.kill()
-					tween_press = null
-				if(tween_normal):
-					tween_normal.kill()
-					tween_normal = null
+				var tween_button = get_tree().create_tween()
+				tween_button.tween_property(self, "size", hover_size, 1)\
+				.set_ease(Tween.EASE_OUT)\
+				.set_trans(Tween.TRANS_ELASTIC)
+				tween_button.play()
 				#_set_size_button(lerpf(self.size.x, original_size.x+HoverDif, 5*delta), lerpf(self.size.y, original_size.y+HoverDif, 5*delta))
 			#endregion
 		#region Return to normal state
@@ -76,26 +63,20 @@ func _process(delta: float) -> void:
 			if(touching_mouse):
 				if(IsPixelartButton): icon = tex_unselected
 			touching_mouse = false
-			if(tween_normal == null):
-				tween_normal = get_tree().create_tween()
-				tween_normal.tween_property(self, "size", original_size, 1)\
-				.set_ease(Tween.EASE_OUT)\
-				.set_trans(Tween.TRANS_ELASTIC)
-			tween_normal.play()
-			if(tween_hover):
-				tween_hover.kill()
-				tween_hover = null
-			if(tween_press):
-				tween_press.kill()
-				tween_press = null
+			var tween_button = get_tree().create_tween()
+			tween_button.tween_property(self, "size", original_size, 1)\
+			.set_ease(Tween.EASE_OUT)\
+			.set_trans(Tween.TRANS_ELASTIC)
+			tween_button.play()
 			#_set_size_button(lerpf(self.size.x, original_size.x, 10*delta), lerpf(self.size.y, original_size.y, 10*delta))
 		#endregion
 	#endregion
 	_set_text_size(self.size.x)
 
 func _set_text_size(X : float):
-	pass
-	#add_theme_font_size_override('font_size', X-45)
+	var tosize = X-45
+	if(get_theme_font_size("font_size") != tosize):
+		add_theme_font_size_override('font_size', X-52)
 
 func _on_pressed() -> void:
 	print("Button pressed!")

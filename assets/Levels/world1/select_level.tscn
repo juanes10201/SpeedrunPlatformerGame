@@ -1,19 +1,19 @@
-[gd_scene load_steps=27 format=3 uid="uid://b8hfdqkkc1qu4"]
+[gd_scene load_steps=28 format=3 uid="uid://b8hfdqkkc1qu4"]
 
-[ext_resource type="Script" path="res://assets/Levels/select_level_control.gd" id="1_b5fae"]
-[ext_resource type="Texture2D" uid="uid://be1h2ja4pyni1" path="res://assets/Sprites/screenshot.png" id="2_4ih8s"]
-[ext_resource type="Texture2D" uid="uid://dtrd6thhu6b8c" path="res://assets/Sprites/levelnote.png" id="2_crdla"]
-[ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="3_xs1fo"]
-[ext_resource type="Texture2D" uid="uid://cd5uevt337ene" path="res://assets/Sprites/menus/iconuser.jpg" id="4_31q2l"]
-[ext_resource type="FontFile" uid="uid://dfigptrdw0fg2" path="res://assets/Fonts/pixelart/Gossamer Girls.ttf" id="4_ls6e5"]
-[ext_resource type="Script" path="res://assets/Levels/transitionLevelSelect.gd" id="4_mhtpf"]
-[ext_resource type="FontFile" uid="uid://b42aju5a8xkr8" path="res://assets/Fonts/pixelart/Pixel Or GTFO.ttf" id="5_pukat"]
-[ext_resource type="Shader" path="res://assets/Levels/Shader/playername_text.gdshader" id="5_vk6as"]
-[ext_resource type="Script" path="res://assets/Levels/iconuser.gd" id="6_g16s7"]
-[ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="6_l7vrl"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/menu_button.gd" id="8_fy3l1"]
-[ext_resource type="Shader" path="res://assets/Levels/Shader/playertexttime.gdshader" id="9_fpqfc"]
-[ext_resource type="Texture2D" uid="uid://bwv6k156sqcd2" path="res://assets/Sprites/menus/noisemap.png" id="9_nnt34"]
+[ext_resource type="Script" path="res://assets/Levels/select_level_control.gd" id="1_q8u5j"]
+[ext_resource type="Texture2D" uid="uid://be1h2ja4pyni1" path="res://assets/Sprites/screenshot.png" id="2_xahmg"]
+[ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="3_mhrci"]
+[ext_resource type="Script" path="res://assets/Levels/transitionLevelSelect.gd" id="4_gl1p6"]
+[ext_resource type="FontFile" uid="uid://dfigptrdw0fg2" path="res://assets/Fonts/pixelart/Gossamer Girls.ttf" id="5_tpl6t"]
+[ext_resource type="Texture2D" uid="uid://dtrd6thhu6b8c" path="res://assets/Sprites/levelnote.png" id="6_06y12"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/menu_button.gd" id="7_lq2g5"]
+[ext_resource type="Shader" path="res://assets/Levels/Shader/playername_text.gdshader" id="8_d61iw"]
+[ext_resource type="Texture2D" uid="uid://bwv6k156sqcd2" path="res://assets/Sprites/menus/noisemap.png" id="9_buyvs"]
+[ext_resource type="Texture2D" uid="uid://cd5uevt337ene" path="res://assets/Sprites/menus/iconuser.jpg" id="10_14c6j"]
+[ext_resource type="Script" path="res://assets/Levels/iconuser.gd" id="11_j8cba"]
+[ext_resource type="Shader" path="res://assets/Levels/Shader/playertexttime.gdshader" id="12_fjjkg"]
+[ext_resource type="FontFile" uid="uid://b42aju5a8xkr8" path="res://assets/Fonts/pixelart/Pixel Or GTFO.ttf" id="13_ng54s"]
+[ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="14_7hpb2"]
 
 [sub_resource type="Animation" id="Animation_8cdkx"]
 length = 0.001
@@ -460,6 +460,18 @@ tracks/36/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [4]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("../Iconuser:position")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(951, 173)]
 }
 
 [sub_resource type="Animation" id="Animation_ec4ib"]
@@ -911,10 +923,470 @@ tracks/36/keys = {
 "values": [4, 8, 4, 4, 8, 4]
 }
 
+[sub_resource type="Animation" id="Animation_cwa4y"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(647, 583), Vector2(1487, 458)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../select1:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(52, -83), Vector2(30, 48)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../select2:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(147, -82), Vector2(125, 49)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../select3:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.166667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(243, -86), Vector2(221, 49)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../select4:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.166667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(344, -86), Vector2(322, 49)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../select5:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.166667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(449, -93), Vector2(427, 49)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../select6:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.166667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(551, -93), Vector2(529, 49)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../select7:position")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.166667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(656, -102), Vector2(634, 49)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../select8:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(749, -102), Vector2(727, 49)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../select9:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(76, -159), Vector2(24, 163)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../select10:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(177, -159), Vector2(125, 163)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../select11:position")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(273, -167), Vector2(221, 163)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../select12:position")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(374, -167), Vector2(322, 163)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../select13:position")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(479, -174), Vector2(427, 163)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../select14:position")
+tracks/14/interp = 2
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.133333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(581, -174), Vector2(529, 163)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../select15:position")
+tracks/15/interp = 2
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(686, -181), Vector2(634, 163)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../select16:position")
+tracks/16/interp = 2
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(779, -181), Vector2(727, 163)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../select17:position")
+tracks/17/interp = 2
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.166667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(99, 775), Vector2(24, 284)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../select18:position")
+tracks/18/interp = 2
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0.133333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(200, 774), Vector2(125, 284)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../select19:position")
+tracks/19/interp = 2
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0.166667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(296, 760), Vector2(221, 284)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../select20:position")
+tracks/20/interp = 2
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(397, 760), Vector2(322, 284)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../select21:position")
+tracks/21/interp = 2
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(502, 751), Vector2(427, 284)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../select22:position")
+tracks/22/interp = 2
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0.2, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(604, 751), Vector2(529, 284)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../select23:position")
+tracks/23/interp = 2
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0.133333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(709, 743), Vector2(634, 284)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../select24:position")
+tracks/24/interp = 2
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(802, 743), Vector2(727, 284)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../select25:position")
+tracks/25/interp = 2
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0.0666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(59, 674), Vector2(24, 415)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../select26:position")
+tracks/26/interp = 2
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0.0666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(160, 674), Vector2(125, 415)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../select27:position")
+tracks/27/interp = 2
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0.0666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 664), Vector2(221, 415)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../select28:position")
+tracks/28/interp = 2
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(357, 664), Vector2(322, 415)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../select29:position")
+tracks/29/interp = 2
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0.133333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(462, 656), Vector2(427, 415)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../select30:position")
+tracks/30/interp = 2
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0.133333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(564, 656), Vector2(529, 415)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../select31:position")
+tracks/31/interp = 2
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0.133333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(669, 648), Vector2(634, 415)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../select32:position")
+tracks/32/interp = 2
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(727, 415), Vector2(727, 415)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("../speed:position")
+tracks/33/interp = 2
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(869, -85), Vector2(752, -14)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("../tickers:position")
+tracks/34/interp = 2
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(107, 648), Vector2(18, 545)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("../tickers:theme_override_constants/shadow_offset_y")
+tracks/35/interp = 2
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("../speed:theme_override_constants/shadow_offset_y")
+tracks/36/interp = 2
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("../Iconuser:position")
+tracks/37/interp = 2
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0.3, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1307, 242), Vector2(951, 173)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k8t8m"]
 _data = {
 "RESET": SubResource("Animation_8cdkx"),
-"idle": SubResource("Animation_ec4ib")
+"idle": SubResource("Animation_ec4ib"),
+"start": SubResource("Animation_cwa4y")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhdmf"]
@@ -941,7 +1413,7 @@ gradient = SubResource("Gradient_f0wjs")
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_alg7h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jubap"]
-shader = ExtResource("5_vk6as")
+shader = ExtResource("8_d61iw")
 shader_parameter/mouse_position = Vector2(1592.89, -37.9576)
 shader_parameter/sprite_position = Vector2(951, 174)
 shader_parameter/fov = 90.0
@@ -960,18 +1432,18 @@ shader_parameter/direction = 0.5
 shader_parameter/foil_mask = SubResource("GradientTexture1D_t61u7")
 shader_parameter/gradient = SubResource("GradientTexture1D_ctt21")
 shader_parameter/noise = SubResource("NoiseTexture2D_alg7h")
-shader_parameter/normal_map = ExtResource("9_nnt34")
+shader_parameter/normal_map = ExtResource("9_buyvs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u7p1s"]
 resource_local_to_scene = true
-shader = ExtResource("9_fpqfc")
+shader = ExtResource("12_fjjkg")
 shader_parameter/center = Vector2(50, 50)
 shader_parameter/amplitude = 0.1
 shader_parameter/frequency = 1.0
 shader_parameter/downward_offset = 22.512
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mnboa"]
-shader = ExtResource("9_fpqfc")
+shader = ExtResource("12_fjjkg")
 shader_parameter/center = Vector2(50, 50)
 shader_parameter/amplitude = 0.048
 shader_parameter/frequency = 1.085
@@ -984,19 +1456,19 @@ offset_top = 1.0
 offset_right = 40.0
 offset_bottom = 41.0
 focus_mode = 2
-script = ExtResource("1_b5fae")
+script = ExtResource("1_q8u5j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(691, 373)
 scale = Vector2(0.744436, 0.744436)
-texture = ExtResource("2_4ih8s")
+texture = ExtResource("2_xahmg")
 
 [node name="Transition" type="Sprite2D" parent="."]
 position = Vector2(1487, 458)
 rotation = -1.79813
 scale = Vector2(1.21884, -1.21061)
-texture = ExtResource("3_xs1fo")
-script = ExtResource("4_mhtpf")
+texture = ExtResource("3_mhrci")
+script = ExtResource("4_gl1p6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
 libraries = {
@@ -1014,15 +1486,15 @@ offset_top = 48.0
 offset_right = 63.0
 offset_bottom = 123.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "1"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1038,15 +1510,15 @@ offset_top = 49.0
 offset_right = 158.0
 offset_bottom = 124.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "2"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1062,15 +1534,15 @@ offset_top = 49.0
 offset_right = 254.0
 offset_bottom = 124.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "3"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1086,15 +1558,15 @@ offset_top = 49.0
 offset_right = 355.0
 offset_bottom = 124.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "4"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1110,15 +1582,15 @@ offset_top = 49.0
 offset_right = 460.0
 offset_bottom = 124.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "5"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1134,15 +1606,15 @@ offset_top = 49.0
 offset_right = 562.0
 offset_bottom = 124.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "6"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1158,15 +1630,15 @@ offset_top = 49.0
 offset_right = 667.0
 offset_bottom = 124.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "7"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1182,15 +1654,15 @@ offset_top = 49.0
 offset_right = 760.0
 offset_bottom = 124.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "8"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1206,15 +1678,15 @@ offset_top = 163.0
 offset_right = 57.0
 offset_bottom = 238.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "9"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1230,15 +1702,15 @@ offset_top = 163.0
 offset_right = 158.0
 offset_bottom = 238.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "10"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1254,15 +1726,15 @@ offset_top = 163.0
 offset_right = 254.0
 offset_bottom = 238.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "11"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1278,15 +1750,15 @@ offset_top = 163.0
 offset_right = 355.0
 offset_bottom = 238.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "12"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1302,15 +1774,15 @@ offset_top = 163.0
 offset_right = 460.0
 offset_bottom = 238.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "13"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1326,15 +1798,15 @@ offset_top = 163.0
 offset_right = 562.0
 offset_bottom = 238.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "14"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1350,15 +1822,15 @@ offset_top = 163.0
 offset_right = 667.0
 offset_bottom = 238.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "15"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1374,15 +1846,15 @@ offset_top = 163.0
 offset_right = 760.0
 offset_bottom = 238.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "16"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1398,15 +1870,15 @@ offset_top = 284.0
 offset_right = 57.0
 offset_bottom = 359.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "17"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1422,15 +1894,15 @@ offset_top = 284.0
 offset_right = 158.0
 offset_bottom = 359.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "18"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1446,15 +1918,15 @@ offset_top = 284.0
 offset_right = 254.0
 offset_bottom = 359.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "19"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1470,15 +1942,15 @@ offset_top = 284.0
 offset_right = 355.0
 offset_bottom = 359.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "20"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1494,15 +1966,15 @@ offset_top = 284.0
 offset_right = 460.0
 offset_bottom = 359.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "21"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1518,15 +1990,15 @@ offset_top = 284.0
 offset_right = 562.0
 offset_bottom = 359.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "22"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1542,15 +2014,15 @@ offset_top = 284.0
 offset_right = 667.0
 offset_bottom = 359.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "23"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1566,15 +2038,15 @@ offset_top = 284.0
 offset_right = 760.0
 offset_bottom = 359.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "24"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1590,15 +2062,15 @@ offset_top = 415.0
 offset_right = 57.0
 offset_bottom = 490.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "25"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1614,15 +2086,15 @@ offset_top = 415.0
 offset_right = 158.0
 offset_bottom = 490.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "26"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1638,15 +2110,15 @@ offset_top = 415.0
 offset_right = 254.0
 offset_bottom = 490.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "27"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1662,15 +2134,15 @@ offset_top = 415.0
 offset_right = 355.0
 offset_bottom = 490.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "28"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1686,15 +2158,15 @@ offset_top = 415.0
 offset_right = 460.0
 offset_bottom = 490.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "29"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1710,15 +2182,15 @@ offset_top = 415.0
 offset_right = 562.0
 offset_bottom = 490.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "30"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1734,15 +2206,15 @@ offset_top = 415.0
 offset_right = 667.0
 offset_bottom = 490.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "31"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1759,15 +2231,15 @@ offset_top = 415.0
 offset_right = 760.0
 offset_bottom = 490.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "32"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1784,15 +2256,15 @@ offset_top = 526.0
 offset_right = 57.0
 offset_bottom = 601.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "33"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1809,15 +2281,15 @@ offset_top = 526.0
 offset_right = 158.0
 offset_bottom = 601.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "34"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1834,15 +2306,15 @@ offset_top = 526.0
 offset_right = 254.0
 offset_bottom = 601.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "35"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1859,15 +2331,15 @@ offset_top = 526.0
 offset_right = 355.0
 offset_bottom = 601.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "36"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1884,15 +2356,15 @@ offset_top = 526.0
 offset_right = 460.0
 offset_bottom = 601.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "37"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1909,15 +2381,15 @@ offset_top = 526.0
 offset_right = 562.0
 offset_bottom = 601.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "38"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1934,15 +2406,15 @@ offset_top = 526.0
 offset_right = 667.0
 offset_bottom = 601.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_ls6e5")
+theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
 text = "39"
-icon = ExtResource("2_crdla")
+icon = ExtResource("6_06y12")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_fy3l1")
+script = ExtResource("7_lq2g5")
 BUTTON_ACTION = 5
 ADITIONAL_ARGUMENT = "level"
 IsPixelartButton = true
@@ -1951,8 +2423,8 @@ IsPixelartButton = true
 material = SubResource("ShaderMaterial_jubap")
 position = Vector2(951, 173)
 scale = Vector2(1.09358, 1.09358)
-texture = ExtResource("4_31q2l")
-script = ExtResource("6_g16s7")
+texture = ExtResource("10_14c6j")
+script = ExtResource("11_j8cba")
 
 [node name="BestUser" type="RichTextLabel" parent="Iconuser"]
 material = SubResource("ShaderMaterial_u7p1s")
@@ -1960,7 +2432,7 @@ offset_left = -128.934
 offset_top = 101.501
 offset_right = 200.066
 offset_bottom = 189.501
-theme_override_fonts/normal_font = ExtResource("5_pukat")
+theme_override_fonts/normal_font = ExtResource("13_ng54s")
 theme_override_font_sizes/normal_font_size = 32
 text = "{STEAM USER}"
 
@@ -1970,7 +2442,7 @@ offset_left = -124.362
 offset_top = 140.815
 offset_right = 175.638
 offset_bottom = 187.815
-theme_override_fonts/normal_font = ExtResource("5_pukat")
+theme_override_fonts/normal_font = ExtResource("13_ng54s")
 theme_override_font_sizes/normal_font_size = 32
 text = "1:01 seg"
 
@@ -1983,21 +2455,21 @@ offset_bottom = 155.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 4
 theme_override_constants/shadow_offset_x = 1
-theme_override_fonts/normal_font = ExtResource("6_l7vrl")
-theme_override_font_sizes/normal_font_size = 120
+theme_override_fonts/normal_font = ExtResource("14_7hpb2")
+theme_override_font_sizes/normal_font_size = 95
 text = "Speed"
 
 [node name="tickers" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 545.0
-offset_right = 568.998
-offset_bottom = 727.0
+offset_right = 569.0
+offset_bottom = 664.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/shadow_offset_x = -2
-theme_override_fonts/normal_font = ExtResource("6_l7vrl")
-theme_override_font_sizes/normal_font_size = 120
+theme_override_fonts/normal_font = ExtResource("14_7hpb2")
+theme_override_font_sizes/normal_font_size = 95
 text = "Tickers"
 
 [connection signal="pressed" from="select1" to="select1" method="_on_pressed"]

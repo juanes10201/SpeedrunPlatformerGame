@@ -17,11 +17,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if(Input.is_action_pressed("ui_click")):
 		SelectedButton = null
-	if(Input.is_action_just_pressed("ui_down")):
+	if(Input.is_action_just_pressed("ui_down") || Input.is_action_just_pressed("ui_right")):
 		if(SelectedButton == PauseButtons.RESUME_GAME): SelectedButton = PauseButtons.CONFIG
 		elif(SelectedButton == PauseButtons.CONFIG): SelectedButton = PauseButtons.RESTART
 		else: SelectedButton = PauseButtons.RESUME_GAME
-	elif(Input.is_action_just_pressed("ui_up")):
+	elif(Input.is_action_just_pressed("ui_up") || Input.is_action_just_pressed("ui_left")):
 		if(SelectedButton == PauseButtons.RESUME_GAME): SelectedButton = PauseButtons.RESTART
 		elif(SelectedButton == PauseButtons.CONFIG): SelectedButton = PauseButtons.RESUME_GAME
 		else: SelectedButton = PauseButtons.CONFIG

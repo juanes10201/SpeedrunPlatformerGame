@@ -307,7 +307,7 @@ position = Vector2(448, 89)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("15_x43xa")]
 position = Vector2(102, -104)
-scale = Vector2(3.31, 5.385)
+scale = Vector2(3.31, 4.97)
 
 [node name="falling_sand" parent="." instance=ExtResource("13_e8m4r")]
 position = Vector2(392, 25)

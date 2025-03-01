@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-var SaveData = preload("res://assets/Levels/Scripts/save_game.gd")
-
 func enemy_jump():
 	pass
 
@@ -99,6 +97,8 @@ var Dead : bool = false
 
 var EnabledKillBox = Global.KillBoxTypes.Red
 
+var PlayedBefore : bool = false
+
 #endregion
 
 #region Debug
@@ -112,10 +112,18 @@ func _ready() -> void:
 	if(TransitionOut): TransitionOut.hide()
 	if(TransitionIn): TransitionIn.show()
 	if(TransitionIn): TransitionIn.fade_out()
+	
+	if($"../Flag".current_level == 1): 
+		PlayedBefore = SaveGame.IfPlayedFirstTime()
+		if(!PlayedBefore):
+			Camera.offset.y = -226.31
 
 
 #region Physics proccess
 func _physics_process(delta: float) -> void:
+	if($"../Flag".current_level == 1):
+		Camera.offset.y = lerpf(Camera.offset.y, 23.85, 1*delta)
+	
 	WasSliding = false
 	var direction := Input.get_axis("ui_left", "ui_right")
 	

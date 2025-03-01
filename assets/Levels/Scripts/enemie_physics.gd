@@ -212,5 +212,17 @@ func check_collision() -> bool:
 #endregion
 #region Enemie Death
 func On_Death():
+	#region Create destroy particles
+	if(enemy_type == 0):
+		var DestroyParticles = preload("res://assets/Levels/Particles/destroy_enemy.tscn")
+		var InstanceParticles = DestroyParticles.instantiate()
+		get_tree().current_scene.add_child(InstanceParticles)
+		InstanceParticles.position = self.position
+	elif(enemy_type == 1):
+		var DestroyParticles = preload("res://assets/Levels/Particles/destroy_enemy_special.tscn")
+		var InstanceParticles = DestroyParticles.instantiate()
+		get_tree().current_scene.add_child(InstanceParticles)
+		InstanceParticles.position = self.position
+	#endregion
 	self.queue_free()
 #endregion

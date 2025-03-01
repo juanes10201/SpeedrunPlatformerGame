@@ -27,7 +27,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1487, 458)]
+"values": [Vector2(647, 583)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -39,7 +39,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(30, 48)]
+"values": [Vector2(52, -83)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -51,7 +51,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(125, 49)]
+"values": [Vector2(147, -82)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -63,7 +63,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(221, 49)]
+"values": [Vector2(243, -86)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -75,7 +75,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(322, 49)]
+"values": [Vector2(344, -86)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -87,7 +87,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(427, 49)]
+"values": [Vector2(449, -93)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -99,7 +99,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(529, 49)]
+"values": [Vector2(551, -93)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -111,7 +111,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(634, 49)]
+"values": [Vector2(656, -102)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -123,7 +123,7 @@ tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(727, 49)]
+"values": [Vector2(749, -102)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -135,7 +135,7 @@ tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(24, 163)]
+"values": [Vector2(76, -159)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -147,7 +147,7 @@ tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(125, 163)]
+"values": [Vector2(177, -159)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -159,7 +159,7 @@ tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(221, 163)]
+"values": [Vector2(979, -101)]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
@@ -171,7 +171,7 @@ tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(322, 163)]
+"values": [Vector2(871, -106)]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
@@ -183,7 +183,7 @@ tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(427, 163)]
+"values": [Vector2(851, -254)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
@@ -195,7 +195,7 @@ tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(529, 163)]
+"values": [Vector2(656, -231)]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
@@ -207,7 +207,7 @@ tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(634, 163)]
+"values": [Vector2(-431, 626)]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
@@ -219,7 +219,7 @@ tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(727, 163)]
+"values": [Vector2(-310, 629)]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
@@ -231,7 +231,7 @@ tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(24, 284)]
+"values": [Vector2(-114, 563)]
 }
 tracks/18/type = "value"
 tracks/18/imported = false
@@ -243,7 +243,7 @@ tracks/18/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(125, 284)]
+"values": [Vector2(-454, 130)]
 }
 tracks/19/type = "value"
 tracks/19/imported = false
@@ -255,7 +255,7 @@ tracks/19/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(221, 284)]
+"values": [Vector2(-385, 248)]
 }
 tracks/20/type = "value"
 tracks/20/imported = false
@@ -267,7 +267,7 @@ tracks/20/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(322, 284)]
+"values": [Vector2(-128, -14)]
 }
 tracks/21/type = "value"
 tracks/21/imported = false
@@ -279,7 +279,7 @@ tracks/21/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(427, 284)]
+"values": [Vector2(-410, 380)]
 }
 tracks/22/type = "value"
 tracks/22/imported = false
@@ -291,7 +291,7 @@ tracks/22/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(529, 284)]
+"values": [Vector2(-335, 198)]
 }
 tracks/23/type = "value"
 tracks/23/imported = false
@@ -303,7 +303,7 @@ tracks/23/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(634, 284)]
+"values": [Vector2(-301, 367)]
 }
 tracks/24/type = "value"
 tracks/24/imported = false
@@ -315,7 +315,7 @@ tracks/24/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(727, 284)]
+"values": [Vector2(-255, 303)]
 }
 tracks/25/type = "value"
 tracks/25/imported = false
@@ -327,7 +327,7 @@ tracks/25/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(24, 415)]
+"values": [Vector2(-258, 485)]
 }
 tracks/26/type = "value"
 tracks/26/imported = false
@@ -339,7 +339,7 @@ tracks/26/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(125, 415)]
+"values": [Vector2(-173, 421)]
 }
 tracks/27/type = "value"
 tracks/27/imported = false
@@ -351,7 +351,7 @@ tracks/27/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(221, 415)]
+"values": [Vector2(-73, -62)]
 }
 tracks/28/type = "value"
 tracks/28/imported = false
@@ -363,7 +363,7 @@ tracks/28/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(322, 415)]
+"values": [Vector2(-137, 87)]
 }
 tracks/29/type = "value"
 tracks/29/imported = false
@@ -375,7 +375,7 @@ tracks/29/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(427, 415)]
+"values": [Vector2(-128, 176)]
 }
 tracks/30/type = "value"
 tracks/30/imported = false
@@ -387,7 +387,7 @@ tracks/30/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(529, 415)]
+"values": [Vector2(-180, 100)]
 }
 tracks/31/type = "value"
 tracks/31/imported = false
@@ -399,7 +399,7 @@ tracks/31/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(634, 415)]
+"values": [Vector2(-175, 282)]
 }
 tracks/32/type = "value"
 tracks/32/imported = false
@@ -411,7 +411,7 @@ tracks/32/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(727, 415)]
+"values": [Vector2(0, 0)]
 }
 tracks/33/type = "value"
 tracks/33/imported = false
@@ -423,7 +423,7 @@ tracks/33/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(752, -14)]
+"values": [Vector2(-241, -280)]
 }
 tracks/34/type = "value"
 tracks/34/imported = false
@@ -435,7 +435,7 @@ tracks/34/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(18, 545)]
+"values": [Vector2(959, -175)]
 }
 tracks/35/type = "value"
 tracks/35/imported = false
@@ -447,7 +447,7 @@ tracks/35/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [5]
+"values": [3]
 }
 tracks/36/type = "value"
 tracks/36/imported = false
@@ -459,7 +459,7 @@ tracks/36/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [4]
+"values": [2]
 }
 tracks/37/type = "value"
 tracks/37/imported = false
@@ -471,7 +471,7 @@ tracks/37/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(951, 173)]
+"values": [Vector2(-241, -41)]
 }
 
 [sub_resource type="Animation" id="Animation_ec4ib"]
@@ -1389,13 +1389,7 @@ _data = {
 "start": SubResource("Animation_cwa4y")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhdmf"]
-bg_color = Color(0.619608, 0.478431, 1, 0.227451)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.619608, 0.478431, 1, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohwaj"]
 
 [sub_resource type="Gradient" id="Gradient_pl6gh"]
 offsets = PackedFloat32Array(0, 0.177596)
@@ -1464,7 +1458,7 @@ scale = Vector2(0.744436, 0.744436)
 texture = ExtResource("2_xahmg")
 
 [node name="Transition" type="Sprite2D" parent="."]
-position = Vector2(1487, 458)
+position = Vector2(647, 583)
 rotation = -1.79813
 scale = Vector2(1.21884, -1.21061)
 texture = ExtResource("3_mhrci")
@@ -1481,14 +1475,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -10.0
-offset_top = 48.0
-offset_right = 63.0
-offset_bottom = 123.0
+offset_left = 12.0
+offset_top = -83.0
+offset_right = 85.0
+offset_bottom = -8.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "1"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1505,14 +1499,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 85.0
-offset_top = 49.0
-offset_right = 158.0
-offset_bottom = 124.0
+offset_left = 107.0
+offset_top = -82.0
+offset_right = 180.0
+offset_bottom = -7.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "2"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1529,14 +1523,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 181.0
-offset_top = 49.0
-offset_right = 254.0
-offset_bottom = 124.0
+offset_left = 203.0
+offset_top = -86.0
+offset_right = 276.0
+offset_bottom = -11.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "3"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1553,14 +1547,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 282.0
-offset_top = 49.0
-offset_right = 355.0
-offset_bottom = 124.0
+offset_left = 304.0
+offset_top = -86.0
+offset_right = 377.0
+offset_bottom = -11.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "4"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1577,14 +1571,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 387.0
-offset_top = 49.0
-offset_right = 460.0
-offset_bottom = 124.0
+offset_left = 409.0
+offset_top = -93.0
+offset_right = 482.0
+offset_bottom = -18.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "5"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1601,14 +1595,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 489.0
-offset_top = 49.0
-offset_right = 562.0
-offset_bottom = 124.0
+offset_left = 511.0
+offset_top = -93.0
+offset_right = 584.0
+offset_bottom = -18.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "6"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1625,14 +1619,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 594.0
-offset_top = 49.0
-offset_right = 667.0
-offset_bottom = 124.0
+offset_left = 616.0
+offset_top = -102.0
+offset_right = 689.0
+offset_bottom = -27.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "7"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1649,14 +1643,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 687.0
-offset_top = 49.0
-offset_right = 760.0
-offset_bottom = 124.0
+offset_left = 709.0
+offset_top = -102.0
+offset_right = 782.0
+offset_bottom = -27.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "8"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1673,14 +1667,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -16.0
-offset_top = 163.0
-offset_right = 57.0
-offset_bottom = 238.0
+offset_left = 36.0
+offset_top = -159.0
+offset_right = 109.0
+offset_bottom = -84.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "9"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1697,14 +1691,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 85.0
-offset_top = 163.0
-offset_right = 158.0
-offset_bottom = 238.0
+offset_left = 137.0
+offset_top = -159.0
+offset_right = 210.0
+offset_bottom = -84.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "10"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1721,14 +1715,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 181.0
-offset_top = 163.0
-offset_right = 254.0
-offset_bottom = 238.0
+offset_left = 939.0
+offset_top = -101.0
+offset_right = 1012.0
+offset_bottom = -26.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "11"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1745,14 +1739,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 282.0
-offset_top = 163.0
-offset_right = 355.0
-offset_bottom = 238.0
+offset_left = 831.0
+offset_top = -106.0
+offset_right = 904.0
+offset_bottom = -31.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "12"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1769,14 +1763,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 387.0
-offset_top = 163.0
-offset_right = 460.0
-offset_bottom = 238.0
+offset_left = 811.0
+offset_top = -254.0
+offset_right = 884.0
+offset_bottom = -179.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "13"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1793,14 +1787,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 489.0
-offset_top = 163.0
-offset_right = 562.0
-offset_bottom = 238.0
+offset_left = 616.0
+offset_top = -231.0
+offset_right = 689.0
+offset_bottom = -156.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "14"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1817,14 +1811,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 594.0
-offset_top = 163.0
-offset_right = 667.0
-offset_bottom = 238.0
+offset_left = -471.0
+offset_top = 626.0
+offset_right = -398.0
+offset_bottom = 701.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "15"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1841,14 +1835,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 687.0
-offset_top = 163.0
-offset_right = 760.0
-offset_bottom = 238.0
+offset_left = -350.0
+offset_top = 629.0
+offset_right = -277.0
+offset_bottom = 704.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "16"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1865,14 +1859,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -16.0
-offset_top = 284.0
-offset_right = 57.0
-offset_bottom = 359.0
+offset_left = -154.0
+offset_top = 563.0
+offset_right = -81.0
+offset_bottom = 638.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "17"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1889,14 +1883,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 85.0
-offset_top = 284.0
-offset_right = 158.0
-offset_bottom = 359.0
+offset_left = -494.0
+offset_top = 130.0
+offset_right = -421.0
+offset_bottom = 205.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "18"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1913,14 +1907,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 181.0
-offset_top = 284.0
-offset_right = 254.0
-offset_bottom = 359.0
+offset_left = -425.0
+offset_top = 248.0
+offset_right = -352.0
+offset_bottom = 323.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "19"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1937,14 +1931,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 282.0
-offset_top = 284.0
-offset_right = 355.0
-offset_bottom = 359.0
+offset_left = -168.0
+offset_top = -14.0
+offset_right = -95.0
+offset_bottom = 61.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "20"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1961,14 +1955,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 387.0
-offset_top = 284.0
-offset_right = 460.0
-offset_bottom = 359.0
+offset_left = -450.0
+offset_top = 380.0
+offset_right = -377.0
+offset_bottom = 455.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "21"
 icon = ExtResource("6_06y12")
 flat = true
@@ -1985,14 +1979,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 489.0
-offset_top = 284.0
-offset_right = 562.0
-offset_bottom = 359.0
+offset_left = -375.0
+offset_top = 198.0
+offset_right = -302.0
+offset_bottom = 273.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "22"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2009,14 +2003,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 594.0
-offset_top = 284.0
-offset_right = 667.0
-offset_bottom = 359.0
+offset_left = -341.0
+offset_top = 367.0
+offset_right = -268.0
+offset_bottom = 442.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "23"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2033,14 +2027,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 687.0
-offset_top = 284.0
-offset_right = 760.0
-offset_bottom = 359.0
+offset_left = -295.0
+offset_top = 303.0
+offset_right = -222.0
+offset_bottom = 378.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "24"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2057,14 +2051,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -16.0
-offset_top = 415.0
-offset_right = 57.0
-offset_bottom = 490.0
+offset_left = -298.0
+offset_top = 485.0
+offset_right = -225.0
+offset_bottom = 560.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "25"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2081,14 +2075,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 85.0
-offset_top = 415.0
-offset_right = 158.0
-offset_bottom = 490.0
+offset_left = -213.0
+offset_top = 421.0
+offset_right = -140.0
+offset_bottom = 496.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "26"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2105,14 +2099,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 181.0
-offset_top = 415.0
-offset_right = 254.0
-offset_bottom = 490.0
+offset_left = -113.0
+offset_top = -62.0
+offset_right = -40.0
+offset_bottom = 13.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "27"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2129,14 +2123,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 282.0
-offset_top = 415.0
-offset_right = 355.0
-offset_bottom = 490.0
+offset_left = -177.0
+offset_top = 87.0
+offset_right = -104.0
+offset_bottom = 162.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "28"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2153,14 +2147,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 387.0
-offset_top = 415.0
-offset_right = 460.0
-offset_bottom = 490.0
+offset_left = -168.0
+offset_top = 176.0
+offset_right = -95.0
+offset_bottom = 251.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "29"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2177,14 +2171,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 489.0
-offset_top = 415.0
-offset_right = 562.0
-offset_bottom = 490.0
+offset_left = -220.0
+offset_top = 100.0
+offset_right = -147.0
+offset_bottom = 175.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "30"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2201,14 +2195,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 594.0
-offset_top = 415.0
-offset_right = 667.0
-offset_bottom = 490.0
+offset_left = -215.0
+offset_top = 282.0
+offset_right = -142.0
+offset_bottom = 357.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "31"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2226,14 +2220,13 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 687.0
-offset_top = 415.0
-offset_right = 760.0
-offset_bottom = 490.0
+offset_left = -40.0
+offset_right = 33.0
+offset_bottom = 75.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "32"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2258,7 +2251,7 @@ offset_bottom = 601.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "33"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2283,7 +2276,7 @@ offset_bottom = 601.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "34"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2308,7 +2301,7 @@ offset_bottom = 601.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "35"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2333,7 +2326,7 @@ offset_bottom = 601.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "36"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2358,7 +2351,7 @@ offset_bottom = 601.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "37"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2383,7 +2376,7 @@ offset_bottom = 601.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "38"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2408,7 +2401,7 @@ offset_bottom = 601.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("5_tpl6t")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxFlat_jhdmf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohwaj")
 text = "39"
 icon = ExtResource("6_06y12")
 flat = true
@@ -2421,7 +2414,7 @@ IsPixelartButton = true
 
 [node name="Iconuser" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_jubap")
-position = Vector2(951, 173)
+position = Vector2(-241, -41)
 scale = Vector2(1.09358, 1.09358)
 texture = ExtResource("10_14c6j")
 script = ExtResource("11_j8cba")
@@ -2434,7 +2427,7 @@ offset_right = 200.066
 offset_bottom = 189.501
 theme_override_fonts/normal_font = ExtResource("13_ng54s")
 theme_override_font_sizes/normal_font_size = 32
-text = "{STEAM USER}"
+text = "{STEAMUSER}"
 
 [node name="BestTime" type="RichTextLabel" parent="Iconuser"]
 material = SubResource("ShaderMaterial_mnboa")
@@ -2448,12 +2441,12 @@ text = "1:01 seg"
 
 [node name="speed" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 752.0
-offset_top = -14.0
-offset_right = 1251.0
-offset_bottom = 155.0
+offset_left = -241.0
+offset_top = -280.0
+offset_right = 258.0
+offset_bottom = -111.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_offset_x = 1
 theme_override_fonts/normal_font = ExtResource("14_7hpb2")
 theme_override_font_sizes/normal_font_size = 95
@@ -2461,12 +2454,12 @@ text = "Speed"
 
 [node name="tickers" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 545.0
-offset_right = 569.0
-offset_bottom = 664.0
+offset_left = 959.0
+offset_top = -175.0
+offset_right = 1510.0
+offset_bottom = -56.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_y = 3
 theme_override_constants/shadow_offset_x = -2
 theme_override_fonts/normal_font = ExtResource("14_7hpb2")
 theme_override_font_sizes/normal_font_size = 95

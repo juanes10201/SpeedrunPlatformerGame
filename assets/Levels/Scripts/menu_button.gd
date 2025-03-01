@@ -28,6 +28,8 @@ var tween_normal = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#if(text == "1"):
+	#	grab_focus()
 	_set_text_size(original_size.y)
 	if(BUTTON_ACTION == Global.BUTTON_ACTIONS.move_to_level_starting_with):
 		ADITIONAL_ARGUMENT += str(text)
@@ -38,7 +40,8 @@ func _process(delta: float) -> void:
 	#region Button anims
 	if(!PressedAnim):
 		var Mouse_pos = get_global_mouse_position()
-		if(Mouse_pos.x >= self.position.x && Mouse_pos.x <= self.position.x + self.size.x && Mouse_pos.y >= self.position.y && Mouse_pos.y <= self.position.y + self.size.y+20):
+		#Checks if mouse is touching button or if has focused(For controller support)
+		if(has_focus() || (Mouse_pos.x >= self.position.x && Mouse_pos.x <= self.position.x + self.size.x && Mouse_pos.y >= self.position.y && Mouse_pos.y <= self.position.y + self.size.y+20)):
 			if(IsPixelartButton && !touching_mouse):
 				$"../Iconuser"._update_best_scores(float(text))
 			touching_mouse = true

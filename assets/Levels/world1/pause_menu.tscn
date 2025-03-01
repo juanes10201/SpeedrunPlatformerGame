@@ -1,13 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://l4jvo6ayxlkp"]
+[gd_scene load_steps=19 format=3 uid="uid://l4jvo6ayxlkp"]
 
 [ext_resource type="Script" path="res://assets/Levels/Scripts/PauseMenuLogic.gd" id="1_lmvks"]
 [ext_resource type="Texture2D" uid="uid://be1h2ja4pyni1" path="res://assets/Sprites/screenshot.png" id="2_p57sw"]
 [ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="3_rsgsr"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/PauseMenuTransition.gd" id="4_37ts2"]
 [ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="5_rmh30"]
+[ext_resource type="Texture2D" uid="uid://b1ifl8spiqdmv" path="res://assets/Sprites/menus/buttonSelect2.png" id="6_7w7eu"]
 [ext_resource type="Texture2D" uid="uid://qot7qahghomi" path="res://assets/Sprites/PauseMenuConfigButton.png" id="6_gbpqt"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/menu_button.gd" id="7_fg2bv"]
 [ext_resource type="Texture2D" uid="uid://dt72x52yyj1wa" path="res://assets/Sprites/PauseMenuButton.png" id="8_5hgw6"]
+[ext_resource type="StyleBox" uid="uid://dirm08jxjyusl" path="res://assets/Sprites/menus/selectStylebox.tres" id="9_cas78"]
 [ext_resource type="Texture2D" uid="uid://0s62gu0b77n1" path="res://assets/Sprites/PauseMenuGoBackButton.png" id="9_pn634"]
 
 [sub_resource type="Animation" id="Animation_xvgwm"]
@@ -321,21 +323,19 @@ _data = {
 "main_movement": SubResource("Animation_uc043")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7cgd"]
-bg_color = Color(0.619608, 0.478431, 1, 0.227451)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.619608, 0.478431, 1, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ptwe"]
+texture = ExtResource("6_7w7eu")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncy8t"]
-bg_color = Color(0.823529, 0.658824, 1, 0.156863)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.823529, 0.658824, 1, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yw3r3"]
+texture = ExtResource("6_7w7eu")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [node name="control_pause_menu" type="Control"]
 layout_mode = 3
@@ -394,7 +394,7 @@ offset_top = 419.0
 offset_right = 148.0
 offset_bottom = 553.0
 grow_horizontal = 0
-theme_override_styles/focus = SubResource("StyleBoxFlat_i7cgd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0ptwe")
 icon = ExtResource("6_gbpqt")
 flat = true
 icon_alignment = 1
@@ -412,7 +412,7 @@ offset_top = 106.0
 offset_right = -357.0
 offset_bottom = 302.0
 grow_horizontal = 0
-theme_override_styles/focus = SubResource("StyleBoxFlat_ncy8t")
+theme_override_styles/focus = ExtResource("9_cas78")
 icon = ExtResource("8_5hgw6")
 flat = true
 icon_alignment = 1
@@ -430,7 +430,7 @@ offset_top = 584.0
 offset_right = 127.0
 offset_bottom = 707.0
 grow_horizontal = 0
-theme_override_styles/focus = SubResource("StyleBoxFlat_i7cgd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_yw3r3")
 icon = ExtResource("9_pn634")
 flat = true
 icon_alignment = 1

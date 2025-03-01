@@ -1,11 +1,16 @@
-[gd_scene load_steps=24 format=4 uid="uid://qw4dpb57t7yw"]
+[gd_scene load_steps=30 format=4 uid="uid://qw4dpb57t7yw"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_bi0fk"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_p4moc"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="2_snkaw"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_u03ck"]
+[ext_resource type="Texture2D" uid="uid://d4adg6gvvqnum" path="res://assets/Sprites/blackboard/blackboard1.png" id="3_24lgs"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="3_dqsa5"]
+[ext_resource type="Texture2D" uid="uid://ciergeo0yj4j0" path="res://assets/Sprites/blackboard/blackboard3.png" id="3_f2h44"]
+[ext_resource type="Texture2D" uid="uid://oxkakvhpr2r2" path="res://assets/Sprites/blackboard/blackboard2.png" id="4_fdoyh"]
+[ext_resource type="Texture2D" uid="uid://d03twnnvb6npk" path="res://assets/Sprites/blackboard/blackboard4.png" id="4_fp6qt"]
 [ext_resource type="PackedScene" uid="uid://djqwajvc8m3td" path="res://assets/Levels/enemie.tscn" id="5_h6i6c"]
+[ext_resource type="Script" path="res://assets/Levels/world1/blackboard.gd" id="5_wf4i7"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="6_35nne"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="9_ntw5c"]
 [ext_resource type="Texture2D" uid="uid://fxx14m4na3pt" path="res://assets/Sprites/kenney_inputs.png" id="11_sx557"]
@@ -49,6 +54,31 @@ _data = {
 "RESET": SubResource("Animation_wh1ld"),
 "move": SubResource("Animation_6ubuh")
 }
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1t2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f2h44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fp6qt")
+}],
+"loop": true,
+"name": &"groundsmash",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_24lgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fdoyh")
+}],
+"loop": true,
+"name": &"slide",
+"speed": 1.0
+}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qknv4"]
 texture = ExtResource("1_p4moc")
@@ -233,6 +263,20 @@ script = ExtResource("2_u03ck")
 libraries = {
 "": SubResource("AnimationLibrary_0i2pc")
 }
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-120, -69)
+sprite_frames = SubResource("SpriteFrames_s1t2w")
+animation = &"slide"
+script = ExtResource("5_wf4i7")
+anim_to_play = "slide"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-17, 73)
+sprite_frames = SubResource("SpriteFrames_s1t2w")
+animation = &"groundsmash"
+script = ExtResource("5_wf4i7")
+anim_to_play = "groundsmash"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 32)

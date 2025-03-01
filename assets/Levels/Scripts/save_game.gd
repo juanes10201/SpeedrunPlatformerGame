@@ -3,6 +3,12 @@ extends Node
 var config = ConfigFile.new()
 const SAVE_GAME_PATH = "user://savegame.save"
 
+func IfPlayedFirstTime() -> bool:
+	loadgamedata()
+	var playedbefore = config.get_value("Game", "PlayedBefore")
+	
+	return false
+
 func savelevelrecord(Level : float = 1, RealTime : float = 0) -> void:
 	loadgamedata()
 	var current_best_score = config.get_value("Level", str(Level))

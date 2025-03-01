@@ -1,15 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://kjm13r2ji7ia"]
+[gd_scene load_steps=18 format=3 uid="uid://bn1csj47sa2bw"]
 
-[ext_resource type="Script" path="res://assets/Levels/Scripts/PauseMenuLogic.gd" id="1_vu2xc"]
-[ext_resource type="Texture2D" uid="uid://be1h2ja4pyni1" path="res://assets/Sprites/screenshot.png" id="2_aw1vc"]
-[ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="3_0md8d"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/PauseMenuTransition.gd" id="4_uxibd"]
-[ext_resource type="Texture2D" uid="uid://yd12qv33qsva" path="res://assets/Sprites/titlemenu_placeholder.png" id="5_3ynvh"]
-[ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="6_ic1sp"]
-[ext_resource type="Texture2D" uid="uid://qot7qahghomi" path="res://assets/Sprites/PauseMenuConfigButton.png" id="7_jb63s"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/menu_button.gd" id="8_5grrx"]
-[ext_resource type="Texture2D" uid="uid://dt72x52yyj1wa" path="res://assets/Sprites/PauseMenuButton.png" id="9_kqgcf"]
-[ext_resource type="Texture2D" uid="uid://0s62gu0b77n1" path="res://assets/Sprites/PauseMenuGoBackButton.png" id="10_nri81"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/PauseMenuLogic.gd" id="1_p4p5w"]
+[ext_resource type="Texture2D" uid="uid://be1h2ja4pyni1" path="res://assets/Sprites/screenshot.png" id="2_b6kau"]
+[ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="3_6l5tb"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/PauseMenuTransition.gd" id="4_i1blh"]
+[ext_resource type="Texture2D" uid="uid://yd12qv33qsva" path="res://assets/Sprites/titlemenu_placeholder.png" id="5_w07j8"]
+[ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="6_b6xsx"]
+[ext_resource type="StyleBox" uid="uid://c1edtywsppgxy" path="res://assets/Sprites/menus/selectStylebox2.tres" id="7_kynhk"]
+[ext_resource type="Texture2D" uid="uid://qot7qahghomi" path="res://assets/Sprites/PauseMenuConfigButton.png" id="8_7qegd"]
+[ext_resource type="Script" path="res://assets/Levels/Scripts/menu_button.gd" id="9_itrmr"]
+[ext_resource type="StyleBox" uid="uid://dirm08jxjyusl" path="res://assets/Sprites/menus/selectStylebox.tres" id="10_gopbp"]
+[ext_resource type="Texture2D" uid="uid://dt72x52yyj1wa" path="res://assets/Sprites/PauseMenuButton.png" id="11_1to64"]
+[ext_resource type="Texture2D" uid="uid://0s62gu0b77n1" path="res://assets/Sprites/PauseMenuGoBackButton.png" id="12_cvx7u"]
 
 [sub_resource type="Animation" id="Animation_xvgwm"]
 tracks/0/type = "value"
@@ -322,22 +324,6 @@ _data = {
 "main_movement": SubResource("Animation_3qh4w")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7cgd"]
-bg_color = Color(0.619608, 0.478431, 1, 0.227451)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.619608, 0.478431, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncy8t"]
-bg_color = Color(0.823529, 0.658824, 1, 0.156863)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.823529, 0.658824, 1, 1)
-
 [node name="control_pause_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -347,19 +333,19 @@ focus_mode = 2
 
 [node name="pause_menu" type="CanvasLayer" parent="."]
 layer = 2
-script = ExtResource("1_vu2xc")
+script = ExtResource("1_p4p5w")
 
 [node name="Sprite2D" type="Sprite2D" parent="pause_menu"]
 position = Vector2(691, 373)
 scale = Vector2(0.744436, 0.744436)
-texture = ExtResource("2_aw1vc")
+texture = ExtResource("2_b6kau")
 
 [node name="Transition" type="Sprite2D" parent="pause_menu"]
 position = Vector2(1750, 374.562)
 rotation = 1.33518
 scale = Vector2(-1.21884, 1.21061)
-texture = ExtResource("3_0md8d")
-script = ExtResource("4_uxibd")
+texture = ExtResource("3_6l5tb")
+script = ExtResource("4_i1blh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="pause_menu/Transition"]
 libraries = {
@@ -369,23 +355,23 @@ libraries = {
 [node name="TitlemenuPlaceholder" type="Sprite2D" parent="pause_menu"]
 position = Vector2(518, 110)
 scale = Vector2(8.46429, 8.46429)
-texture = ExtResource("5_3ynvh")
+texture = ExtResource("5_w07j8")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="pause_menu"]
-offset_left = 270.0
-offset_top = 15.0
-offset_right = 768.998
-offset_bottom = 184.0
-theme_override_fonts/normal_font = ExtResource("6_ic1sp")
+offset_left = 702.932
+offset_top = -6.43848
+offset_right = 1201.93
+offset_bottom = 162.562
+theme_override_fonts/normal_font = ExtResource("6_b6xsx")
 theme_override_font_sizes/normal_font_size = 120
 text = "Speed"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="pause_menu"]
-offset_left = 504.0
-offset_top = 77.0
-offset_right = 1055.0
-offset_bottom = 259.0
-theme_override_fonts/normal_font = ExtResource("6_ic1sp")
+offset_left = 541.932
+offset_top = 570.562
+offset_right = 1092.93
+offset_bottom = 752.562
+theme_override_fonts/normal_font = ExtResource("6_b6xsx")
 theme_override_font_sizes/normal_font_size = 120
 text = "Tickers"
 
@@ -394,7 +380,7 @@ offset_left = 325.0
 offset_top = 174.0
 offset_right = 769.0
 offset_bottom = 247.0
-theme_override_fonts/normal_font = ExtResource("6_ic1sp")
+theme_override_fonts/normal_font = ExtResource("6_b6xsx")
 theme_override_font_sizes/normal_font_size = 60
 text = "placeholder logo"
 
@@ -403,17 +389,17 @@ z_index = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -832.0
-offset_top = 323.0
-offset_right = -672.0
-offset_bottom = 488.0
+offset_left = 18.0
+offset_top = 419.0
+offset_right = 178.0
+offset_bottom = 584.0
 grow_horizontal = 0
-theme_override_styles/focus = SubResource("StyleBoxFlat_i7cgd")
-icon = ExtResource("7_jb63s")
+theme_override_styles/focus = ExtResource("7_kynhk")
+icon = ExtResource("8_7qegd")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_5grrx")
+script = ExtResource("9_itrmr")
 BUTTON_ACTION = 3
 
 [node name="PauseMenuButton2" type="Button" parent="pause_menu"]
@@ -421,36 +407,36 @@ z_index = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1078.0
-offset_top = 206.0
-offset_right = -872.0
-offset_bottom = 418.0
+offset_left = -547.0
+offset_top = 106.0
+offset_right = -341.0
+offset_bottom = 318.0
 grow_horizontal = 0
-theme_override_styles/focus = SubResource("StyleBoxFlat_ncy8t")
-icon = ExtResource("9_kqgcf")
+theme_override_styles/focus = ExtResource("10_gopbp")
+icon = ExtResource("11_1to64")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_5grrx")
+script = ExtResource("9_itrmr")
 BUTTON_ACTION = 4
-ADITIONAL_ARGUMENT = "level1"
+ADITIONAL_ARGUMENT = "select_level"
 
 [node name="PauseMenuGoBackButton2" type="Button" parent="pause_menu"]
 z_index = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -632.0
-offset_top = 389.0
-offset_right = -478.0
-offset_bottom = 548.0
+offset_left = 8.0
+offset_top = 584.0
+offset_right = 162.0
+offset_bottom = 743.0
 grow_horizontal = 0
-theme_override_styles/focus = SubResource("StyleBoxFlat_i7cgd")
-icon = ExtResource("10_nri81")
+theme_override_styles/focus = ExtResource("7_kynhk")
+icon = ExtResource("12_cvx7u")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("8_5grrx")
+script = ExtResource("9_itrmr")
 BUTTON_ACTION = 2
 
 [connection signal="pressed" from="pause_menu/PauseMenuConfigButton2" to="pause_menu/PauseMenuConfigButton2" method="_on_pressed"]

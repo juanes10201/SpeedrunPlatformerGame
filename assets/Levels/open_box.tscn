@@ -1,20 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1ytdkacld0nb"]
+[gd_scene load_steps=9 format=3 uid="uid://c1ytdkacld0nb"]
 
 [ext_resource type="Script" path="res://assets/Levels/Scripts/open_box.gd" id="1_5cidy"]
+[ext_resource type="Shader" path="res://assets/Levels/open_box.gdshader" id="2_1dae4"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="2_lrgft"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b824a"]
-atlas = ExtResource("2_lrgft")
-region = Rect2(128.062, 0.125791, 15.8569, 15.8229)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qn4ou"]
 size = Vector2(16, 16)
 
+[sub_resource type="Gradient" id="Gradient_5xgts"]
+offsets = PackedFloat32Array(0, 0.803279, 1)
+colors = PackedColorArray(0.372549, 0.788235, 0.905882, 1, 0.368627, 0.992157, 0.968627, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_craap"]
+gradient = SubResource("Gradient_5xgts")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_otnnh"]
+shader = ExtResource("2_1dae4")
+shader_parameter/size_effect = 0.1
+shader_parameter/speed = 1.0
+shader_parameter/highlight_strength = 0.5
+shader_parameter/color_mode_toggle = true
+shader_parameter/is_horizontal = false
+shader_parameter/pause_duration = 0.2
+shader_parameter/color_gradient = SubResource("GradientTexture1D_craap")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lei70"]
+atlas = ExtResource("2_lrgft")
+region = Rect2(160.004, 0.00147152, 15.9422, 15.9943)
+
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource("1_5cidy")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("AtlasTexture_b824a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qn4ou")
@@ -28,6 +43,11 @@ collision_mask = 31
 scale = Vector2(1.115, 1.16)
 shape = SubResource("RectangleShape2D_qn4ou")
 debug_color = Color(0.826248, 0.397122, 3.85046e-07, 0.42)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_otnnh")
+scale = Vector2(1.055, 1.055)
+texture = SubResource("AtlasTexture_lei70")
 
 [node name="SandTimer" type="Timer" parent="."]
 wait_time = 0.2

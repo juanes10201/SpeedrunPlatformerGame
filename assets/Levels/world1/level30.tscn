@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://y8hoxiwewykl"]
+[gd_scene load_steps=22 format=4 uid="uid://y8hoxiwewykl"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_0232b"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_yrbhv"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="10_n7a8j"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="11_mobwh"]
 [ext_resource type="PackedScene" uid="uid://cqqh8fidhrwc3" path="res://assets/Levels/enemie_skeleton.tscn" id="14_1xrpc"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="14_t7y2k"]
 [ext_resource type="PackedScene" uid="uid://c1ytdkacld0nb" path="res://assets/Levels/open_box.tscn" id="15_1gwwl"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
@@ -162,9 +163,10 @@ current_level = 30.0
 [node name="WorldEnvironment" parent="." instance=ExtResource("7_k0kpi")]
 
 [node name="KillBox" parent="." instance=ExtResource("8_kr5fu")]
-position = Vector2(-54, 424)
+position = Vector2(-54, 426)
 scale = Vector2(99.32, 1)
 Visible = false
+CanChange = false
 
 [node name="Player" parent="." instance=ExtResource("10_n7a8j")]
 position = Vector2(-190, 222)
@@ -201,3 +203,9 @@ scale = Vector2(1.5, 4)
 [node name="StaticBody2D" parent="." instance=ExtResource("15_1gwwl")]
 position = Vector2(-135, 237)
 scale = Vector2(3, 1)
+
+[node name="AmbientParticles" parent="." instance=ExtResource("14_t7y2k")]
+position = Vector2(35, 63)
+
+[node name="AmbientParticles2" parent="." instance=ExtResource("14_t7y2k")]
+position = Vector2(-171, 71)

@@ -6,7 +6,10 @@ const SAVE_GAME_PATH = "user://savegame.save"
 func IfPlayedFirstTime() -> bool:
 	loadgamedata()
 	var playedbefore = config.get_value("Game", "PlayedBefore")
-	
+	if(playedbefore == "true"):
+		return true
+	else:
+		config.set_value("Game", "PlayedBefore", "true")
 	return false
 
 func savelevelrecord(Level : float = 1, RealTime : float = 0) -> void:

@@ -11,6 +11,8 @@ func _ready() -> void:
 	tween = get_tree().create_tween().set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 	tween.tween_property(self, "position", PosGoto, 1.0)
 	CanDie = false
+	$PlayerDeathArea2D/CollisionShape2D.disabled = true
+	$PlayerJumpArea2D/CollisionShape2D.disabled = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -18,10 +20,12 @@ func _process(delta: float) -> void:
 		position.y += 30*delta
 		if(DeathTimer.is_stopped()):
 			Destroy()
+	if($DisableTimer.is_stopped()):
+		$PlayerDeathArea2D/CollisionShape2D.disabled = false
+		$PlayerJumpArea2D/CollisionShape2D.disabled = false
 	if(!tween.is_running() && DeathTimer.is_stopped()):
 		DeathTimer.start()
 		CanDie = true
-		print("a")
 
 func Destroy() -> void:
 	#region Create destroy particles

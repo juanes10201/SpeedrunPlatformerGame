@@ -15,7 +15,8 @@ enum BUTTON_ACTIONS{
 }
 enum OBJECT_ACTIONS{
 	none,
-	switch_killbox_type
+	switch_killbox_type,
+	MoveLava
 }
 
 # Called when the node enters the scene tree for the first time.

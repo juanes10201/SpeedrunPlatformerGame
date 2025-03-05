@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://d4lqd4xuepdef"]
+[gd_scene load_steps=18 format=4 uid="uid://d4lqd4xuepdef"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_g1dnh"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_ujwwy"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="8_sq8sp"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="11_8v5lg"]
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="11_22yrf"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="12_pxjv7"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -302,5 +303,9 @@ collision_mask = 31
 position = Vector2(-275, 343)
 scale = Vector2(53.6, 1)
 Visible = false
+CanChange = false
 
 [node name="CanvasLayer" parent="." instance=ExtResource("11_22yrf")]
+
+[node name="AmbientParticles" parent="." instance=ExtResource("12_pxjv7")]
+position = Vector2(-281, -200)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://c688753g83gfm"]
+[gd_scene load_steps=20 format=4 uid="uid://c688753g83gfm"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_svm64"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_230qw"]
@@ -10,10 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="8_17xrm"]
 [ext_resource type="PackedScene" uid="uid://cqqh8fidhrwc3" path="res://assets/Levels/enemie_skeleton.tscn" id="8_o6q2b"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="9_3tqqu"]
-[ext_resource type="PackedScene" uid="uid://bxtkh08fsp6ue" path="res://assets/Levels/kill_box_blue.tscn" id="10_8y0hr"]
-[ext_resource type="PackedScene" uid="uid://mwwwugaaoyiw" path="res://assets/Levels/key.tscn" id="11_cd4gw"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="12_fo3hw"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="13_3jwmj"]
-[ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="14_ye02u"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -163,13 +161,10 @@ current_level = 27.0
 [node name="WorldEnvironment" parent="." instance=ExtResource("7_sapdy")]
 
 [node name="KillBox" parent="." instance=ExtResource("8_17xrm")]
-position = Vector2(-54, 424)
+position = Vector2(-54, 422)
 scale = Vector2(99.32, 1)
 Visible = false
-
-[node name="Key2" parent="." instance=ExtResource("11_cd4gw")]
-position = Vector2(-377, 254)
-AditionalAction = 1
+CanChange = false
 
 [node name="Player" parent="." instance=ExtResource("9_3tqqu")]
 position = Vector2(-71, 334)
@@ -188,17 +183,9 @@ limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("13_3jwmj")
 
-[node name="KillBox10" parent="." instance=ExtResource("8_17xrm")]
-position = Vector2(-349, 128)
-
-[node name="KillBox11" parent="." instance=ExtResource("10_8y0hr")]
-position = Vector2(-349, 152)
-
-[node name="falling_sand9" parent="." instance=ExtResource("14_ye02u")]
-position = Vector2(-333, 104)
-
 [node name="Enemie" parent="." instance=ExtResource("8_o6q2b")]
 position = Vector2(42, 284)
+TimeToShoot = 0.7
 
 [node name="KillBox2" parent="." instance=ExtResource("8_17xrm")]
 position = Vector2(167, 205)
@@ -207,3 +194,6 @@ scale = Vector2(5, 1)
 [node name="KillBox3" parent="." instance=ExtResource("8_17xrm")]
 position = Vector2(167, 126)
 scale = Vector2(5, 1)
+
+[node name="AmbientParticles" parent="." instance=ExtResource("12_fo3hw")]
+position = Vector2(134, 45)

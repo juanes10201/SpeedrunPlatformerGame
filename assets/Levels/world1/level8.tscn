@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cmrxabift4221"]
+[gd_scene load_steps=16 format=4 uid="uid://cmrxabift4221"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_b6ua6"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_kxtis"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bygxx5ppwysc3" path="res://assets/Levels/enemie_special.tscn" id="6_c0iwm"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="7_x5mvq"]
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="9_3dbsn"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="10_3dkqx"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -250,3 +251,6 @@ EnemyDirection = 2
 [node name="WorldEnvironment" parent="." instance=ExtResource("7_x5mvq")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("9_3dbsn")]
+
+[node name="AmbientParticles" parent="." instance=ExtResource("10_3dkqx")]
+position = Vector2(10, -29)

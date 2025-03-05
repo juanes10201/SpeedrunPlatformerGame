@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://qw4dpb57t7yw"]
+[gd_scene load_steps=35 format=4 uid="uid://qw4dpb57t7yw"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_bi0fk"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_p4moc"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="12_8csto"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/animated_button.gd" id="12_h62lm"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="12_obget"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="18_6522k"]
+[ext_resource type="Texture2D" uid="uid://c84avb2yr7nyv" path="res://assets/Sprites/Keyboard White.png" id="19_ho3ev"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -245,6 +247,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpyud"]
+atlas = ExtResource("19_ho3ev")
+region = Rect2(15, 80, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbd0k"]
+atlas = ExtResource("19_ho3ev")
+region = Rect2(15, 176, 24, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0g7lv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpyud")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbd0k")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, -1)
 
@@ -265,14 +294,18 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-120, -69)
+modulate = Color(0.490196, 0.490196, 0.490196, 1)
+position = Vector2(-129, -75)
+skew = -0.20944
 sprite_frames = SubResource("SpriteFrames_s1t2w")
 animation = &"slide"
 script = ExtResource("5_wf4i7")
 anim_to_play = "slide"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(-17, 73)
+modulate = Color(0.489622, 0.489622, 0.489622, 1)
+position = Vector2(-24, 63)
+skew = 0.0890118
 sprite_frames = SubResource("SpriteFrames_s1t2w")
 animation = &"groundsmash"
 script = ExtResource("5_wf4i7")
@@ -357,6 +390,7 @@ EnemyDirection = 2
 position = Vector2(-100, 336)
 scale = Vector2(99.32, 1)
 Visible = false
+CanChange = false
 
 [node name="CanvasLayer" parent="." instance=ExtResource("12_8csto")]
 
@@ -376,3 +410,12 @@ ButtonToPress = "player_slide"
 position = Vector2(17, -14)
 sprite_frames = SubResource("SpriteFrames_uw3e0")
 script = ExtResource("12_h62lm")
+
+[node name="AmbientParticles" parent="." instance=ExtResource("18_6522k")]
+position = Vector2(13, -173)
+
+[node name="DashButtonKeyboard" type="AnimatedSprite2D" parent="."]
+position = Vector2(-273, -63)
+sprite_frames = SubResource("SpriteFrames_0g7lv")
+script = ExtResource("12_h62lm")
+ButtonToPress = "player_slide"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bitlmcq7vy28o"]
+[gd_scene load_steps=22 format=4 uid="uid://bitlmcq7vy28o"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_y0bho"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_wmjuc"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="8_td8xb"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="9_4bcer"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="11_3cmu8"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="12_7ughv"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="12_rk70u"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
@@ -353,11 +354,13 @@ position = Vector2(-153, 537)
 position = Vector2(-580, 21)
 scale = Vector2(41.6249, -0.656824)
 Visible = false
+CanChange = false
 
 [node name="KillBox42" parent="." instance=ExtResource("12_rk70u")]
 position = Vector2(-162, 745)
 scale = Vector2(41.6249, -0.656824)
 Visible = false
+CanChange = false
 
 [node name="KillBox9" parent="." instance=ExtResource("12_rk70u")]
 position = Vector2(-198, 354)
@@ -376,3 +379,6 @@ position = Vector2(-197, 514)
 
 [node name="KillBox18" parent="." instance=ExtResource("12_rk70u")]
 position = Vector2(-181, 514)
+
+[node name="AmbientParticles" parent="." instance=ExtResource("12_7ughv")]
+position = Vector2(-211, -369)

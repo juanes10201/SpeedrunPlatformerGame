@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cafn7pokf25fd"]
+[gd_scene load_steps=31 format=4 uid="uid://cafn7pokf25fd"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_enkfg"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_37lu5"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="12_mru5o"]
 [ext_resource type="Texture2D" uid="uid://fxx14m4na3pt" path="res://assets/Sprites/kenney_inputs.png" id="13_hnsh7"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/animated_button.gd" id="14_ngfm0"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="15_t5fs5"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -398,17 +399,11 @@ EnemyDirection = 2
 position = Vector2(-281, 1578)
 EnemyDirection = 2
 
-[node name="falling_sand" parent="." instance=ExtResource("9_2w5ig")]
-position = Vector2(-330, 2039)
-
 [node name="falling_sand2" parent="." instance=ExtResource("9_2w5ig")]
 position = Vector2(-314, 2039)
 
 [node name="falling_sand3" parent="." instance=ExtResource("9_2w5ig")]
 position = Vector2(-298, 2039)
-
-[node name="falling_sand4" parent="." instance=ExtResource("9_2w5ig")]
-position = Vector2(-282, 2039)
 
 [node name="KillBox" parent="." instance=ExtResource("12_mru5o")]
 position = Vector2(-331, 2180)
@@ -432,11 +427,13 @@ position = Vector2(-315, 2453)
 position = Vector2(-677, 2008)
 scale = Vector2(41.6249, -0.656824)
 Visible = false
+CanChange = false
 
 [node name="KillBox8" parent="." instance=ExtResource("12_mru5o")]
 position = Vector2(65, 2006)
 scale = Vector2(41.6249, -0.656824)
 Visible = false
+CanChange = false
 
 [node name="DashButton" type="AnimatedSprite2D" parent="."]
 position = Vector2(-314, 313)
@@ -449,3 +446,6 @@ position = Vector2(-287, -68)
 sprite_frames = SubResource("SpriteFrames_ppre6")
 script = ExtResource("14_ngfm0")
 ButtonToPress = "player_slide"
+
+[node name="AmbientParticles" parent="." instance=ExtResource("15_t5fs5")]
+position = Vector2(-309, -152)

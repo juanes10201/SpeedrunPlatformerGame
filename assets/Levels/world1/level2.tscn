@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bvi5piwn8p4tm"]
+[gd_scene load_steps=27 format=4 uid="uid://bvi5piwn8p4tm"]
 
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_01enl"]
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_18p41"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://assets/Levels/Scripts/animated_button.gd" id="10_hm2hf"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="11_1dasu"]
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="11_17duw"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="14_vwp2c"]
+[ext_resource type="Texture2D" uid="uid://c84avb2yr7nyv" path="res://assets/Sprites/Keyboard White.png" id="15_r2eqi"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -167,6 +169,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jr0n"]
+atlas = ExtResource("15_r2eqi")
+region = Rect2(0, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usbao"]
+atlas = ExtResource("15_r2eqi")
+region = Rect2(0, 160, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h5v7n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jr0n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usbao")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, -1)
 
@@ -240,11 +269,21 @@ position = Vector2(-25, 87)
 position = Vector2(-194, 211)
 scale = Vector2(99.32, 1)
 Visible = false
+CanChange = false
 
 [node name="CanvasLayer" parent="." instance=ExtResource("11_17duw")]
 
 [node name="DashButton" type="AnimatedSprite2D" parent="."]
-position = Vector2(-140, -24)
+position = Vector2(-146, -25)
 sprite_frames = SubResource("SpriteFrames_l7k34")
 script = ExtResource("10_hm2hf")
 ButtonToPress = "player_dash"
+
+[node name="DashButtonKeyboard" type="AnimatedSprite2D" parent="."]
+position = Vector2(-179, -41)
+sprite_frames = SubResource("SpriteFrames_h5v7n")
+script = ExtResource("10_hm2hf")
+ButtonToPress = "player_dash"
+
+[node name="AmbientParticles" parent="." instance=ExtResource("14_vwp2c")]
+position = Vector2(-223, -366)

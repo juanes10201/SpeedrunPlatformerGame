@@ -18,6 +18,6 @@ func _on_body_entered(body):
 		SaveGame.savelevelrecord(current_level ,$"../Time_Left".wait_time - $"../Time_Left".time_left)
 		#endregion
 		#region Change level
-		var _scene_string : String = "res://assets/Levels/world1/" + level_to_change + ".tscn"
+		var _scene_string : String = "res://assets/Levels/world1/level" + str(current_level+1) + ".tscn"
 		get_tree().change_scene_to_file(_scene_string)
 		#endregion

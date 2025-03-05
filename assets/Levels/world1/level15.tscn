@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dgu46ihyo375i"]
+[gd_scene load_steps=24 format=4 uid="uid://dgu46ihyo375i"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_sev6v"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_q20hp"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://mwwwugaaoyiw" path="res://assets/Levels/key.tscn" id="13_bb8w2"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="13_wknru"]
 [ext_resource type="PackedScene" uid="uid://c1ytdkacld0nb" path="res://assets/Levels/open_box.tscn" id="14_sn28y"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="14_yqlgd"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -301,6 +302,7 @@ current_level = 15.0
 position = Vector2(142, 240)
 scale = Vector2(99.32, 1)
 Visible = false
+CanChange = false
 
 [node name="Key" parent="." instance=ExtResource("13_bb8w2")]
 position = Vector2(-292, -34)
@@ -309,11 +311,9 @@ position = Vector2(-292, -34)
 position = Vector2(69, -15)
 scale = Vector2(2.215, 3.125)
 
-[node name="KillBox2" parent="." instance=ExtResource("11_kqgmp")]
-position = Vector2(30, -175)
-
 [node name="KillBox3" parent="." instance=ExtResource("11_kqgmp")]
-position = Vector2(15, -175)
+position = Vector2(22, -175)
+scale = Vector2(2, 1)
 
 [node name="falling_sand" parent="." instance=ExtResource("13_wknru")]
 position = Vector2(-83, 17)
@@ -387,11 +387,9 @@ position = Vector2(36, 172)
 [node name="falling_sand24" parent="." instance=ExtResource("13_wknru")]
 position = Vector2(20, 172)
 
-[node name="KillBox6" parent="." instance=ExtResource("11_kqgmp")]
-position = Vector2(-5, -69)
-
 [node name="KillBox7" parent="." instance=ExtResource("11_kqgmp")]
-position = Vector2(-20, -69)
+position = Vector2(-11, -69)
+scale = Vector2(2, 1)
 
 [node name="KillBox4" parent="." instance=ExtResource("11_kqgmp")]
 position = Vector2(98, -370)
@@ -400,3 +398,6 @@ Visible = false
 
 [node name="falling_sand25" parent="." instance=ExtResource("13_wknru")]
 position = Vector2(-127, 156)
+
+[node name="AmbientParticles" parent="." instance=ExtResource("14_yqlgd")]
+position = Vector2(-284, -89)

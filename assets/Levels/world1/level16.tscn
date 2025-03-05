@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://c5ueymd87lgb0"]
+[gd_scene load_steps=26 format=4 uid="uid://c5ueymd87lgb0"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_86mg3"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_y1ig7"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="13_4nnxb"]
 [ext_resource type="PackedScene" uid="uid://bygxx5ppwysc3" path="res://assets/Levels/enemie_special.tscn" id="14_5dlhc"]
 [ext_resource type="PackedScene" uid="uid://djqwajvc8m3td" path="res://assets/Levels/enemie.tscn" id="15_lf3du"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="16_m63sx"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -300,9 +301,10 @@ current_level = 16.0
 [node name="WorldEnvironment" parent="." instance=ExtResource("9_p3m2h")]
 
 [node name="KillBox" parent="." instance=ExtResource("10_xrwsc")]
-position = Vector2(142, 240)
+position = Vector2(142, 244)
 scale = Vector2(99.32, 1)
 Visible = false
+CanChange = false
 
 [node name="Key" parent="." instance=ExtResource("11_311bb")]
 position = Vector2(243, -175)
@@ -313,7 +315,7 @@ scale = Vector2(3.06, 3.125)
 
 [node name="KillBox2" parent="." instance=ExtResource("10_xrwsc")]
 position = Vector2(118, -141)
-scale = Vector2(31.985, 0.68)
+scale = Vector2(29.905, 0.68)
 
 [node name="KillBox4" parent="." instance=ExtResource("10_xrwsc")]
 position = Vector2(107, -447)
@@ -400,7 +402,7 @@ position = Vector2(-99, -32)
 
 [node name="KillBox3" parent="." instance=ExtResource("10_xrwsc")]
 position = Vector2(-43, 65)
-scale = Vector2(8.655, 2.875)
+scale = Vector2(7.93, 2.875)
 
 [node name="Enemie4" parent="." instance=ExtResource("15_lf3du")]
 position = Vector2(35, -63)
@@ -411,3 +413,6 @@ position = Vector2(99, -63)
 [node name="KillBox5" parent="." instance=ExtResource("10_xrwsc")]
 position = Vector2(206, 173)
 scale = Vector2(3.33, 2.875)
+
+[node name="AmbientParticles" parent="." instance=ExtResource("16_m63sx")]
+position = Vector2(-141, -263)

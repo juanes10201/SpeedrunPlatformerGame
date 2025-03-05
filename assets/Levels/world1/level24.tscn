@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://ijygf8cwv32x"]
+[gd_scene load_steps=22 format=4 uid="uid://ijygf8cwv32x"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_fy35p"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_scyvo"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bygxx5ppwysc3" path="res://assets/Levels/enemie_special.tscn" id="11_wn83n"]
 [ext_resource type="PackedScene" uid="uid://bxtkh08fsp6ue" path="res://assets/Levels/kill_box_blue.tscn" id="12_fhy0e"]
 [ext_resource type="PackedScene" uid="uid://mwwwugaaoyiw" path="res://assets/Levels/key.tscn" id="13_gum8d"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="14_5q3si"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -162,9 +163,10 @@ current_level = 24.0
 [node name="WorldEnvironment" parent="." instance=ExtResource("9_criad")]
 
 [node name="KillBox" parent="." instance=ExtResource("10_4ksds")]
-position = Vector2(-54, 424)
+position = Vector2(36, 152)
 scale = Vector2(99.32, 1)
 Visible = false
+CanChange = false
 
 [node name="Enemie" parent="." instance=ExtResource("11_wn83n")]
 position = Vector2(0, -68)
@@ -240,10 +242,6 @@ position = Vector2(154, -152)
 [node name="KillBox13" parent="." instance=ExtResource("12_fhy0e")]
 position = Vector2(186, -217)
 
-[node name="Key" parent="." instance=ExtResource("13_gum8d")]
-position = Vector2(136, -11)
-AditionalAction = 1
-
 [node name="Player" parent="." instance=ExtResource("5_8mss8")]
 position = Vector2(-141, -230)
 floor_stop_on_slope = false
@@ -259,3 +257,16 @@ limit_bottom = 110
 limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("6_6i3wh")
+
+[node name="Key" parent="." instance=ExtResource("13_gum8d")]
+position = Vector2(138, 4)
+AditionalAction = 1
+
+[node name="AmbientParticles" parent="." instance=ExtResource("14_5q3si")]
+position = Vector2(-136, -373)
+
+[node name="AmbientParticles2" parent="." instance=ExtResource("14_5q3si")]
+position = Vector2(168, -245)
+
+[node name="AmbientParticles3" parent="." instance=ExtResource("14_5q3si")]
+position = Vector2(135, -66)

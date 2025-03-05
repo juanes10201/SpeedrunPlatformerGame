@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dmwlprrnl3ma8"]
+[gd_scene load_steps=20 format=4 uid="uid://dmwlprrnl3ma8"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_onwic"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_lbrdv"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="9_ub8py"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="10_pj0ol"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="11_wchcv"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="12_g843m"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -107,6 +108,7 @@ _data = {
 position = Vector2(0, -1)
 
 [node name="Bg" type="Sprite2D" parent="."]
+visible = false
 texture_repeat = 2
 position = Vector2(-755, -863)
 scale = Vector2(1.00384, 1)
@@ -122,6 +124,7 @@ libraries = {
 }
 
 [node name="Bg2" type="Sprite2D" parent="."]
+visible = false
 texture_repeat = 2
 position = Vector2(-755, -863)
 scale = Vector2(1.00769, 1)
@@ -167,7 +170,7 @@ autostart = true
 [node name="CanvasLayer" parent="." instance=ExtResource("7_l4ctg")]
 
 [node name="Flag" parent="." instance=ExtResource("8_2veu1")]
-position = Vector2(-124, 346)
+position = Vector2(-124, 358)
 level_to_change = "level24"
 current_level = 23.0
 
@@ -177,27 +180,22 @@ current_level = 23.0
 position = Vector2(-54, 424)
 scale = Vector2(99.32, 1)
 Visible = false
+CanChange = false
 
 [node name="falling_sand5" parent="." instance=ExtResource("11_wchcv")]
-position = Vector2(-136, -274)
-collision_mask = 3
-is_falling = true
-MAX_SPEED = 120.0
-
-[node name="falling_sand7" parent="." instance=ExtResource("11_wchcv")]
-position = Vector2(-120, -274)
+position = Vector2(-129, -274)
 collision_mask = 3
 is_falling = true
 MAX_SPEED = 120.0
 
 [node name="falling_sand6" parent="." instance=ExtResource("11_wchcv")]
-position = Vector2(-152, -274)
+position = Vector2(-145, -274)
 collision_mask = 3
 is_falling = true
 MAX_SPEED = 120.0
 
 [node name="falling_sand8" parent="." instance=ExtResource("11_wchcv")]
-position = Vector2(-167, -274)
+position = Vector2(-160, -274)
 collision_mask = 3
 is_falling = true
 MAX_SPEED = 120.0
@@ -223,21 +221,30 @@ position = Vector2(-161, 152)
 scale = Vector2(2, 1)
 
 [node name="KillBox15" parent="." instance=ExtResource("10_pj0ol")]
-position = Vector2(-126, 203)
+position = Vector2(-126, 209)
 scale = Vector2(2, 1)
 
 [node name="KillBox16" parent="." instance=ExtResource("10_pj0ol")]
-position = Vector2(-161, 252)
+position = Vector2(-161, 263)
 scale = Vector2(2, 1)
 
 [node name="KillBox17" parent="." instance=ExtResource("10_pj0ol")]
-position = Vector2(-126, 299)
+position = Vector2(-126, 311)
 scale = Vector2(2, 1)
 
 [node name="KillBox18" parent="." instance=ExtResource("10_pj0ol")]
-position = Vector2(-161, 343)
+position = Vector2(-161, 355)
 scale = Vector2(2, 1)
 
 [node name="KillBox8" parent="." instance=ExtResource("10_pj0ol")]
 position = Vector2(-110.755, -186)
 scale = Vector2(2.045, 1)
+
+[node name="AmbientParticles" parent="." instance=ExtResource("12_g843m")]
+position = Vector2(-139, -427)
+
+[node name="AmbientParticles2" parent="." instance=ExtResource("12_g843m")]
+position = Vector2(-145, -93)
+
+[node name="AmbientParticles3" parent="." instance=ExtResource("12_g843m")]
+position = Vector2(-149, 156)

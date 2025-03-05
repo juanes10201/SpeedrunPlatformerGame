@@ -39,4 +39,8 @@ debug_color = Color(0, 0.6, 0.701961, 0.235294)
 texture_repeat = 2
 sprite_frames = SubResource("SpriteFrames_y6adf")
 
+[node name="LavaTimer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,6 @@
+Credits game:
+https://hyohnoo.itch.io/keyboard-controller-keys
+not used: https://dreammix.itch.io/keyboard-keys-for-ui
+Kenney Input Prompts Pixel
+
+to-do shader credits

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://chat6jxc63bfj"]
+[gd_scene load_steps=51 format=4 uid="uid://chat6jxc63bfj"]
 
 [ext_resource type="Script" path="res://assets/Levels/Scripts/Player.gd" id="1_uhpgg"]
 [ext_resource type="Texture2D" uid="uid://cga4opnhsehd7" path="res://assets/Sprites/knight-Sheet.png" id="2_5o2oi"]
@@ -20,6 +20,8 @@
 [ext_resource type="AudioStream" uid="uid://c2jyf1ulqt0qj" path="res://assets/Sounds/slime_move.wav" id="15_4ir8m"]
 [ext_resource type="AudioStream" uid="uid://baawx3chmik64" path="res://assets/Sounds/PlayerWind.wav" id="15_ehprd"]
 [ext_resource type="Texture2D" uid="uid://d233ru5plyksw" path="res://assets/Sprites/particlesfall-Sheet.png" id="19_8erp2"]
+[ext_resource type="AudioStream" uid="uid://cgvt4j0ojlh60" path="res://assets/Sounds/switch.wav" id="19_uvkhq"]
+[ext_resource type="AudioStream" uid="uid://cqau2g0edyke0" path="res://assets/Sounds/key.wav" id="20_2xca2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5171x"]
 size = Vector2(9.99999, 13.0001)
@@ -399,6 +401,12 @@ volume_db = -10.74
 
 [node name="AudioSlimeGroundsmash" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamWAV_ppcfx")
+
+[node name="AudioSwitch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_uvkhq")
+
+[node name="AudioKey" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_2xca2")
 
 [node name="ParticlesLanding" type="AnimatedSprite2D" parent="."]
 visible = false

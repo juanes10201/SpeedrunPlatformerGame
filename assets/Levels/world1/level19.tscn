@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://cmoi1akylmxsx"]
+[gd_scene load_steps=28 format=4 uid="uid://cmoi1akylmxsx"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_wspew"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_uhmqi"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c1ytdkacld0nb" path="res://assets/Levels/open_box.tscn" id="13_0cqak"]
 [ext_resource type="PackedScene" uid="uid://mwwwugaaoyiw" path="res://assets/Levels/key.tscn" id="14_glfla"]
 [ext_resource type="PackedScene" uid="uid://bygxx5ppwysc3" path="res://assets/Levels/enemie_special.tscn" id="15_7h57r"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="16_a6nlu"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -320,9 +321,10 @@ current_level = 19.0
 [node name="WorldEnvironment" parent="." instance=ExtResource("9_2yk4m")]
 
 [node name="KillBox" parent="." instance=ExtResource("10_wbcye")]
-position = Vector2(-54, 143)
+position = Vector2(-54, 142)
 scale = Vector2(99.32, 1)
 Visible = false
+CanChange = false
 
 [node name="SlideRampArea2D2" type="Area2D" parent="."]
 position = Vector2(114, -288)
@@ -396,6 +398,12 @@ EnemyDirection = 2
 
 [node name="KillBox7" parent="." instance=ExtResource("10_wbcye")]
 position = Vector2(217, -204)
+
+[node name="AmbientParticles" parent="." instance=ExtResource("16_a6nlu")]
+position = Vector2(243, -231)
+
+[node name="AmbientParticles2" parent="." instance=ExtResource("16_a6nlu")]
+position = Vector2(-59, -451)
 
 [connection signal="body_entered" from="SlideRampArea2D2" to="SlideRampArea2D2" method="_on_body_entered"]
 [connection signal="body_exited" from="SlideRampArea2D2" to="SlideRampArea2D2" method="_on_body_exited"]

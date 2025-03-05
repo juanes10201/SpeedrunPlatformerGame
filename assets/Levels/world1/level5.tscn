@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://b5v0scru643ls"]
+[gd_scene load_steps=18 format=4 uid="uid://b5v0scru643ls"]
 
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="1_lv37x"]
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_whp7s"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="6_vghth"]
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="11_868bk"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="11_q5bbx"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="12_p6vs0"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -225,3 +226,9 @@ scale = Vector2(24.815, 1)
 [node name="KillBox3" parent="." instance=ExtResource("11_q5bbx")]
 position = Vector2(-358.525, 174.21)
 scale = Vector2(1, 7.88)
+
+[node name="AmbientParticles" parent="." instance=ExtResource("12_p6vs0")]
+position = Vector2(-155, -178)
+
+[node name="AmbientParticles2" parent="." instance=ExtResource("12_p6vs0")]
+position = Vector2(75, -192)

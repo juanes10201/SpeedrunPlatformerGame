@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1ji315fcqjjv"]
+
+[ext_resource type="Texture2D" uid="uid://bcqhpwtu5xyn8" path="res://assets/Sprites/slime-special-particles.png" id="1_rhgmu"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6j88u"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+turbulence_enabled = true
+turbulence_noise_strength = 2.39
+turbulence_noise_speed = Vector3(1.385, 0, 0)
+
+[node name="AmbientParticles" type="GPUParticles2D"]
+scale = Vector2(1.805, 1.805)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_6j88u")
+texture = ExtResource("1_rhgmu")
+lifetime = 20.0
+preprocess = 16.29

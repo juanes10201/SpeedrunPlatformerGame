@@ -11,6 +11,8 @@ enum Sides{
 	UP
 }
 
+var MoveLava : bool = false
+
 var Sliding: Sides = Sides.NONE
 var WasSliding : bool = false
 var Slide : bool = false
@@ -70,6 +72,8 @@ var direction := Input.get_axis("ui_left", "ui_right")
 @onready var AudioWind = $AudioWind
 @onready var AudioJump = $AudioJump
 @onready var AudioWalkSand = $AudioWalkSand
+@onready var AudioSwitch = $AudioSwitch
+@onready var AudioKey = $AudioKey
 
 @onready var AudioSlimeKill = $AudioSlimeGroundsmash #AudioSlimeKill
 @onready var AudioSlimeMove = $AudioSlimeMove
@@ -447,6 +451,7 @@ func strech_size(X, Y):
 	Sprite.scale = Vector2(original_scale.x*X, original_scale.y*Y)
 
 func _strech_tick(delta : float):
+	
 	Sprite.scale.x += (original_scale.x - Sprite.scale.x) * 20 * delta
 	Sprite.scale.y += (original_scale.y - Sprite.scale.y) * 20 * delta
 #endregion

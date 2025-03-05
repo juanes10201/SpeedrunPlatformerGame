@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bqov503amlnpt"]
+[gd_scene load_steps=25 format=4 uid="uid://bqov503amlnpt"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_nt2ap"]
 [ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_q0itx"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bygxx5ppwysc3" path="res://assets/Levels/enemie_special.tscn" id="12_x7vur"]
 [ext_resource type="PackedScene" uid="uid://mwwwugaaoyiw" path="res://assets/Levels/key.tscn" id="13_bnttt"]
 [ext_resource type="PackedScene" uid="uid://c1ytdkacld0nb" path="res://assets/Levels/open_box.tscn" id="14_x46s7"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="15_ahf20"]
 
 [sub_resource type="Animation" id="Animation_wh1ld"]
 length = 0.001
@@ -271,7 +272,7 @@ tile_map_data = PackedByteArray("AADr//3/AAABAAAAAADr//7/AAABAAEAAADr////AAABAAI
 tile_set = SubResource("TileSet_i8b3o")
 
 [node name="Player" parent="." instance=ExtResource("5_eq0dd")]
-position = Vector2(-367, -19)
+position = Vector2(-385, -19)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(30, 26.053)
@@ -314,18 +315,14 @@ current_level = 14.0
 position = Vector2(-42, 472)
 scale = Vector2(99.32, 1)
 Visible = false
+CanChange = false
 
 [node name="KillBox2" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-92, 3)
-
-[node name="KillBox3" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-82, 3)
-
-[node name="KillBox4" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-73, 3)
+position = Vector2(-82.355, 3)
+scale = Vector2(2, 1)
 
 [node name="Enemie4" parent="." instance=ExtResource("12_x7vur")]
-position = Vector2(-105, 73)
+position = Vector2(-122, 73)
 EnemyDirection = 1
 
 [node name="Enemie5" parent="." instance=ExtResource("12_x7vur")]
@@ -341,27 +338,15 @@ position = Vector2(-43, 73)
 EnemyDirection = 2
 
 [node name="KillBox5" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-314, 167)
-
-[node name="KillBox6" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-329, 167)
-
-[node name="KillBox8" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-314, 243)
-
-[node name="KillBox9" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-329, 243)
-
-[node name="KillBox10" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-344, 243)
-
-[node name="KillBox11" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-359, 243)
+position = Vector2(-324, 167)
+scale = Vector2(2, 1)
 
 [node name="KillBox12" parent="." instance=ExtResource("11_r4kd5")]
-position = Vector2(-364, 243)
+position = Vector2(-338.92, 242)
+scale = Vector2(4, 1)
 
 [node name="Key" parent="." instance=ExtResource("13_bnttt")]
+position = Vector2(-326, 131)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("14_x46s7")]
 position = Vector2(-251, 260)
@@ -384,3 +369,6 @@ position = Vector2(-180, 372)
 collision_layer = 2
 collision_mask = 0
 Enemy_burst_speed = 400.0
+
+[node name="AmbientParticles" parent="." instance=ExtResource("15_ahf20")]
+position = Vector2(-325, 4)

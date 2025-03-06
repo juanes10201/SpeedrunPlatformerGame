@@ -121,8 +121,11 @@ func _ready() -> void:
 		PlayedBefore = SaveGame.IfPlayedFirstTime()
 		if(!PlayedBefore):
 			Camera.offset.y = -226.31
-
-
+	
+	#region Change music style to ingame
+	SongPlayer.MusicState = SongPlayer.MusicStates.ingame
+	#endregion
+	
 #region Physics proccess
 func _physics_process(delta: float) -> void:
 	if($"../Flag".current_level == 1):

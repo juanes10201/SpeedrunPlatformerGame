@@ -12,6 +12,7 @@ func _ready() -> void:
 	#If connected controller
 	if(!Input.get_connected_joypads().size() == 0):
 		SelectedButton = PauseButtons.RESUME_GAME
+	SongPlayer.MusicState = SongPlayer.MusicStates.menu
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -201,7 +201,7 @@ tile_set = SubResource("TileSet_i8b3o")
 script = ExtResource("2_ubfur")
 
 [node name="Player" parent="." instance=ExtResource("2_kmi6g")]
-position = Vector2(-318, -43)
+position = Vector2(-317, -43)
 collision_mask = 5
 jump_height = 45.0
 

@@ -158,7 +158,7 @@ autostart = true
 [node name="CanvasLayer" parent="." instance=ExtResource("5_gp860")]
 
 [node name="Flag" parent="." instance=ExtResource("6_v80wx")]
-position = Vector2(-6, 340)
+position = Vector2(-6, 339)
 level_to_change = "level30"
 current_level = 29.0
 

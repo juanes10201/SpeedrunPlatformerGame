@@ -13,15 +13,16 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
-	Player.HaveKey = true
-	Player._play_sound(Player.AudioSwitch, false)
-	if(AditionalAction == Global.OBJECT_ACTIONS.switch_killbox_type):
-		if(Player.EnabledKillBox == Global.KillBoxTypes.Red):
-			Player.EnabledKillBox = Global.KillBoxTypes.Blue
+	if(Player):
+		Player.HaveKey = true
+		Player._play_sound(Player.AudioSwitch, false)
+		if(AditionalAction == Global.OBJECT_ACTIONS.switch_killbox_type):
+			if(Player.EnabledKillBox == Global.KillBoxTypes.Red):
+				Player.EnabledKillBox = Global.KillBoxTypes.Blue
+			else:
+				Player.EnabledKillBox = Global.KillBoxTypes.Red
+		elif(AditionalAction == Global.OBJECT_ACTIONS.MoveLava):
+			Player.MoveLava = true
 		else:
-			Player.EnabledKillBox = Global.KillBoxTypes.Red
-	elif(AditionalAction == Global.OBJECT_ACTIONS.MoveLava):
-		Player.MoveLava = true
-	else:
-		Player._play_sound(Player.AudioKey, false)
-	self.queue_free()
+			Player._play_sound(Player.AudioKey, false)
+		self.queue_free()

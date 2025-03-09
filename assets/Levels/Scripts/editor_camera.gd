@@ -6,9 +6,13 @@ var ShakeStrenght : float = 0.0
 
 var rng = RandomNumberGenerator.new()
 
+@export var EditorMoveSpeed : float = 200
+@export var EditorDragSpeed : float = 1
+
 enum Cinematic_types{
 	FOLLOW_PLAYER,
-	CREDITS
+	CREDITS,
+	EDITOR
 }
 #@export var Cinematic_type : Cinematic_types = Cinematic_types.FOLLOW_PLAYER
 #@onready var credits_ystart = position.y
@@ -21,6 +25,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if(Input.is_action_pressed("ui_up")):
+		position.y -= EditorMoveSpeed * delta
+	elif(Input.is_action_pressed("ui_down")):
+		position.y += EditorMoveSpeed * delta
+	if(Input.is_action_pressed("ui_right")):
+		position.x += EditorMoveSpeed * delta
+	if(Input.is_action_pressed("ui_left")):
+		position.x -= EditorMoveSpeed * delta
+	#position = sin(position.x, position.y)
 	
 	TickShake(delta)
 	#if(Cinematic_type == Cinematic_types.CREDITS): self.position.y = lerpf(self.position.y, credits_ystart, 2*delta)

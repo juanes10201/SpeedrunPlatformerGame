@@ -1,14 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://djcwdir3r48tx"]
+[gd_scene load_steps=6 format=3 uid="uid://djcwdir3r48tx"]
 
 [ext_resource type="Script" path="res://assets/Levels/song_player.tscn.gd" id="1_wkvdr"]
 [ext_resource type="AudioStream" uid="uid://d2ofxtkay3jkh" path="res://assets/Music/song1.wav" id="2_pyils"]
 [ext_resource type="AudioStream" uid="uid://2sbsg2fmwpk4" path="res://assets/Music/menu1.wav" id="3_i1pet"]
+[ext_resource type="AudioStream" uid="uid://bge1e2m0s2k1s" path="res://assets/Music/song2.wav" id="3_jeb53"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2k4mj"]
+streams_count = 2
+stream_0/stream = ExtResource("2_pyils")
+stream_1/stream = ExtResource("3_jeb53")
 
 [node name="SongPlayer_tscn" type="Node2D"]
 script = ExtResource("1_wkvdr")
+PlayMusic = false
 
 [node name="SongInGame" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_pyils")
+stream = SubResource("AudioStreamRandomizer_2k4mj")
 volume_db = -5.0
 
 [node name="SongMenu" type="AudioStreamPlayer" parent="."]

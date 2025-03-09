@@ -1,0 +1,149 @@
+[gd_scene load_steps=19 format=4 uid="uid://cjsl48otlsu08"]
+
+[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_ckr3y"]
+[ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="3_6cmfe"]
+[ext_resource type="TileSet" uid="uid://defl28kc6mcu4" path="res://assets/Levels/world1/tiles.tres" id="4_q2fg8"]
+[ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="5_lasqu"]
+[ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="6_75r6v"]
+[ext_resource type="Script" path="res://assets/Levels/world1/LevelEditor.gd" id="6_vcuvb"]
+[ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="7_k2qlo"]
+[ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="8_iqx3n"]
+[ext_resource type="Script" path="res://assets/Levels/world1/editor_camera.gd" id="9_jayyq"]
+[ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="11_fgtej"]
+[ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="12_l622d"]
+[ext_resource type="PackedScene" uid="uid://mwwwugaaoyiw" path="res://assets/Levels/key.tscn" id="13_q44dh"]
+[ext_resource type="PackedScene" uid="uid://bxtkh08fsp6ue" path="res://assets/Levels/kill_box_blue.tscn" id="14_0bub6"]
+
+[sub_resource type="Animation" id="Animation_timnu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-755, -863)]
+}
+
+[sub_resource type="Animation" id="Animation_sumt0"]
+resource_name = "game_editor"
+
+[sub_resource type="Animation" id="Animation_y3i1q"]
+resource_name = "move"
+length = 40.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 19.9667, 39.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-755, -863), Vector2(-493, -367), Vector2(-755, -863)]
+}
+
+[sub_resource type="Animation" id="Animation_b10uo"]
+resource_name = "move2"
+length = 40.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20.0333, 39.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-493, -367), Vector2(-755, -863), Vector2(-493, -367)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_klj0i"]
+_data = {
+"RESET": SubResource("Animation_timnu"),
+"game_editor": SubResource("Animation_sumt0"),
+"move": SubResource("Animation_y3i1q"),
+"move2": SubResource("Animation_b10uo")
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, -1)
+
+[node name="Bg2" type="Sprite2D" parent="."]
+visible = false
+texture_repeat = 2
+position = Vector2(-755, -863)
+scale = Vector2(1.00769, 1)
+texture = ExtResource("3_6cmfe")
+centered = false
+region_enabled = true
+region_rect = Rect2(0.078, 0.149, 1200, 1762.79)
+script = ExtResource("2_ckr3y")
+PlayAnimation = "game_editor"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bg2"]
+libraries = {
+"": SubResource("AnimationLibrary_klj0i")
+}
+
+[node name="Time_Left" type="Timer" parent="."]
+wait_time = 9999.0
+one_shot = true
+autostart = true
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_lasqu")]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("7_k2qlo")]
+
+[node name="AmbientParticles" parent="." instance=ExtResource("11_fgtej")]
+position = Vector2(0, 10)
+
+[node name="Level" type="Node2D" parent="."]
+script = ExtResource("6_vcuvb")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Level"]
+position = Vector2(235, 10)
+scale = Vector2(1.00384, 1)
+tile_map_data = PackedByteArray("AADv/wAAAAADAAAAAADv/wEAAAADAAEAAADv/wIAAAADAAEAAADv/wMAAAADAAEAAADv/wQAAAADAAIAAADx/0IAAAAAAAAAAADx/0MAAAAAAAIAAADy/0IAAAABAAAAAADy/0MAAAABAAIAAADz/0IAAAABAAAAAADz/0MAAAABAAIAAAD0/0IAAAACAAAAAAD0/0MAAAACAAIAAAA=")
+tile_set = ExtResource("4_q2fg8")
+
+[node name="Flag" parent="Level" instance=ExtResource("6_75r6v")]
+position = Vector2(25, 1046)
+level_to_change = "end"
+current_level = 41.0
+
+[node name="KillBox" parent="Level" instance=ExtResource("8_iqx3n")]
+position = Vector2(37, 1121)
+scale = Vector2(99.32, 1)
+Visible = false
+CanChange = false
+
+[node name="Camera2D" type="Camera2D" parent="Level"]
+position = Vector2(-25, 95)
+scale = Vector2(6.59375, 0.882813)
+offset = Vector2(0, -11.99)
+zoom = Vector2(2.08, 2.08)
+limit_smoothed = true
+position_smoothing_enabled = true
+script = ExtResource("9_jayyq")
+
+[node name="falling_sand10" parent="Level" instance=ExtResource("12_l622d")]
+position = Vector2(15.855, 81.875)
+collision_mask = 31
+MAX_SPEED = 70.0
+
+[node name="Key3" parent="Level" instance=ExtResource("13_q44dh")]
+position = Vector2(-14, 82)
+AditionalAction = 1
+
+[node name="KillBox10" parent="Level" instance=ExtResource("14_0bub6")]
+position = Vector2(-14, 112)
+
+[node name="KillBox12" parent="Level" instance=ExtResource("8_iqx3n")]
+position = Vector2(15.895, 111.58)

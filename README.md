@@ -1,3 +1,6 @@
+# SPEEDTICKERS
+[![See the game on itch.io](./images/itch.png)](https://juanes10201.itch.io/speedtickers)
+
 Speedtickers is a fast paced 2d platformer game that uses the momentum based physics and fast movement from Ultrakill.
 
 This game was submitted to [Hackclub Juice Gamejam](https://github.com/hackclub/juice)

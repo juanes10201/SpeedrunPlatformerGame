@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=4 uid="uid://rfc7e15hhxq"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_llh53"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_0saqq"]
+[ext_resource type="Script" uid="uid://bfjuhdt66v471" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_0saqq"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="2_f7fjn"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="3_kv3dk"]
+[ext_resource type="Script" uid="uid://db87exh6jetnl" path="res://assets/Levels/Scripts/Player_camera.gd" id="3_kv3dk"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="6_2ec6p"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="6_4a4ii"]
 [ext_resource type="TileSet" uid="uid://defl28kc6mcu4" path="res://assets/Levels/world1/tiles.tres" id="6_gvryu"]
@@ -45,8 +45,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0i2pc"]
 _data = {
-"RESET": SubResource("Animation_wh1ld"),
-"move": SubResource("Animation_6ubuh")
+&"RESET": SubResource("Animation_wh1ld"),
+&"move": SubResource("Animation_6ubuh")
 }
 
 [node name="Node2D" type="Node2D"]

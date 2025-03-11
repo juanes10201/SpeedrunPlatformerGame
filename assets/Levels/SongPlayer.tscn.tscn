@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://djcwdir3r48tx"]
 
-[ext_resource type="Script" path="res://assets/Levels/song_player.tscn.gd" id="1_wkvdr"]
+[ext_resource type="Script" uid="uid://k3i1xvybny7h" path="res://assets/Levels/song_player.tscn.gd" id="1_wkvdr"]
 [ext_resource type="AudioStream" uid="uid://d2ofxtkay3jkh" path="res://assets/Music/song1.wav" id="2_pyils"]
 [ext_resource type="AudioStream" uid="uid://2sbsg2fmwpk4" path="res://assets/Music/menu1.wav" id="3_i1pet"]
 [ext_resource type="AudioStream" uid="uid://bge1e2m0s2k1s" path="res://assets/Music/song2.wav" id="3_jeb53"]

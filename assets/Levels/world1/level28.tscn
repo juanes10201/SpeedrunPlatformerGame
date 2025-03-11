@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=4 uid="uid://bjksqled8yecv"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_6fie6"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_2beqw"]
+[ext_resource type="Script" uid="uid://bfjuhdt66v471" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_2beqw"]
 [ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="3_qk8k5"]
 [ext_resource type="TileSet" uid="uid://defl28kc6mcu4" path="res://assets/Levels/world1/tiles.tres" id="4_emxd1"]
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="5_ppnra"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="8_uyjke"]
 [ext_resource type="PackedScene" uid="uid://mwwwugaaoyiw" path="res://assets/Levels/key.tscn" id="9_pbw21"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="10_xhxe7"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="11_p3dn7"]
+[ext_resource type="Script" uid="uid://db87exh6jetnl" path="res://assets/Levels/Scripts/Player_camera.gd" id="11_p3dn7"]
 [ext_resource type="PackedScene" uid="uid://bxtkh08fsp6ue" path="res://assets/Levels/kill_box_blue.tscn" id="12_03a5k"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="13_a5vxr"]
 [ext_resource type="PackedScene" uid="uid://cqqh8fidhrwc3" path="res://assets/Levels/enemie_skeleton.tscn" id="14_nmx33"]
@@ -49,8 +49,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0i2pc"]
 _data = {
-"RESET": SubResource("Animation_wh1ld"),
-"move": SubResource("Animation_6ubuh")
+&"RESET": SubResource("Animation_wh1ld"),
+&"move": SubResource("Animation_6ubuh")
 }
 
 [sub_resource type="Animation" id="Animation_timnu"]
@@ -102,9 +102,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_klj0i"]
 _data = {
-"RESET": SubResource("Animation_timnu"),
-"move": SubResource("Animation_y3i1q"),
-"move2": SubResource("Animation_b10uo")
+&"RESET": SubResource("Animation_timnu"),
+&"move": SubResource("Animation_y3i1q"),
+&"move2": SubResource("Animation_b10uo")
 }
 
 [node name="Node2D" type="Node2D"]

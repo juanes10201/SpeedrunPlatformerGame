@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwbydrtmfhb5" path="res://assets/Sprites/creditsby.png" id="1_112yo"]
 [ext_resource type="Texture2D" uid="uid://djdqm5mvbclor" path="res://assets/Sprites/credits.png" id="2_e37kk"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/initialcredits.gd" id="3_ywqdo"]
+[ext_resource type="Script" uid="uid://bmi82jvel5jb2" path="res://assets/Levels/Scripts/initialcredits.gd" id="3_ywqdo"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="4_0qd8d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7kdu"]

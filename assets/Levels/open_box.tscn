@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c1ytdkacld0nb"]
 
-[ext_resource type="Script" path="res://assets/Levels/Scripts/open_box.gd" id="1_5cidy"]
-[ext_resource type="Shader" path="res://assets/Levels/open_box.gdshader" id="2_1dae4"]
+[ext_resource type="Script" uid="uid://bgk0oiktjml4b" path="res://assets/Levels/Scripts/open_box.gd" id="1_5cidy"]
+[ext_resource type="Shader" uid="uid://bdshb7ecjuhu2" path="res://assets/Levels/open_box.gdshader" id="2_1dae4"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://assets/Sprites/tiles_1.png" id="2_lrgft"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qn4ou"]
@@ -16,13 +16,13 @@ gradient = SubResource("Gradient_5xgts")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_otnnh"]
 shader = ExtResource("2_1dae4")
+shader_parameter/color_gradient = SubResource("GradientTexture1D_craap")
 shader_parameter/size_effect = 0.1
 shader_parameter/speed = 1.0
 shader_parameter/highlight_strength = 0.5
 shader_parameter/color_mode_toggle = true
 shader_parameter/is_horizontal = false
 shader_parameter/pause_duration = 0.2
-shader_parameter/color_gradient = SubResource("GradientTexture1D_craap")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lei70"]
 atlas = ExtResource("2_lrgft")

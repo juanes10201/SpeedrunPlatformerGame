@@ -1,13 +1,13 @@
 [gd_scene load_steps=19 format=3 uid="uid://l4jvo6ayxlkp"]
 
-[ext_resource type="Script" path="res://assets/Levels/Scripts/PauseMenuLogic.gd" id="1_lmvks"]
+[ext_resource type="Script" uid="uid://b40hrfks2w7u6" path="res://assets/Levels/Scripts/PauseMenuLogic.gd" id="1_lmvks"]
 [ext_resource type="Texture2D" uid="uid://be1h2ja4pyni1" path="res://assets/Sprites/screenshot.png" id="2_p57sw"]
 [ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="3_rsgsr"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/PauseMenuTransition.gd" id="4_37ts2"]
+[ext_resource type="Script" uid="uid://0xbub3erkcxb" path="res://assets/Levels/Scripts/PauseMenuTransition.gd" id="4_37ts2"]
 [ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="5_rmh30"]
 [ext_resource type="Texture2D" uid="uid://b1ifl8spiqdmv" path="res://assets/Sprites/menus/buttonSelect2.png" id="6_7w7eu"]
 [ext_resource type="Texture2D" uid="uid://qot7qahghomi" path="res://assets/Sprites/PauseMenuConfigButton.png" id="6_gbpqt"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/menu_button.gd" id="7_fg2bv"]
+[ext_resource type="Script" uid="uid://3crm18ad88ys" path="res://assets/Levels/Scripts/menu_button.gd" id="7_fg2bv"]
 [ext_resource type="Texture2D" uid="uid://dt72x52yyj1wa" path="res://assets/Sprites/PauseMenuButton.png" id="8_5hgw6"]
 [ext_resource type="StyleBox" uid="uid://dirm08jxjyusl" path="res://assets/Sprites/menus/selectStylebox.tres" id="9_cas78"]
 [ext_resource type="Texture2D" uid="uid://0s62gu0b77n1" path="res://assets/Sprites/PauseMenuGoBackButton.png" id="9_pn634"]
@@ -317,10 +317,10 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vy804"]
 _data = {
-"RESET": SubResource("Animation_xvgwm"),
-"fade_movement": SubResource("Animation_yq3rj"),
-"initial_movement": SubResource("Animation_h07xo"),
-"main_movement": SubResource("Animation_uc043")
+&"RESET": SubResource("Animation_xvgwm"),
+&"fade_movement": SubResource("Animation_yq3rj"),
+&"initial_movement": SubResource("Animation_h07xo"),
+&"main_movement": SubResource("Animation_uc043")
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ptwe"]

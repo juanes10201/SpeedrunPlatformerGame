@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var level_to_change : String = "level2"
-@export var current_level : float = 0
+@export var current_level : int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,5 +19,6 @@ func _on_body_entered(body):
 		#endregion
 		#region Change level
 		var _scene_string : String = "res://assets/Levels/world1/level" + str(current_level+1) + ".tscn"
+		print(_scene_string)
 		get_tree().change_scene_to_file(_scene_string)
 		#endregion

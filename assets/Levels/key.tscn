@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://mwwwugaaoyiw"]
 
-[ext_resource type="Script" path="res://assets/Levels/Scripts/key.gd" id="1_ruxkn"]
+[ext_resource type="Script" uid="uid://yi71cshxkfnc" path="res://assets/Levels/Scripts/key.gd" id="1_ruxkn"]
 [ext_resource type="Texture2D" uid="uid://frgvamgpi0lw" path="res://assets/Sprites/key-Sheet.png" id="2_kxj2g"]
 [ext_resource type="Texture2D" uid="uid://cc6sao5m1uf1p" path="res://assets/Sprites/light3.png" id="3_bajnl"]
 

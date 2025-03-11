@@ -1,11 +1,11 @@
 [gd_scene load_steps=23 format=4 uid="uid://bqov503amlnpt"]
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_nt2ap"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_q0itx"]
+[ext_resource type="Script" uid="uid://bfjuhdt66v471" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_q0itx"]
 [ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="3_t1f4y"]
 [ext_resource type="TileSet" uid="uid://defl28kc6mcu4" path="res://assets/Levels/world1/tiles.tres" id="4_i8whd"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="5_eq0dd"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="6_ih448"]
+[ext_resource type="Script" uid="uid://db87exh6jetnl" path="res://assets/Levels/Scripts/Player_camera.gd" id="6_ih448"]
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="7_wxvqd"]
 [ext_resource type="PackedScene" uid="uid://djqwajvc8m3td" path="res://assets/Levels/enemie.tscn" id="8_15uhc"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="9_pssnl"]
@@ -49,8 +49,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0i2pc"]
 _data = {
-"RESET": SubResource("Animation_wh1ld"),
-"move": SubResource("Animation_6ubuh")
+&"RESET": SubResource("Animation_wh1ld"),
+&"move": SubResource("Animation_6ubuh")
 }
 
 [sub_resource type="Animation" id="Animation_timnu"]
@@ -102,9 +102,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_klj0i"]
 _data = {
-"RESET": SubResource("Animation_timnu"),
-"move": SubResource("Animation_y3i1q"),
-"move2": SubResource("Animation_b10uo")
+&"RESET": SubResource("Animation_timnu"),
+&"move": SubResource("Animation_y3i1q"),
+&"move2": SubResource("Animation_b10uo")
 }
 
 [node name="Node2D" type="Node2D"]

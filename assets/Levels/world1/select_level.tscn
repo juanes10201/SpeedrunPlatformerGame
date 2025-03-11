@@ -1,17 +1,17 @@
 [gd_scene load_steps=28 format=3 uid="uid://b8hfdqkkc1qu4"]
 
-[ext_resource type="Script" path="res://assets/Levels/select_level_control.gd" id="1_q8u5j"]
+[ext_resource type="Script" uid="uid://d3tf5emrtsw71" path="res://assets/Levels/select_level_control.gd" id="1_q8u5j"]
 [ext_resource type="Texture2D" uid="uid://be1h2ja4pyni1" path="res://assets/Sprites/screenshot.png" id="2_xahmg"]
 [ext_resource type="Texture2D" uid="uid://dk8qs15tgkthx" path="res://assets/Sprites/bg.png" id="3_mhrci"]
-[ext_resource type="Script" path="res://assets/Levels/transitionLevelSelect.gd" id="4_gl1p6"]
+[ext_resource type="Script" uid="uid://vy45jgrig202" path="res://assets/Levels/transitionLevelSelect.gd" id="4_gl1p6"]
 [ext_resource type="FontFile" uid="uid://dfigptrdw0fg2" path="res://assets/Fonts/pixelart/Gossamer Girls.ttf" id="5_tpl6t"]
 [ext_resource type="Texture2D" uid="uid://dtrd6thhu6b8c" path="res://assets/Sprites/levelnote.png" id="6_06y12"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/menu_button.gd" id="7_lq2g5"]
-[ext_resource type="Shader" path="res://assets/Levels/Shader/playername_text.gdshader" id="8_d61iw"]
+[ext_resource type="Script" uid="uid://3crm18ad88ys" path="res://assets/Levels/Scripts/menu_button.gd" id="7_lq2g5"]
+[ext_resource type="Shader" uid="uid://dl0kjgssku3nm" path="res://assets/Levels/Shader/playername_text.gdshader" id="8_d61iw"]
 [ext_resource type="Texture2D" uid="uid://bwv6k156sqcd2" path="res://assets/Sprites/menus/noisemap.png" id="9_buyvs"]
 [ext_resource type="Texture2D" uid="uid://cd5uevt337ene" path="res://assets/Sprites/menus/iconuser.jpg" id="10_14c6j"]
-[ext_resource type="Script" path="res://assets/Levels/iconuser.gd" id="11_j8cba"]
-[ext_resource type="Shader" path="res://assets/Levels/Shader/playertexttime.gdshader" id="12_fjjkg"]
+[ext_resource type="Script" uid="uid://bo2oqy5pkneo2" path="res://assets/Levels/iconuser.gd" id="11_j8cba"]
+[ext_resource type="Shader" uid="uid://bewtpgjognj1i" path="res://assets/Levels/Shader/playertexttime.gdshader" id="12_fjjkg"]
 [ext_resource type="FontFile" uid="uid://b42aju5a8xkr8" path="res://assets/Fonts/pixelart/Pixel Or GTFO.ttf" id="13_ng54s"]
 [ext_resource type="FontFile" uid="uid://d3ebca3t4i171" path="res://assets/Fonts/Ace Futurism.ttf" id="14_7hpb2"]
 
@@ -1384,9 +1384,9 @@ tracks/37/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k8t8m"]
 _data = {
-"RESET": SubResource("Animation_8cdkx"),
-"idle": SubResource("Animation_ec4ib"),
-"start": SubResource("Animation_cwa4y")
+&"RESET": SubResource("Animation_8cdkx"),
+&"idle": SubResource("Animation_ec4ib"),
+&"start": SubResource("Animation_cwa4y")
 }
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohwaj"]

@@ -6,8 +6,8 @@
  uniform float speed = 0.5;
 
  void fragment() {
-  vec2 uv = UV;
-  uv *= tile_size;
+  vec2 uv = UV * tile_size;
+  uv = fract(uv);
   vec2 offset;
   offset.x = TIME * speed;
   offset.y = TIME * speed;

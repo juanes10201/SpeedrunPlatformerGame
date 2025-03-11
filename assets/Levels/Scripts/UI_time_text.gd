@@ -9,8 +9,8 @@ extends RichTextLabel
 @onready var previous_time = Time_Left
 @onready var RaySprite = $"../Ray-time"
 
-@onready var CurrentSecond = str(floor(Time_Left.time_left)) if Time_Left else 0
-var TimeRest = 0
+@onready var CurrentSecond : int = floor(Time_Left.time_left) if Time_Left else 0
+var TimeRest : int = 0
 
 var DangerTime : bool = false
 @export var DangerTimeStartTimer : float = 3

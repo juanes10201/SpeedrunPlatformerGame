@@ -1,14 +1,14 @@
 [gd_scene load_steps=19 format=4 uid="uid://cjsl48otlsu08"]
 
-[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_ckr3y"]
+[ext_resource type="Script" uid="uid://bfjuhdt66v471" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_ckr3y"]
 [ext_resource type="Texture2D" uid="uid://krk3i3gy70sb" path="res://assets/Sprites/grid2.png" id="3_6cmfe"]
 [ext_resource type="TileSet" uid="uid://defl28kc6mcu4" path="res://assets/Levels/world1/tiles.tres" id="4_q2fg8"]
 [ext_resource type="PackedScene" uid="uid://cfa7sxsc3ppdn" path="res://assets/Levels/canvas_layer.tscn" id="5_lasqu"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="6_75r6v"]
-[ext_resource type="Script" path="res://assets/Levels/world1/LevelEditor.gd" id="6_vcuvb"]
+[ext_resource type="Script" uid="uid://borg76uikbrs0" path="res://assets/Levels/world1/LevelEditor.gd" id="6_vcuvb"]
 [ext_resource type="PackedScene" uid="uid://xjx2k63akbn3" path="res://assets/Levels/levels_default.tscn" id="7_k2qlo"]
 [ext_resource type="PackedScene" uid="uid://dmnyy0uuvc0jk" path="res://assets/Levels/kill_box.tscn" id="8_iqx3n"]
-[ext_resource type="Script" path="res://assets/Levels/world1/editor_camera.gd" id="9_jayyq"]
+[ext_resource type="Script" uid="uid://mr2ukhf4tbd" path="res://assets/Levels/world1/editor_camera.gd" id="9_jayyq"]
 [ext_resource type="PackedScene" uid="uid://d1ji315fcqjjv" path="res://assets/Levels/Particles/ambientparticles.tscn" id="11_fgtej"]
 [ext_resource type="PackedScene" uid="uid://cykeyxkv73jjt" path="res://assets/Levels/falling_sand.tscn" id="12_l622d"]
 [ext_resource type="PackedScene" uid="uid://mwwwugaaoyiw" path="res://assets/Levels/key.tscn" id="13_q44dh"]
@@ -66,14 +66,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_klj0i"]
 _data = {
-"RESET": SubResource("Animation_timnu"),
-"game_editor": SubResource("Animation_sumt0"),
-"move": SubResource("Animation_y3i1q"),
-"move2": SubResource("Animation_b10uo")
+&"RESET": SubResource("Animation_timnu"),
+&"game_editor": SubResource("Animation_sumt0"),
+&"move": SubResource("Animation_y3i1q"),
+&"move2": SubResource("Animation_b10uo")
 }
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(0, -1)
 
 [node name="Bg2" type="Sprite2D" parent="."]
 visible = false
@@ -89,7 +88,7 @@ PlayAnimation = "game_editor"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Bg2"]
 libraries = {
-"": SubResource("AnimationLibrary_klj0i")
+&"": SubResource("AnimationLibrary_klj0i")
 }
 
 [node name="Time_Left" type="Timer" parent="."]
@@ -116,7 +115,6 @@ tile_set = ExtResource("4_q2fg8")
 [node name="Flag" parent="Level" instance=ExtResource("6_75r6v")]
 position = Vector2(25, 1046)
 level_to_change = "end"
-current_level = 41.0
 
 [node name="KillBox" parent="Level" instance=ExtResource("8_iqx3n")]
 position = Vector2(37, 1121)

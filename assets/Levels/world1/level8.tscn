@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://l5gcewxed7vs" path="res://assets/Sprites/grid.png" id="1_b6ua6"]
 [ext_resource type="PackedScene" uid="uid://chat6jxc63bfj" path="res://assets/Levels/player.tscn" id="2_ck00r"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_mvniq"]
-[ext_resource type="Script" path="res://assets/Levels/Scripts/Player_camera.gd" id="3_in43c"]
+[ext_resource type="Script" uid="uid://bfjuhdt66v471" path="res://assets/Levels/Scripts/grid_bg.gd" id="2_mvniq"]
+[ext_resource type="Script" uid="uid://db87exh6jetnl" path="res://assets/Levels/Scripts/Player_camera.gd" id="3_in43c"]
 [ext_resource type="TileSet" uid="uid://defl28kc6mcu4" path="res://assets/Levels/world1/tiles.tres" id="3_t0yux"]
 [ext_resource type="PackedScene" uid="uid://cba0dn710x26" path="res://assets/Levels/flag.tscn" id="5_g23c0"]
 [ext_resource type="PackedScene" uid="uid://bygxx5ppwysc3" path="res://assets/Levels/enemie_special.tscn" id="6_c0iwm"]
@@ -44,8 +44,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0i2pc"]
 _data = {
-"RESET": SubResource("Animation_wh1ld"),
-"move": SubResource("Animation_6ubuh")
+&"RESET": SubResource("Animation_wh1ld"),
+&"move": SubResource("Animation_6ubuh")
 }
 
 [node name="Node2D" type="Node2D"]

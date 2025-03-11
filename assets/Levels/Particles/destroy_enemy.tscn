@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b0s78hw1o0f1"]
 
 [ext_resource type="Texture2D" uid="uid://b145nvnbk486f" path="res://assets/Sprites/slime-particles.png" id="1_0c4dd"]
-[ext_resource type="Script" path="res://assets/Levels/Particles/TempParticle.gd" id="2_uo4gt"]
+[ext_resource type="Script" uid="uid://cfsfgd2dxfth6" path="res://assets/Levels/Particles/TempParticle.gd" id="2_uo4gt"]
 
 [sub_resource type="Curve" id="Curve_ty0i1"]
 _data = [Vector2(0.829949, 1), 0.0, 0.0, 0, 0, Vector2(0.979695, 0), 0.0, 0.0, 0, 0]
@@ -18,7 +18,7 @@ point_count = 2
 curve = SubResource("Curve_2dvdp")
 
 [sub_resource type="Curve" id="Curve_q7or0"]
-max_value = 3.0
+_limits = [0.0, 3.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 

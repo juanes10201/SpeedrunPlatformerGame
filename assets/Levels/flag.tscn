@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cba0dn710x26"]
 
-[ext_resource type="Script" path="res://assets/Levels/Scripts/flag.gd" id="1_gl5pl"]
+[ext_resource type="Script" uid="uid://dkxnggsy0tpc" path="res://assets/Levels/Scripts/flag.gd" id="1_gl5pl"]
 [ext_resource type="Texture2D" uid="uid://dj6fpitwbxqbk" path="res://assets/brackeys_platformer_assets/sprites/coin.png" id="2_5d660"]
 [ext_resource type="Texture2D" uid="uid://cc6sao5m1uf1p" path="res://assets/Sprites/light3.png" id="3_klgg3"]
 
